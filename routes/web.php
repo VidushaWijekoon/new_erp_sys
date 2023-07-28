@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Auth\LoginController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -15,6 +16,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+ 
 Auth::routes();
 
-Route::get('/', [LoginController::class, 'index'])->name('login');
+Route::get('/', [LoginController::class, 'index'])->name('loginpage');
+
+Route::prefix('admin/')->middleware('auth', 'isAdmin') ->group(function () {
+    Route::controller(DashboardController::class)->group(function (){
+        Route::get('dashboard', 'index')->name('admin.dashboard');
+    });
+});

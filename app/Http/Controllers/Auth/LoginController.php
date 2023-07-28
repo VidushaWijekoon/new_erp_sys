@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
@@ -26,7 +27,15 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = RouteServiceProvider::HOME;
+     protected function authenticated()
+    {
+        if (Auth::user()->role == '1' || Auth::user()->role == '2') {
+            return redirect(route('admin.dashboard'))->with('message', 'Welcome to Dashboard');
+        } else {
+            return redirect(route('loginpage'));
+        }
+    }
+
 
     /**
      * Create a new controller instance.
@@ -38,8 +47,12 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
+    public function username()
+    {
+        return 'name';
+    }
+
     public function index(){
         return view('auth.login');
     }
-
 }

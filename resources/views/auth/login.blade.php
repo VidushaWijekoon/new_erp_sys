@@ -8,21 +8,21 @@
 
                     <div class="card-body">
                         <div class="card-title d-flex justify-content-center">
-                            <img src="{{ asset('img/logortbig.png') }}" alt="Company Logo" width="150">
+                            <img src="{{ asset('img/logortbig.png') }}" alt="Company Logo" width="115">
                         </div>
                         <hr>
                         <form method="POST" action="{{ route('login') }}">
                             @csrf
 
                             <div class="row mb-3">
-                                <label for="email" class="form-label">{{ __('Email Address') }} </label>
+                                <label for="email" class="form-label">{{ __('Username') }} </label>
                                 <div class="">
-                                    <input id="email" type="email"
-                                        class="form-control @error('email') is-invalid @enderror" name="email"
-                                        value="{{ old('email') }}" required autocomplete="email" autofocus
+                                    <input id="name" type="text"
+                                        class="form-control @error('name') is-invalid @enderror" name="name"
+                                        value="{{ old('name') }}" required autocomplete="name" autofocus
                                         style="border-radius: 0">
 
-                                    @error('email')
+                                    @error('name')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
@@ -46,7 +46,7 @@
                             </div>
 
 
-                            <div class="row mb-0 mt-4">
+                            <div class="row mb-0 mt-4 justify-content-between">
 
                                 <div class="col-md-2">
                                     <button type="submit" class="btn btn-sm btn-outline-info px-4"
@@ -56,7 +56,7 @@
                                 </div>
 
                                 <div class="col-md-4 mt-1">
-                                    <div class="form-check">
+                                    <div class="form-check float-end">
                                         <input class="form-check-input" type="checkbox" name="remember" id="remember"
                                             {{ old('remember') ? 'checked' : '' }}>
 
