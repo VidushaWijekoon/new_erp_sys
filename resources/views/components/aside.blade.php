@@ -1,7 +1,9 @@
 <nav id="sidebar" class="sidebar">
     <div class="sidebar-content js-simplebar">
         <a class="sidebar-brand" href="#">
-            <span class="align-middle">AdminKit</span>
+            <span class="align-middle d-flex justify-content-center">
+                <img src="{{ asset('img/rtlogolight.png') }}" alt="company logo" width="80">
+            </span>
         </a>
 
         <ul class="sidebar-nav">
@@ -15,25 +17,73 @@
             </li>
 
             <li class="sidebar-item">
-                <a class="sidebar-link" href="#">
+                <a href="#pos" data-toggle="collapse" class="sidebar-link collapsed">
                     <i class="align-middle" data-feather="layers"></i>
                     <span class="align-middle">POS</span>
                 </a>
+                <ul id="pos" class="sidebar-dropdown list-unstyled collapse" data-parent="#sidebar">
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="#">Make Order</a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="#">Categories</a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="#">Products</a>
+                    </li>
+                </ul>
             </li>
 
 
             <li class="sidebar-item">
-                <a class="sidebar-link" href="#">
+                <a href="#sales" data-toggle="collapse" class="sidebar-link collapsed">
                     <i class="align-middle" data-feather="file"></i>
                     <span class="align-middle">Sales & Marketing</span>
                 </a>
+                <ul id="sales" class="sidebar-dropdown list-unstyled collapse" data-parent="#sidebar">
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="#">Customers</a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="#">Orders</a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="#">Quatations</a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="#">Sales Invoice</a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="#">Sales Return</a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="#">Sales Analysis</a>
+                    </li>
+                </ul>
             </li>
 
             <li class="sidebar-item">
-                <a class="sidebar-link" href="#">
+                <a href="#accounts" data-toggle="collapse" class="sidebar-link collapsed">
                     <i class="align-middle" data-feather="briefcase"></i>
-                    <span class="align-middle">Finance & Accounting</span>
+                    <span class="align-middle">Accounts & Finance</span>
                 </a>
+                <ul id="accounts" class="sidebar-dropdown list-unstyled collapse" data-parent="#sidebar">
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="#">Customers</a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="#">General Ledger</a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="#">Account Payable</a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="#">Account Receivable</a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="#">Tax Management</a>
+                    </li>
+                </ul>
             </li>
 
             <li class="sidebar-item">
@@ -64,7 +114,7 @@
                 </a>
                 <ul id="hr" class="sidebar-dropdown list-unstyled collapse" data-parent="#sidebar">
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="#">HR</a>
+                        <a class="sidebar-link" href="{{ route('hr.dashboard') }}">Employees</a>
                     </li>
                     <li class="sidebar-item">
                         <a class="sidebar-link" href="#">Payroll</a>
