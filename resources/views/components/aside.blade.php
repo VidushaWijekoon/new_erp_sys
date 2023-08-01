@@ -23,6 +23,9 @@
                 </a>
                 <ul id="pos" class="sidebar-dropdown list-unstyled collapse" data-parent="#sidebar">
                     <li class="sidebar-item">
+                        <a class="sidebar-link" href="{{ route('pos.index') }}">POS</a>
+                    </li>
+                    <li class="sidebar-item">
                         <a class="sidebar-link" href="#">Make Order</a>
                     </li>
                     <li class="sidebar-item">
