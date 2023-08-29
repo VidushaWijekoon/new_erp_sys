@@ -1,9 +1,10 @@
 <?php
 
-use App\Http\Controllers\Admin\HomepageController;
+use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,4 +19,8 @@ use App\Http\Controllers\HomeController;
 
 Auth::routes();
 
-Route::get('/', [HomepageController::class, 'index'])->name('homepagecontroller');
+Route::get('/', [LoginController::class, 'index'])->name('loginpage');
+
+Route::prefix('admin')->middleware('auth', 'isAdmin')->group(function () {
+    Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
+});

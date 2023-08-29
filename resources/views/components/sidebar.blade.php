@@ -15,19 +15,16 @@
             </li>
 
             <li class="sidebar-item">
-                <a href="#ui" data-toggle="collapse" class="sidebar-link collapsed">
-                    <i class="align-middle" data-feather="briefcase"></i>
+                <a href="#hrm" data-toggle="collapse" class="sidebar-link collapsed">
+                    <i class="align-middle" data-feather="users"></i>
                     <span class="align-middle">HRM</span>
                 </a>
-                <ul id="ui" class="sidebar-dropdown list-unstyled collapse" data-parent="#sidebar">
+                <ul id="hrm" class="sidebar-dropdown list-unstyled collapse" data-parent="#sidebar">
                     <li class="sidebar-item">
                         <a class="sidebar-link" href="#">Document Management</a>
                     </li>
                     <li class="sidebar-item">
                         <a class="sidebar-link" href="#">Compensation Management</a>
-                    </li>
-                    <li class="sidebar-item">
-                        <a class="sidebar-link" href="#">Employee Onboarding and Administration</a>
                     </li>
                     <li class="sidebar-item">
                         <a class="sidebar-link" href="#">Performance Management</a>
@@ -48,79 +45,143 @@
             </li>
 
             <li class="sidebar-item">
-                <a class="sidebar-link" href="pages-blank.html">
-                    <i class="align-middle" data-feather="book"></i>
-                    <span class="align-middle">Blank</span>
+                <a href="#sales" data-toggle="collapse" class="sidebar-link collapsed">
+                    <i class="align-middle" data-feather="git-branch"></i>
+                    <span class="align-middle">Sales</span>
                 </a>
-            </li>
-
-            <li class="sidebar-header">Tools & Components</li>
-            <li class="sidebar-item">
-                <a href="#ui" data-toggle="collapse" class="sidebar-link collapsed">
-                    <i class="align-middle" data-feather="briefcase"></i>
-                    <span class="align-middle">UI Elements</span>
-                </a>
-                <ul id="ui" class="sidebar-dropdown list-unstyled collapse" data-parent="#sidebar">
+                <ul id="sales" class="sidebar-dropdown list-unstyled collapse" data-parent="#sidebar">
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="ui-alerts.html">Alerts</a>
+                        <a class="sidebar-link" href="#">Customer Management</a>
                     </li>
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="ui-buttons.html">Buttons</a>
+                        <a class="sidebar-link" href="#">Appointment Scheduling</a>
                     </li>
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="ui-cards.html">Cards</a>
+                        <a class="sidebar-link" href="#">Target Management</a>
                     </li>
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="ui-general.html">General</a>
+                        <a class="sidebar-link" href="#">Quotation Management</a>
                     </li>
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="ui-grid.html">Grid</a>
+                        <a class="sidebar-link" href="#">Opportunity Management</a>
                     </li>
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="ui-modals.html">Modals</a>
+                        <a class="sidebar-link" href="#">Sales Estimation</a>
                     </li>
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="ui-typography.html">Typography</a>
+                        <a class="sidebar-link" href="#">Sales Informations</a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="#">Campaign Informations</a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="#">Reporting and Dashboard</a>
                     </li>
                 </ul>
             </li>
+
+            <li class="sidebar-item">
+                <a href="#accounts" data-toggle="collapse" class="sidebar-link collapsed">
+                    <i class="align-middle" data-feather="briefcase"></i>
+                    <span class="align-middle">Acconts</span>
+                </a>
+                <ul id="accounts" class="sidebar-dropdown list-unstyled collapse" data-parent="#sidebar">
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="#">General Ledger</a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="#">Invocing</a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="#">Tax Management</a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="#">Account Reconciliation</a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="#">Account Payable</a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="#">Account Receivable</a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="#">Payments</a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="#">Reporting and Dashboard</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="sidebar-item">
+                <a href="#pos" data-toggle="collapse" class="sidebar-link collapsed">
+                    <i class="align-middle" data-feather="hard-drive"></i>
+                    <span class="align-middle">POS</span>
+                </a>
+                <ul id="pos" class="sidebar-dropdown list-unstyled collapse" data-parent="#sidebar">
+
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="#">POS Items</a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="#">Orders</a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="#">Payment Management</a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="#">Reporting and Dashboard</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="sidebar-header">Supply Chain Management</li>
+
 
             <li class="sidebar-item">
                 <a class="sidebar-link" href="icons-feather.html">
-                    <i class="align-middle" data-feather="coffee"></i>
-                    <span class="align-middle">Icons</span>
+                    <i class="align-middle" data-feather="codepen"></i>
+                    <span class="align-middle">Procurement</span>
                 </a>
-            </li>
-
-            <li class="sidebar-item">
-                <a href="#forms" data-toggle="collapse" class="sidebar-link collapsed">
-                    <i class="align-middle" data-feather="check-circle"></i>
-                    <span class="align-middle">Forms</span>
-                </a>
-                <ul id="forms" class="sidebar-dropdown list-unstyled collapse" data-parent="#sidebar">
-                    <li class="sidebar-item">
-                        <a class="sidebar-link" href="forms-layouts.html">Form Layouts</a>
-                    </li>
-                    <li class="sidebar-item">
-                        <a class="sidebar-link" href="forms-basic-inputs.html">Basic Inputs</a>
-                    </li>
-                </ul>
             </li>
 
             <li class="sidebar-item">
                 <a class="sidebar-link" href="tables-bootstrap.html">
-                    <i class="align-middle" data-feather="list"></i>
-                    <span class="align-middle">Tables</span>
+                    <i class="align-middle" data-feather="box"></i>
+                    <span class="align-middle">Inventory Management</span>
+                </a>
+            </li>
+
+            <li class="sidebar-item">
+                <a class="sidebar-link" href="tables-bootstrap.html">
+                    <i class="align-middle" data-feather="package"></i>
+                    <span class="align-middle">Warehouse Management</span>
+                </a>
+            </li>
+
+            <li class="sidebar-item">
+                <a class="sidebar-link" href="tables-bootstrap.html">
+                    <i class="align-middle" data-feather="filter"></i>
+                    <span class="align-middle">Import & Export</span>
                 </a>
             </li>
 
             <li class="sidebar-header">Users & Authentications</li>
 
             <li class="sidebar-item">
-                <a class="sidebar-link" href="pages-profile.html">
+                <a href="#users" data-toggle="collapse" class="sidebar-link collapsed">
                     <i class="align-middle" data-feather="user"></i>
-                    <span class="align-middle">Profile</span>
+                    <span class="align-middle">Users</span>
                 </a>
+                <ul id="users" class="sidebar-dropdown list-unstyled collapse" data-parent="#sidebar">
+
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="#">Create New User</a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="#">Disciplinary List</a>
+                    </li>
+                </ul>
             </li>
 
             <li class="sidebar-item">
@@ -130,7 +191,5 @@
                 </a>
             </li>
         </ul>
-
-
     </div>
 </nav>
