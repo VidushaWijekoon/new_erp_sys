@@ -32,6 +32,9 @@ Route::prefix('admin/')->middleware('auth', 'isAdmin')->group(function () {
         Route::get('employee', 'index')->name('hr.dashboard');
     });
 
+    // Holidays
+    Route::get('holidays', App\Http\Livewire\Admin\Holidays\Index::class)->name('admin.holidays');
+
     Route::controller(PosController::class)->group(function () {
         Route::get('pos', 'index')->name('pos.index');
     });

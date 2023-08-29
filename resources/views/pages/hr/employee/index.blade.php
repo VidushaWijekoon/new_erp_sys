@@ -29,6 +29,19 @@
                 </div>
             </div>
 
+            <div class="col-3">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                            <h5 class="card-title d-flex align-items-center">Holidays</h5>
+                            <h2 class="subtitle">9</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
             <div class="col-md-6">
                 <div class="card">
                     <div class="card-body">
@@ -37,9 +50,6 @@
                 </div>
             </div>
 
-        </div>
-
-        <div class="row">
             <div class="col-md-6">
                 <div class="card">
                     <div class="card-body">
