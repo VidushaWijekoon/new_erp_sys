@@ -21,25 +21,10 @@
                 </a>
                 <ul id="hrm" class="sidebar-dropdown list-unstyled collapse" data-parent="#sidebar">
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="#">Document Management</a>
-                    </li>
-                    <li class="sidebar-item">
-                        <a class="sidebar-link" href="#">Compensation Management</a>
-                    </li>
-                    <li class="sidebar-item">
-                        <a class="sidebar-link" href="#">Performance Management</a>
-                    </li>
-                    <li class="sidebar-item">
-                        <a class="sidebar-link" href="#">Attendance Management</a>
-                    </li>
-                    <li class="sidebar-item">
-                        <a class="sidebar-link" href="#">Workforce Management</a>
+                        <a class="sidebar-link" href="{{ url('admin/documents') }}">Document Management</a>
                     </li>
                     <li class="sidebar-item">
                         <a class="sidebar-link" href="#">Payroll Management</a>
-                    </li>
-                    <li class="sidebar-item">
-                        <a class="sidebar-link" href="#">Reporting and Dashboard</a>
                     </li>
                 </ul>
             </li>
