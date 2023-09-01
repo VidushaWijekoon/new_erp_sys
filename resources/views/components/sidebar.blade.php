@@ -21,7 +21,7 @@
                 </a>
                 <ul id="hrm" class="sidebar-dropdown list-unstyled collapse" data-parent="#sidebar">
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="{{ url('admin/hrm') }}">Document Management</a>
+                        <a class="sidebar-link" href="{{ route('document-management') }}">Document Management</a>
                     </li>
                     <li class="sidebar-item">
                         <a class="sidebar-link" href="#">Payroll Management</a>

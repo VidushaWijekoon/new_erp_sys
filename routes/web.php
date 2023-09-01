@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\DocumentMangementController;
 use App\Http\Controllers\Admin\EmployeeController;
 use App\Http\Controllers\Auth\LoginController;
 use Illuminate\Support\Facades\Auth;
@@ -24,13 +25,14 @@ Route::get('/', [LoginController::class, 'index'])->name('loginpage');
 Route::prefix('admin')->middleware('auth', 'isAdmin')->group(function () {
     Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard.index');
 
-    // Department Livewire
-    Route::get('/hrm', App\Livewire\Admin\HRM\Index::class)->name('hrm');
+    Route::controller(DocumentMangementController::class)->group(function () {
+        Route::get('/document-management', 'index')->name('document-management');
+    });
 
-    // Employee
     Route::controller(EmployeeController::class)->group(function () {
-        Route::get('employee/create', 'create')->name('create-employee');
-        Route::post('employee/', 'store')->name('store-employee');
+        Route::get('/employee', 'index')->name('employee.index');
+        Route::get('/employee/create', 'create')->name('employee.create');
+        Route::post('/employee', 'store')->name('employee.store');
     });
 
     Route::get('/sales', function () {

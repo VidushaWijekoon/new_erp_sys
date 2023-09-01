@@ -11,12 +11,11 @@ class EmployeeController extends Controller
 {
     public function create()
     {
-        return view('pages.hrm.employee.create');
+        return view('pages.employee.create');
     }
 
     public function store(EmployeeRequestForm $request)
     {
-        dd($request);
         $validatedData = $request->validated();
         $employee = new Employees();
 

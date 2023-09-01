@@ -4,16 +4,16 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="card">
-                    @if ($errors->any())
-                        <div class="alert alert-warning">
-                            @foreach ($errors->all() as $error)
-                                <div class="">{{ $error }}</div>
-                            @endforeach
-                        </div>
-                    @endif
                     <div class="card-body">
-
-                        <form action="{{ route('create-employee') }}" method="POST" enctype="multipart/form-data">
+                        @if ($errors->any())
+                            <div class="alert alert-warning">
+                                @foreach ($errors->all() as $error)
+                                    <div class="">{{ $error }}</div>
+                                @endforeach
+                            </div>
+                        @endif
+                        <form action="{{ route('employee.store') }}" method="POST" enctype="multipart/form-data">
+                            @csrf
                             <div class="row">
                                 <div class="col-md-6">
                                     <fieldset>
@@ -23,7 +23,7 @@
                                             <label class="col-form-label col-sm-3 text-sm-start">Fullname</label>
                                             <div class="col-sm-9">
                                                 <input type="text" class="form-control rounded-0" name="fullname"
-                                                    placeholder="Fullname">
+                                                    placeholder="Fullname" required>
                                             </div>
                                             @error('fullname')
                                                 <small>{{ $message }}</small>
@@ -34,7 +34,7 @@
                                             <label class="col-form-label col-sm-3 text-sm-start">Email</label>
                                             <div class="col-sm-9">
                                                 <input type="email" class="form-control rounded-0" name="email"
-                                                    placeholder="Email">
+                                                    placeholder="Email" required>
                                             </div>
                                             @error('email')
                                                 <small>{{ $message }}</small>
@@ -44,7 +44,7 @@
                                         <div class="form-group row">
                                             <label class="col-form-label col-sm-3 text-sm-start">Gender</label>
                                             <div class="col-sm-9">
-                                                <select class="custom-select rounded-0" name="gender">
+                                                <select class="custom-select rounded-0" name="gender" required>
                                                     <option selected value="0">Male</option>
                                                     <option value="1">Female</option>
                                                 </select>
@@ -58,7 +58,7 @@
                                             <label class="col-form-label col-sm-3 text-sm-start">Birthday</label>
                                             <div class="col-sm-9">
                                                 <input type="date" class="form-control rounded-0" name="birthday"
-                                                    placeholder="Birthday">
+                                                    placeholder="Birthday" required>
                                             </div>
                                             @error('birthday')
                                                 <small>{{ $message }}</small>
@@ -69,7 +69,7 @@
                                             <label class="col-form-label col-sm-3 text-sm-start">Passport Number</label>
                                             <div class="col-sm-9">
                                                 <input type="text" class="form-control rounded-0"
-                                                    placeholder="Passport Number" name="passport_number">
+                                                    placeholder="Passport Number" name="passport_number" required>
                                             </div>
                                             @error('passport_number')
                                                 <small>{{ $message }}</small>
@@ -80,7 +80,7 @@
                                             <label class="col-form-label col-sm-3 text-sm-start">Passport Expring</label>
                                             <div class="col-sm-9">
                                                 <input type="date" class="form-control rounded-0"
-                                                    placeholder="Passport Expring" name="passport_expiring">
+                                                    placeholder="Passport Expring" name="passport_expiring" required>
                                             </div>
                                             @error('passport_expiring')
                                                 <small>{{ $message }}</small>
@@ -90,7 +90,7 @@
                                         <div class="form-group row">
                                             <label class="col-form-label col-sm-3 text-sm-start">Visa Type</label>
                                             <div class="col-sm-9">
-                                                <select class="custom-select rounded-0" name="visa_type">
+                                                <select class="custom-select rounded-0" name="visa_type" required>
                                                     <option selected>Open this select menu</option>
                                                     <option value="0">Male</option>
                                                     <option value="1">Femail</option>
@@ -105,7 +105,7 @@
                                             <label class="col-form-label col-sm-3 text-sm-start">Visa Expring</label>
                                             <div class="col-sm-9">
                                                 <input type="date" class="form-control rounded-0"
-                                                    placeholder="Visa Expring" name="visa_expiring">
+                                                    placeholder="Visa Expring" name="visa_expiring" required>
                                             </div>
                                             @error('visa_expiring')
                                                 <small>{{ $message }}</small>
@@ -121,7 +121,7 @@
                                             <label class="col-form-label col-sm-3 text-sm-start">Contact Number</label>
                                             <div class="col-sm-9">
                                                 <input type="text" class="form-control rounded-0"
-                                                    placeholder="Contact Number" name="contact_number">
+                                                    placeholder="Contact Number" name="contact_number" required>
                                             </div>
                                             @error('contact_number')
                                                 <small>{{ $message }}</small>
@@ -132,7 +132,7 @@
                                             <label class="col-form-label col-sm-3 text-sm-start">Current Address</label>
                                             <div class="col-sm-9">
                                                 <input type="text" class="form-control rounded-0"
-                                                    placeholder="Current Address" name="current_address">
+                                                    placeholder="Current Address" name="current_address" required>
                                             </div>
                                             @error('current_address')
                                                 <small>{{ $message }}</small>
@@ -143,7 +143,7 @@
                                             <label class="col-form-label col-sm-3 text-sm-start">Resident Country</label>
                                             <div class="col-sm-9">
                                                 <input type="text" class="form-control rounded-0"
-                                                    placeholder="Resident Country" name="resident_country">
+                                                    placeholder="Resident Country" name="resident_country" required>
                                             </div>
                                             @error('resident_country')
                                                 <small>{{ $message }}</small>
@@ -154,7 +154,7 @@
                                             <label class="col-form-label col-sm-3 text-sm-start">Emergency Number</label>
                                             <div class="col-sm-9">
                                                 <input type="text" class="form-control rounded-0"
-                                                    placeholder="Emergency Number" name="emergency_number">
+                                                    placeholder="Emergency Number" name="emergency_number" required>
                                             </div>
                                             @error('emergency_number')
                                                 <small>{{ $message }}</small>
@@ -170,7 +170,8 @@
                                         <legend class="px-4">Profile Information</legend>
                                         <div class="form-group">
                                             <label class="form-label">Profile Photo</label>
-                                            <input type="file" class="rounded-0 ml-5" name="image">
+                                            <input type="file" class="rounded-0 ml-5" name="image"
+                                                accept="image/x-png, image/gif, image/jpeg, image/png, image/jpg">
                                         </div>
                                         @error('image')
                                             <small>{{ $message }}</small>
@@ -184,7 +185,7 @@
                                             <label class="col-form-label col-sm-3 text-sm-start">Department
                                             </label>
                                             <div class="col-sm-9">
-                                                <select class="custom-select rounded-0" name="department">
+                                                <select class="custom-select rounded-0" name="department" required>
                                                     <option selected>Open this select menu</option>
                                                     <option value="0">Male</option>
                                                     <option value="1">Femail</option>
@@ -199,7 +200,7 @@
                                             <label class="col-form-label col-sm-3 text-sm-start">Join Date</label>
                                             <div class="col-sm-9">
                                                 <input type="date" class="form-control rounded-0"
-                                                    placeholder="Join Date" name="join_date">
+                                                    placeholder="Join Date" name="join_date" required>
                                             </div>
                                             @error('join_date')
                                                 <small>{{ $message }}</small>
@@ -223,7 +224,8 @@
 
                                     </fieldset>
                                     <div class="mt-2 text-center">
-                                        <a href="{{ route('hrm') }}" class="btn btn-secondary btn-sm">Close</a>
+                                        <a href="{{ route('document-management') }}"
+                                            class="btn btn-secondary btn-sm">Close</a>
                                         <button type="submit" class="btn btn-primary btn-sm">Save changes</button>
                                     </div>
                                 </div>

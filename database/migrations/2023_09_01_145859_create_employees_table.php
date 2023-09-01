@@ -15,19 +15,20 @@ return new class extends Migration
             $table->id();
             $table->string('fullname');
             $table->string('email');
-            $table->tinyInteger('gender');
             $table->date('birthday');
             $table->string('passport_number');
-            $table->date('passport_expiring');
             $table->tinyInteger('visa_type');
             $table->date('visa_expiring');
             $table->string('contact_number');
             $table->string('current_address');
             $table->string('resident_country');
             $table->string('emergency_number');
-            $table->string('image');
-            $table->tinyInteger('department');
+            $table->unsignedBigInteger('department');
             $table->date('join_date');
+            $table->string('special_note');
+            $table->unsignedBigInteger('created_by');
+            $table->foreign('department')->references('id')->on('departments')->onDelete('cascade');
+            $table->foreign('created_by')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });
     }

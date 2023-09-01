@@ -13,10 +13,11 @@ return new class extends Migration
     {
         Schema::create('departments', function (Blueprint $table) {
             $table->id();
-            $table->string('department_name');
+            $table->string('department_name')->unique();
             $table->tinyText('description');
             $table->tinyInteger('status')->default('0')->comment('0=InActive, 1=Active');
-            $table->tinyInteger('created_by');
+            $table->unsignedBigInteger('created_by');
+            $table->foreign('created_by')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });
     }

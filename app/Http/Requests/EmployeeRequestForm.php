@@ -22,22 +22,20 @@ class EmployeeRequestForm extends FormRequest
     public function rules(): array
     {
         return [
-            'category_id' => ['required', 'integer'],
-            'name' => ['required', 'string', 'max:255'],
-            'slug' => ['required', 'string', 'max:255'],
-            'brand' => ['required', 'string'],
-            'small_description' => ['required', 'string', 'max:255'],
-            'description' => ['required', 'string'],
-            'original_price' => ['required', 'integer'],
-            'selling_price' => ['required', 'integer'],
-            'quantity' => ['required', 'integer'],
-            'trending' => ['nullable'],
-            'status' => ['nullable'],
-            'meta_title' => ['required', 'string', 'max:255'],
-            'meta_keyword' => ['required', 'string'],
-            'meta_description' => ['required', 'string'],
-
-            'image' => ['nullable', 'max:5'],
+            'fullname' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'max:255'],
+            'gender' => ['required', 'integer'],
+            'birthday' => ['required', 'string'],
+            'passport_number' => ['required', 'string', 'max:25'],
+            'visa_type' => ['required', 'integer'],
+            'visa_expiring' => ['required', 'string'],
+            'contact_number' => ['required', 'string'],
+            'current_address' => ['required', 'string', 'max:255'],
+            'resident_country' => ['required', 'string'],
+            'emergency_number' => ['required', 'string', 'max:20'],
+            'department' => ['required', 'integer'],
+            'join_date' => ['required', 'string'],
+            'special_note' => ['required', 'string', 'max:255'],
         ];
     }
 }
