@@ -1,14 +1,14 @@
 <nav id="sidebar" class="sidebar">
     <div class="sidebar-content js-simplebar">
-        <a class="sidebar-brand" href="index.html">
-            <span class="align-middle">AdminKit</span>
+        <a class="sidebar-brand justify-content-center d-flex" href="{{ url('admin/dashboard') }}">
+            <img src="{{ asset('images/rtlogolight.png') }}" alt="Company Logo" width="125">
         </a>
 
         <ul class="sidebar-nav">
             <li class="sidebar-header">Pages</li>
 
             <li class="sidebar-item active">
-                <a class="sidebar-link" href="index.html">
+                <a class="sidebar-link" href="{{ url('admin/dashboard') }}">
                     <i class="align-middle" data-feather="sliders"></i>
                     <span class="align-middle">Dashboard</span>
                 </a>
@@ -21,7 +21,7 @@
                 </a>
                 <ul id="hrm" class="sidebar-dropdown list-unstyled collapse" data-parent="#sidebar">
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="{{ url('admin/documents') }}">Document Management</a>
+                        <a class="sidebar-link" href="{{ url('admin/hrm') }}">Document Management</a>
                     </li>
                     <li class="sidebar-item">
                         <a class="sidebar-link" href="#">Payroll Management</a>
@@ -35,6 +35,9 @@
                     <span class="align-middle">Sales</span>
                 </a>
                 <ul id="sales" class="sidebar-dropdown list-unstyled collapse" data-parent="#sidebar">
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="{{ url('admin/sales') }}">Sales</a>
+                    </li>
                     <li class="sidebar-item">
                         <a class="sidebar-link" href="#">Customer Management</a>
                     </li>
@@ -72,16 +75,10 @@
                 </a>
                 <ul id="accounts" class="sidebar-dropdown list-unstyled collapse" data-parent="#sidebar">
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="#">General Ledger</a>
+                        <a class="sidebar-link" href="{{ url('admin/accounts') }}">Accounts</a>
                     </li>
                     <li class="sidebar-item">
                         <a class="sidebar-link" href="#">Invocing</a>
-                    </li>
-                    <li class="sidebar-item">
-                        <a class="sidebar-link" href="#">Tax Management</a>
-                    </li>
-                    <li class="sidebar-item">
-                        <a class="sidebar-link" href="#">Account Reconciliation</a>
                     </li>
                     <li class="sidebar-item">
                         <a class="sidebar-link" href="#">Account Payable</a>
@@ -124,28 +121,28 @@
 
 
             <li class="sidebar-item">
-                <a class="sidebar-link" href="icons-feather.html">
+                <a class="sidebar-link" href="{{ url('admin/procurement') }}">
                     <i class="align-middle" data-feather="codepen"></i>
                     <span class="align-middle">Procurement</span>
                 </a>
             </li>
 
             <li class="sidebar-item">
-                <a class="sidebar-link" href="tables-bootstrap.html">
+                <a class="sidebar-link" href="{{ url('admin/inventory-management') }}">
                     <i class="align-middle" data-feather="box"></i>
                     <span class="align-middle">Inventory Management</span>
                 </a>
             </li>
 
             <li class="sidebar-item">
-                <a class="sidebar-link" href="tables-bootstrap.html">
+                <a class="sidebar-link" href="{{ url('admin/warehouse-management') }}">
                     <i class="align-middle" data-feather="package"></i>
                     <span class="align-middle">Warehouse Management</span>
                 </a>
             </li>
 
             <li class="sidebar-item">
-                <a class="sidebar-link" href="tables-bootstrap.html">
+                <a class="sidebar-link" href="#">
                     <i class="align-middle" data-feather="filter"></i>
                     <span class="align-middle">Import & Export</span>
                 </a>
@@ -159,12 +156,11 @@
                     <span class="align-middle">Users</span>
                 </a>
                 <ul id="users" class="sidebar-dropdown list-unstyled collapse" data-parent="#sidebar">
-
                     <li class="sidebar-item">
                         <a class="sidebar-link" href="#">Create New User</a>
                     </li>
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="#">Disciplinary List</a>
+                        <a class="sidebar-link" href="{{ url('admin/users') }}">Disciplinary List</a>
                     </li>
                 </ul>
             </li>

@@ -207,7 +207,7 @@ section {
 }
 body {
     margin: 0;
-font-family: 'Solway', serif;
+    font-family: "Solway", serif;
     font-size: 0.875rem;
     font-weight: 400;
     line-height: 1.5;
@@ -11220,7 +11220,7 @@ a.text-dark:hover {
 }
 @media (min-width: 992px) {
     .content {
-        padding: 2.5rem 2.5rem 1rem;
+        padding: 1.5rem 1.5rem 1rem;
     }
 }
 .navbar-nav .dropdown-menu {
