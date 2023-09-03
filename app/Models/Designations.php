@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Designations extends Model
 {
@@ -12,10 +13,10 @@ class Designations extends Model
     protected $table = 'designations';
 
     protected $fillable = [
-        'desgination_name',
+        'designation_name',
         'description',
         'status',
-        'created_by',
+        'created_by'
     ];
 
     public function created_by_username()

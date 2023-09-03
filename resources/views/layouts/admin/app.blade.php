@@ -13,8 +13,8 @@
     <title>@yield('title', 'R-SOFT')</title>
 
     <!-- Favicons -->
-    <link href="{{ asset('images/favicon.png') }}" rel="icon">
-    <link href="{{ asset('images/favicon.png') }}" rel="apple-touch-icon">
+    <link href="{{ asset('images/company/favicon.png') }}" rel="icon">
+    <link href="{{ asset('images/company/favicon.png') }}" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">

@@ -8,7 +8,7 @@
 
                     <div class="card-body">
                         <div class="card-title d-flex justify-content-center">
-                            <img src="{{ asset('images/logortbig.png') }}" alt="Company Logo" width="150">
+                            <img src="{{ asset('images/company/logortbig.png') }}" alt="Company Logo" width="150">
                         </div>
                         <hr>
                         <form method="POST" action="{{ route('register') }}">
@@ -80,7 +80,7 @@
                             <div class="row mb-3">
                                 <label for="password-confirm"
                                     class="form-label">{{ __('Confirm
-                                                                                                                                            Password') }}</label>
+                                                                                                                                                                                                                    Password') }}</label>
 
                                 <div class="">
                                     <input id="password-confirm" type="password" class="form-control"

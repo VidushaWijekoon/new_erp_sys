@@ -1,7 +1,7 @@
 <nav id="sidebar" class="sidebar">
     <div class="sidebar-content js-simplebar">
         <a class="sidebar-brand justify-content-center d-flex" href="{{ url('admin/dashboard') }}">
-            <img src="{{ asset('images/rtlogolight.png') }}" alt="Company Logo" width="125">
+            <img src="{{ asset('images/company/rtlogolight.png') }}" alt="Company Logo" width="125">
         </a>
 
         <ul class="sidebar-nav">
@@ -21,7 +21,7 @@
                 </a>
                 <ul id="hrm" class="sidebar-dropdown list-unstyled collapse" data-parent="#sidebar">
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="{{ route('document-management') }}">Document Management</a>
+                        <a class="sidebar-link" href="{{ route('document-management.index') }}">Document Management</a>
                     </li>
                     <li class="sidebar-item">
                         <a class="sidebar-link" href="#">Payroll Management</a>
@@ -36,7 +36,7 @@
                 </a>
                 <ul id="sales" class="sidebar-dropdown list-unstyled collapse" data-parent="#sidebar">
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="{{ url('admin/sales') }}">Sales</a>
+                        <a class="sidebar-link" href="#">Sales</a>
                     </li>
                     <li class="sidebar-item">
                         <a class="sidebar-link" href="#">Customer Management</a>
@@ -75,7 +75,7 @@
                 </a>
                 <ul id="accounts" class="sidebar-dropdown list-unstyled collapse" data-parent="#sidebar">
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="{{ url('admin/accounts') }}">Accounts</a>
+                        <a class="sidebar-link" href="#">Accounts</a>
                     </li>
                     <li class="sidebar-item">
                         <a class="sidebar-link" href="#">Invocing</a>
@@ -121,21 +121,21 @@
 
 
             <li class="sidebar-item">
-                <a class="sidebar-link" href="{{ url('admin/procurement') }}">
+                <a class="sidebar-link" href="#">
                     <i class="align-middle" data-feather="codepen"></i>
                     <span class="align-middle">Procurement</span>
                 </a>
             </li>
 
             <li class="sidebar-item">
-                <a class="sidebar-link" href="{{ url('admin/inventory-management') }}">
+                <a class="sidebar-link" href="#">
                     <i class="align-middle" data-feather="box"></i>
                     <span class="align-middle">Inventory Management</span>
                 </a>
             </li>
 
             <li class="sidebar-item">
-                <a class="sidebar-link" href="{{ url('admin/warehouse-management') }}">
+                <a class="sidebar-link" href="#">
                     <i class="align-middle" data-feather="package"></i>
                     <span class="align-middle">Warehouse Management</span>
                 </a>
@@ -160,7 +160,7 @@
                         <a class="sidebar-link" href="#">Create New User</a>
                     </li>
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="{{ url('admin/users') }}">Disciplinary List</a>
+                        <a class="sidebar-link" href="#">Disciplinary List</a>
                     </li>
                 </ul>
             </li>
