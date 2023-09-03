@@ -27,6 +27,7 @@ class EmployeeRequestForm extends FormRequest
             'gender' => ['required', 'integer'],
             'birthday' => ['required', 'string'],
             'passport_number' => ['required', 'string', 'max:25'],
+            'passport_expiring' => ['required', 'string'],
             'visa_type' => ['required', 'integer'],
             'visa_expiring' => ['required', 'string'],
             'contact_number' => ['required', 'string'],
@@ -37,6 +38,8 @@ class EmployeeRequestForm extends FormRequest
             'designation' => ['required', 'integer'],
             'join_date' => ['required', 'string'],
             'special_note' => ['required', 'string', 'max:255'],
+
+            'image' => ['nullable']
         ];
     }
 }

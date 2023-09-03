@@ -18,10 +18,11 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <fieldset>
-                                        <legend class="px-4">Personal Informations</legend>
+                                        <legend class="px-4">{{ __('Personal Informations') }}</legend>
 
                                         <div class="form-group row">
-                                            <label class="col-form-label col-sm-3 text-sm-start">Fullname</label>
+                                            <label
+                                                class="col-form-label col-sm-3 text-sm-start">{{ __('Fullname') }}</label>
                                             <div class="col-sm-9">
                                                 <input type="text" class="form-control rounded-0" name="fullname"
                                                     placeholder="Fullname" required>
@@ -32,7 +33,7 @@
                                         </div>
 
                                         <div class="form-group row">
-                                            <label class="col-form-label col-sm-3 text-sm-start">Email</label>
+                                            <label class="col-form-label col-sm-3 text-sm-start">{{ __('Email') }}</label>
                                             <div class="col-sm-9">
                                                 <input type="email" class="form-control rounded-0" name="email"
                                                     placeholder="Email" required>
@@ -43,11 +44,11 @@
                                         </div>
 
                                         <div class="form-group row">
-                                            <label class="col-form-label col-sm-3 text-sm-start">Gender</label>
+                                            <label class="col-form-label col-sm-3 text-sm-start">{{ __('Gender') }}</label>
                                             <div class="col-sm-9">
                                                 <select class="custom-select rounded-0" name="gender" required>
-                                                    <option selected value="0">Male</option>
-                                                    <option value="1">Female</option>
+                                                    <option selected value="0">{{ __('Male') }}</option>
+                                                    <option value="1">{{ __('Female') }}</option>
                                                 </select>
                                             </div>
                                             @error('gender')
@@ -56,7 +57,8 @@
                                         </div>
 
                                         <div class="form-group row">
-                                            <label class="col-form-label col-sm-3 text-sm-start">Birthday</label>
+                                            <label
+                                                class="col-form-label col-sm-3 text-sm-start">{{ __('Birthday') }}</label>
                                             <div class="col-sm-9">
                                                 <input type="date" class="form-control rounded-0" name="birthday"
                                                     placeholder="Birthday" required>
@@ -67,7 +69,8 @@
                                         </div>
 
                                         <div class="form-group row">
-                                            <label class="col-form-label col-sm-3 text-sm-start">Passport Number</label>
+                                            <label
+                                                class="col-form-label col-sm-3 text-sm-start">{{ __('Passport Number') }}</label>
                                             <div class="col-sm-9">
                                                 <input type="text" class="form-control rounded-0"
                                                     placeholder="Passport Number" name="passport_number" required>
@@ -78,7 +81,8 @@
                                         </div>
 
                                         <div class="form-group row">
-                                            <label class="col-form-label col-sm-3 text-sm-start">Passport Expring</label>
+                                            <label
+                                                class="col-form-label col-sm-3 text-sm-start">{{ __('Passport Expring') }}</label>
                                             <div class="col-sm-9">
                                                 <input type="date" class="form-control rounded-0"
                                                     placeholder="Passport Expring" name="passport_expiring" required>
@@ -89,16 +93,17 @@
                                         </div>
 
                                         <div class="form-group row">
-                                            <label class="col-form-label col-sm-3 text-sm-start">Visa Type</label>
+                                            <label
+                                                class="col-form-label col-sm-3 text-sm-start">{{ __('Visa Type') }}</label>
                                             <div class="col-sm-9">
                                                 <select class="custom-select rounded-0 text-capitalize" name="visa_type"
                                                     required>
-                                                    <option selected value="0">Visit Visa</option>
-                                                    <option value="1">Cancel Visa</option>
-                                                    <option value="2">Family Visa</option>
-                                                    <option value="3">Freelance Visa</option>
-                                                    <option value="4">Own Visa</option>
-                                                    <option value="5">Student Visa</option>
+                                                    <option selected value="0">{{ __('Visit Visa') }}</option>
+                                                    <option value="1">{{ __('Cancel Visa') }}</option>
+                                                    <option value="2">{{ __('Family Visa') }}</option>
+                                                    <option value="3">{{ __('Freelance Visa') }}</option>
+                                                    <option value="4">{{ __('Own Visa') }}</option>
+                                                    <option value="5">{{ __('Student Visa') }}</option>
                                                 </select>
                                             </div>
                                             @error('visa_type')
@@ -107,7 +112,8 @@
                                         </div>
 
                                         <div class="form-group row">
-                                            <label class="col-form-label col-sm-3 text-sm-start">Visa Expring</label>
+                                            <label
+                                                class="col-form-label col-sm-3 text-sm-start">{{ __('Visa Expring') }}</label>
                                             <div class="col-sm-9">
                                                 <input type="date" class="form-control rounded-0"
                                                     placeholder="Visa Expring" name="visa_expiring" required>
@@ -120,10 +126,11 @@
                                     </fieldset>
 
                                     <fieldset>
-                                        <legend class="px-4">Living Information</legend>
+                                        <legend class="px-4">{{ __('Living Information') }}</legend>
 
                                         <div class="form-group row">
-                                            <label class="col-form-label col-sm-3 text-sm-start">Contact Number</label>
+                                            <label
+                                                class="col-form-label col-sm-3 text-sm-start">{{ __('Contact Number') }}</label>
                                             <div class="col-sm-9">
                                                 <input type="text" class="form-control rounded-0"
                                                     placeholder="Contact Number" name="contact_number" required>
@@ -134,7 +141,8 @@
                                         </div>
 
                                         <div class="form-group row">
-                                            <label class="col-form-label col-sm-3 text-sm-start">Current Address</label>
+                                            <label
+                                                class="col-form-label col-sm-3 text-sm-start">{{ __('Current Address') }}</label>
                                             <div class="col-sm-9">
                                                 <input type="text" class="form-control rounded-0"
                                                     placeholder="Current Address" name="current_address" required>
@@ -145,7 +153,8 @@
                                         </div>
 
                                         <div class="form-group row">
-                                            <label class="col-form-label col-sm-3 text-sm-start">Resident Country</label>
+                                            <label
+                                                class="col-form-label col-sm-3 text-sm-start">{{ __('Resident Country') }}</label>
                                             <div class="col-sm-9">
                                                 <input type="text" class="form-control rounded-0"
                                                     placeholder="Resident Country" name="resident_country" required>
@@ -156,7 +165,8 @@
                                         </div>
 
                                         <div class="form-group row">
-                                            <label class="col-form-label col-sm-3 text-sm-start">Emergency Number</label>
+                                            <label
+                                                class="col-form-label col-sm-3 text-sm-start">{{ __('Emergency Number') }}</label>
                                             <div class="col-sm-9">
                                                 <input type="text" class="form-control rounded-0"
                                                     placeholder="Emergency Number" name="emergency_number" required>
@@ -172,9 +182,9 @@
                                 <div class="col-md-6">
 
                                     <fieldset>
-                                        <legend class="px-4">Profile Information</legend>
+                                        <legend class="px-4">{{ __('Profile Information') }}</legend>
                                         <div class="form-group">
-                                            <label class="form-label">Profile Photo</label>
+                                            <label class="form-label">{{ __('Profile Photo') }}</label>
                                             <input type="file" class="rounded-0 ml-5" name="image"
                                                 accept="image/x-png, image/gif, image/jpeg, image/png, image/jpg">
                                         </div>
@@ -184,10 +194,10 @@
                                     </fieldset>
 
                                     <fieldset>
-                                        <legend class="px-4">Company Information</legend>
+                                        <legend class="px-4">{{ __('Company Information') }}</legend>
 
                                         <div class="form-group row">
-                                            <label class="col-form-label col-sm-3 text-sm-start">Department
+                                            <label class="col-form-label col-sm-3 text-sm-start">{{ __('Department') }}
                                             </label>
                                             <div class="col-sm-9">
                                                 <select class="custom-select rounded-0" name="department" required>
@@ -207,7 +217,7 @@
                                         </div>
 
                                         <div class="form-group row">
-                                            <label class="col-form-label col-sm-3 text-sm-start">Designation
+                                            <label class="col-form-label col-sm-3 text-sm-start">{{ __('Designation') }}
                                             </label>
                                             <div class="col-sm-9">
                                                 <select class="custom-select rounded-0" name="designation" required>
@@ -225,7 +235,8 @@
                                         </div>
 
                                         <div class="form-group row">
-                                            <label class="col-form-label col-sm-3 text-sm-start">Join Date</label>
+                                            <label
+                                                class="col-form-label col-sm-3 text-sm-start">{{ __('Join Date') }}</label>
                                             <div class="col-sm-9">
                                                 <input type="date" class="form-control rounded-0"
                                                     placeholder="Join Date" name="join_date" required>
@@ -238,9 +249,10 @@
                                     </fieldset>
 
                                     <fieldset>
-                                        <legend class="px-4">Company Information</legend>
+                                        <legend class="px-4">{{ __('Company Information') }}</legend>
                                         <div class="form-group row">
-                                            <label class="col-form-label col-sm-3 text-sm-start">Special Note</label>
+                                            <label
+                                                class="col-form-label col-sm-3 text-sm-start">{{ __('Special Note') }}</label>
                                             <div class="col-sm-9">
                                                 <textarea type="date" class="form-control rounded-0" name="special_note" placeholder="Special Note"
                                                     rows="3"></textarea>
@@ -253,8 +265,9 @@
                                     </fieldset>
                                     <div class="mt-2 text-center">
                                         <a href="{{ route('employee.index') }}"
-                                            class="btn btn-secondary btn-sm">Close</a>
-                                        <button type="submit" class="btn btn-primary btn-sm">Save changes</button>
+                                            class="btn btn-secondary btn-sm">{{ __('Close') }}</a>
+                                        <button type="submit"
+                                            class="btn btn-primary btn-sm">{{ __('Save changes') }}</button>
                                     </div>
                                 </div>
                             </div>

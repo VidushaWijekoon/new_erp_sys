@@ -13,7 +13,7 @@ class Index extends Component
 
     public function render()
     {
-        $departments = Departments::orderBy('department_name', 'DESC')->paginate(10);
+        $departments = Departments::orderBy('department_name', 'ASC')->paginate(20);
         return view('livewire.h-r-m.department.index', ['departments' => $departments]);
     }
 }

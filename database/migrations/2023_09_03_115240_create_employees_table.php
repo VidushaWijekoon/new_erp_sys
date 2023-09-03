@@ -15,9 +15,11 @@ return new class extends Migration
             $table->id();
             $table->string('fullname');
             $table->string('email');
+            $table->tinyInteger('gender')->comment('0=Male, 1=Female');
             $table->date('birthday');
             $table->string('passport_number');
-            $table->tinyInteger('visa_type');
+            $table->string('passport_expiring');
+            $table->tinyInteger('visa_type')->comment('0=Visit Visa, 1=Cancel Visa, 2=Family Visa, 3=Freelance Visa, 4=Own Visa, 5=Student Visa');
             $table->date('visa_expiring');
             $table->string('contact_number');
             $table->string('current_address');

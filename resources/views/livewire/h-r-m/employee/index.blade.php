@@ -11,8 +11,8 @@
             </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col-12 col-lg-8 col-xxl-9 d-flex">
+    <div class="row justify-content-center">
+        <div class="col-12 col-lg-12">
             <div class="card flex-fill">
                 <div class="card-header">
                     <a href="{{ route('employee.create') }}"
@@ -21,20 +21,66 @@
                 <table class="table table-hover my-0">
                     <thead>
                         <tr>
-                            <th>ID</th>
-                            <th>Fullname</th>
-                            <th>Visa Type</th>
-                            <th>Contact Number</th>
-                            <th>Resident Country</th>
-                            <th>Department</th>
-                            <th>Designation</th>
-                            <th>Join Date</th>
-                            <th>Status</th>
-                            <th>Actions</th>
+                            <th>{{ __('#') }}</th>
+                            <th>{{ __('EMP ID') }}</th>
+                            <th>{{ __('Fullname') }}</th>
+                            <th>{{ __('Contact Number') }}</th>
+                            <th>{{ __('Resident Country') }}</th>
+                            <th>{{ __('Department') }}</th>
+                            <th>{{ __('Designation') }}</th>
+                            <th>{{ __('Join Date') }}</th>
+                            <th>{{ __('Status') }}</th>
+                            <th>{{ __('Created By') }}</th>
+                            <th class="text-center">{{ __('Action') }}</th>
                         </tr>
                     </thead>
                     <tbody>
-
+                        <?php $x = 1; ?>
+                        @forelse ($employees as $employeesItem)
+                            <tr>
+                                <td>{{ $x++ }}</td>
+                                <td>{{ $employeesItem->id }}</td>
+                                <td>{{ $employeesItem->fullname }}</td>
+                                <td>{{ $employeesItem->contact_number }}</td>
+                                <td>{{ $employeesItem->resident_country }}</td>
+                                <td>{{ $employeesItem->department_name->department_name }}</td>
+                                <td>{{ $employeesItem->designation_name->designation_name }}</td>
+                                <td>{{ $employeesItem->join_date }}</td>
+                                <td>
+                                    @if ($employeesItem->status == 1)
+                                        <span class="badge badge-success">Active</span>
+                                    @else
+                                        <span class="badge badge-danger">Not Active</span>
+                                    @endif
+                                </td>
+                                <td class="text-capitalize">{{ $employeesItem->created_by_username->username }}</td>
+                                <td class="table-action">
+                                    @if ($employeesItem->status == '1')
+                                        <a href="{{ url('admin/employee/' . $employeesItem->id . '/dectivate') }}"
+                                            onclick="return confirm('Are you sure you want to deactivate this employee')">
+                                            <i class="fa-solid fa-circle-xmark mx-1 text-danger"></i>
+                                        </a>
+                                    @elseif($employeesItem->status == '0')
+                                        <a href="{{ url('admin/employee/' . $employeesItem->id . '/activate') }}"
+                                            onclick="return confirm('Are you sure you want to activate this employee')">
+                                            <i class="fa-solid fa-circle-check mx-1 text-success"></i>
+                                        </a>
+                                    @endif
+                                    <a href="{{ url('admin/employee/' . $employeesItem->id . '/show') }}">
+                                        <i class="fa-solid fa-eye mx-1 text-primary"></i>
+                                    </a>
+                                    <a href="{{ url('admin/employee/' . $employeesItem->id . '/edit') }}">
+                                        <i class="fa-solid fa-pen mx-1 text-info"></i>
+                                    </a>
+                                    <a href="{{ url('admin/employee/' . $employeesItem->id . '/destroy') }}"
+                                        onclick="return confirm('Are you sure you want to delete this employee')">
+                                        <i class="fa-solid fa-trash mx-1 text-danger"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        @empty
+                            <span class="text-danger">{{ __('Data Not Found') }}</span>
+                        @endforelse
                     </tbody>
                 </table>
             </div>

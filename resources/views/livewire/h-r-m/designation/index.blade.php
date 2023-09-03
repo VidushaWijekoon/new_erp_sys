@@ -21,18 +21,21 @@
                 <table class="table table-hover my-0">
                     <thead>
                         <tr>
+                            <th>{{ __('#') }}</th>
                             <th>{{ __('ID') }}</th>
                             <th>{{ __('Department Name') }}</th>
                             <th>{{ __('Discription') }}</th>
                             <th>{{ __('Status') }}</th>
                             <th>{{ __('Created At') }}</th>
                             <th>{{ __('Created By') }}</th>
-                            <th>{{ __('Action') }}</th>
+                            <th class="text-center">{{ __('Action') }}</th>
                         </tr>
                     </thead>
                     <tbody>
+                        <?php $x = 1; ?>
                         @forelse ($designation as $designationItem)
                             <tr>
+                                <td>{{ $x++ }}</td>
                                 <td>{{ $designationItem->id }}</td>
                                 <td class="text-capitalize">{{ $designationItem->designation_name }}</td>
                                 <td class="text-capitalize">{{ $designationItem->description }}</td>

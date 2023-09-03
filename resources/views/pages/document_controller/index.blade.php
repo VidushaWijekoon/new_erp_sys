@@ -4,7 +4,7 @@
     <div class="container-fluid p-0">
         <div class="row mb-2 mb-xl-3">
             <div class="col-auto d-none d-sm-block">
-                <h3><strong>HRM</strong> Dashboard</h3>
+                <h3><strong>{{ __('HRM') }}</strong> {{ __('Dashboard') }}</h3>
             </div>
         </div>
 
@@ -17,7 +17,7 @@
                             <a href="{{ route('department.index') }}">
                                 <div class="card">
                                     <div class="card-body d-flex align-items-center justify-content-between">
-                                        <h1 class="display-5 mt-1 mb-3">Departments</h1>
+                                        <h1 class="display-5 mt-1 mb-3">{{ __('Departments') }}</h1>
                                         <div class="mb-1">
                                             <span class="text-danger">
                                                 <h1 class="text-danger">{{ $deptCount }}</h1>
@@ -32,7 +32,7 @@
                             <a href="{{ route('designation.index') }}">
                                 <div class="card">
                                     <div class="card-body d-flex align-items-center justify-content-between">
-                                        <h1 class="display-5 mt-1 mb-3">Designations</h1>
+                                        <h1 class="display-5 mt-1 mb-3">{{ __('Designations') }}</h1>
                                         <div class="mb-1">
                                             <span>
                                                 <h1 class="text-danger">{{ $designCount }}</h1>
@@ -47,10 +47,10 @@
                             <a href="{{ route('employee.index') }}">
                                 <div class="card">
                                     <div class="card-body d-flex align-items-center justify-content-between">
-                                        <h1 class="display-5 mt-1 mb-3">Employees</h1>
+                                        <h1 class="display-5 mt-1 mb-3">{{ __('Employees') }}</h1>
                                         <div class="mb-1">
                                             <span>
-                                                <h1 class="text-danger">30</h1>
+                                                <h1 class="text-danger">{{ $empCount }}</h1>
                                             </span>
                                         </div>
                                     </div>

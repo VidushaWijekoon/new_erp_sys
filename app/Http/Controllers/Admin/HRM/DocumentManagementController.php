@@ -5,16 +5,26 @@ namespace App\Http\Controllers\Admin\HRM;
 use App\Models\Departments;
 use App\Models\Designations;
 use App\Http\Controllers\Controller;
+use App\Models\Employees;
 
 class DocumentManagementController extends Controller
 {
     public function index()
     {
-        $deptlist = Departments::where('status', '1')->get();
+        $deptlist = Departments::all();
         $deptCount = $deptlist->count();
-        $designList = Designations::where('status', '1')->get();
+        $designList = Designations::all();
         $designCount = $designList->count();
+        $empList = Employees::all();
+        $empCount = $empList->count();
 
-        return view('pages.document_controller.index', ['deptCount' => $deptCount, 'designCount' => $designCount]);
+        return view(
+            'pages.document_controller.index',
+            [
+                'deptCount' => $deptCount,
+                'designCount' => $designCount,
+                'empCount' => $empCount,
+            ]
+        );
     }
 }
