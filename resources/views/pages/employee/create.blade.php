@@ -90,10 +90,14 @@
                                         <div class="form-group row">
                                             <label class="col-form-label col-sm-3 text-sm-start">Visa Type</label>
                                             <div class="col-sm-9">
-                                                <select class="custom-select rounded-0" name="visa_type" required>
-                                                    <option selected>Open this select menu</option>
-                                                    <option value="0">Male</option>
-                                                    <option value="1">Femail</option>
+                                                <select class="custom-select rounded-0 text-capitalize" name="visa_type"
+                                                    required>
+                                                    <option selected value="0">Visit Visa</option>
+                                                    <option value="1">Cancel Visa</option>
+                                                    <option value="2">Family Visa</option>
+                                                    <option value="3">Freelance Visa</option>
+                                                    <option value="4">Own Visa</option>
+                                                    <option value="5">Student Visa</option>
                                                 </select>
                                             </div>
                                             @error('visa_type')
@@ -186,9 +190,32 @@
                                             </label>
                                             <div class="col-sm-9">
                                                 <select class="custom-select rounded-0" name="department" required>
-                                                    <option selected>Open this select menu</option>
-                                                    <option value="0">Male</option>
-                                                    <option value="1">Femail</option>
+                                                    <option value="" selected>Please Select the
+                                                        Department</option>
+                                                    @foreach ($departments as $department)
+                                                        <option value="{{ $department->id }}"
+                                                            class="text-capitalize rounded-0">
+                                                            {{ $department->department_name }}
+                                                        </option>
+                                                    @endforeach
+                                                </select>
+                                            </div>
+                                            @error('department')
+                                                <small>{{ $message }}</small>
+                                            @enderror
+                                        </div>
+
+                                        <div class="form-group row">
+                                            <label class="col-form-label col-sm-3 text-sm-start">Designation
+                                            </label>
+                                            <div class="col-sm-9">
+                                                <select class="custom-select rounded-0" name="designation" required>
+                                                    <option value="" selected>Please Select the Designation</option>
+                                                    @foreach ($designations as $designation)
+                                                        <option value="{{ $designation->id }}" class="text-capitalize">
+                                                            {{ $designation->desgination_name }}
+                                                        </option>
+                                                    @endforeach
                                                 </select>
                                             </div>
                                             @error('department')
@@ -238,13 +265,3 @@
         </div>
     </div>
 @endsection
-
-@push('css')
-    <style>
-        fieldset,
-        legend {
-            all: revert;
-            font-size: 12px;
-        }
-    </style>
-@endpush

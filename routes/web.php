@@ -29,6 +29,12 @@ Route::prefix('admin')->middleware('auth', 'isAdmin')->group(function () {
         Route::get('/document-management', 'index')->name('document-management');
     });
 
+    // Livewire Departments
+    Route::get('/departments', App\Livewire\Admin\HRM\Department\Index::class)->name('departments');
+
+    // Livewire Designations
+    Route::get('/designations', App\Livewire\Admin\HRM\Designation\Index::class)->name('designations');
+
     Route::controller(EmployeeController::class)->group(function () {
         Route::get('/employee', 'index')->name('employee.index');
         Route::get('/employee/create', 'create')->name('employee.create');

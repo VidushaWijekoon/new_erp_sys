@@ -34,6 +34,7 @@ class EmployeeRequestForm extends FormRequest
             'resident_country' => ['required', 'string'],
             'emergency_number' => ['required', 'string', 'max:20'],
             'department' => ['required', 'integer'],
+            'designation' => ['required', 'integer'],
             'join_date' => ['required', 'string'],
             'special_note' => ['required', 'string', 'max:255'],
         ];

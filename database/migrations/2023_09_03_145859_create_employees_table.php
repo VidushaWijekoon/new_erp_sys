@@ -23,11 +23,15 @@ return new class extends Migration
             $table->string('current_address');
             $table->string('resident_country');
             $table->string('emergency_number');
+            $table->string('image');
             $table->unsignedBigInteger('department');
+            $table->unsignedBigInteger('designation');
             $table->date('join_date');
             $table->string('special_note');
+            $table->tinyInteger('status')->default('0')->comment('0=InActive, 1=Active');
             $table->unsignedBigInteger('created_by');
             $table->foreign('department')->references('id')->on('departments')->onDelete('cascade');
+            $table->foreign('designation')->references('id')->on('designations')->onDelete('cascade');
             $table->foreign('created_by')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });

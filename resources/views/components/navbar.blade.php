@@ -80,7 +80,7 @@
                 </a>
                 <a class="" href="{{ route('logout') }}"
                     onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                    <i class="fa fa-sign-out"></i>{{ __('Logout') }}
+                    <i class="fa fa-sign-out mx-1"></i>{{ __('Logout') }}
                 </a>
 
                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">

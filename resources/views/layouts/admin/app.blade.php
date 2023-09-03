@@ -10,7 +10,11 @@
     <meta name="description" content="RSoft" />
     <meta name="author" content="RSoft" />
     <meta name="keywords" content="RSoft" />
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>@yield('title', 'R-SOFT')</title>
+
+    <!-- Favicons -->
+    <link href="{{ asset('images/favicon.png') }}" rel="icon">
+    <link href="{{ asset('images/favicon.png') }}" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
