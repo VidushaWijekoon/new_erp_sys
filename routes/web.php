@@ -10,6 +10,10 @@ use App\Http\Controllers\Admin\HRM\EmployeeController;
 use App\Http\Controllers\Admin\HRM\DepartmentsController;
 use App\Http\Controllers\Admin\HRM\DesignationsController;
 use App\Http\Controllers\Admin\HRM\DocumentManagementController;
+use App\Http\Controllers\Admin\HRM\PayrollManagementController;
+use App\Http\Controllers\Admin\Payroll\AttendanceController;
+use App\Http\Controllers\Admin\Payroll\HolidaysController;
+use App\Http\Controllers\Admin\Payroll\LeavesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,6 +34,7 @@ Route::prefix('/admin')->middleware('auth', 'isAdmin')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
 
     Route::get('/document-management', [DocumentManagementController::class, 'index'])->name('document-management.index');
+    Route::get('/payroll-management', [PayrollManagementController::class, 'index'])->name('payroll-management.index');
 
     Route::controller(DepartmentsController::class)->group(function () {
         Route::get('/department', 'index')->name('department.index');
@@ -79,4 +84,24 @@ Route::prefix('/admin')->middleware('auth', 'isAdmin')->group(function () {
     });
 
     Route::get('/register', [RegisterController::class, 'index'])->name('user.register');
+
+    Route::controller(HolidaysController::class)->group(function () {
+        Route::get('/holidays', 'index')->name('holiday.index');
+        Route::get('/holiday/create', 'create')->name('holiday.create');
+        Route::post('/holiday', 'store')->name('holiday.store');
+        Route::get('/holiday/{holiday}/show', 'show')->name('holiday.show');
+        Route::get('/holiday/{holiday}/edit', 'edit')->name('holiday.edit');
+        Route::put('/holiday/{holiday}/', 'update')->name('holiday.update');
+        Route::get('/holiday/{holiday}/destroy', 'destroy')->name('holiday.destroy');
+        Route::get('/holiday/{holiday}/activate', 'activate')->name('holiday.activate');
+        Route::get('/holiday/{holiday}/dectivate', 'dectivate')->name('holiday.dectivate');
+    });
+
+    Route::controller(LeavesController::class)->group(function () {
+        Route::get('/leaves', 'index')->name('leaves.index');
+    });
+
+    Route::controller(AttendanceController::class)->group(function () {
+        Route::get('/attendance', 'index')->name('attendance.index');
+    });
 });

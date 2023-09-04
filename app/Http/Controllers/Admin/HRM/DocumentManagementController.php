@@ -19,7 +19,7 @@ class DocumentManagementController extends Controller
         $empCount = $empList->count();
 
         return view(
-            'pages.document_controller.index',
+            'pages.document_management.index',
             [
                 'deptCount' => $deptCount,
                 'designCount' => $designCount,

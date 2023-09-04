@@ -24,7 +24,7 @@
                         <a class="sidebar-link" href="{{ route('document-management.index') }}">Document Management</a>
                     </li>
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="#">Payroll Management</a>
+                        <a class="sidebar-link" href="{{ route('payroll-management.index') }}">Payroll Management</a>
                     </li>
                 </ul>
             </li>
