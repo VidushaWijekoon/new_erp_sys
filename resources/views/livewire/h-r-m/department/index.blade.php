@@ -5,14 +5,24 @@
         </div>
     @endif
     <div class="container-fluid p-0">
-        <div class="row mb-2 mb-xl-3">
-            <div class="col-auto d-none d-sm-block">
-                <h3><strong class="mx-2">{{ __('HRM') }}</strong> {{ __('Departments') }}</h3>
+        <div class="d-flex justify-content-between">
+            <div class="row mb-2 mb-xl-3">
+                <div class="col-auto d-none d-sm-block">
+                    <h3><strong class="mx-2">{{ __('HRM') }}</strong> {{ __('Departments') }}</h3>
+                </div>
+            </div>
+            <div class="row mb-2 mb-xl-3">
+                <div class="col-auto d-none d-sm-block">
+                    <a href="{{ route('document-management.index') }}">
+                        <i class="fa-solid fa-home fa-2x text-info"></i>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
+
     <div class="row">
-        <div class="col-12 col-lg-8 col-xxl-9 d-flex">
+        <div class="col-12 col-lg-9 col-xxl-9 d-flex">
             <div class="card flex-fill">
                 <div class="card-header">
                     <a href="{{ route('department.create') }}"
@@ -36,9 +46,19 @@
                         @forelse ($departments as $departmentItem)
                             <tr>
                                 <td>{{ $x++ }}</td>
-                                <td>{{ $departmentItem->id }}</td>
-                                <td class="text-capitalize">{{ $departmentItem->department_name }}</td>
-                                <td class="text-capitalize">{{ $departmentItem->description }}</td>
+                                <td>
+                                    <a href="{{ url('admin/department/' . $departmentItem->id . '/department') }}">
+                                        {{ $departmentItem->id }}
+                                    </a>
+                                </td>
+                                <td class="text-capitalize">
+                                    <a href="{{ url('admin/department/' . $departmentItem->id . '/department') }}">
+                                        {{ $departmentItem->department_name }}</a>
+                                </td>
+                                <td class="text-capitalize">
+                                    <a href="{{ url('admin/department/' . $departmentItem->id . '/department') }}">
+                                        {{ $departmentItem->description }}</a>
+                                </td>
                                 <td>
                                     @if ($departmentItem->status == 1)
                                         <span class="badge badge-success">Active</span>

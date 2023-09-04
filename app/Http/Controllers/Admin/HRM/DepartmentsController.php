@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin\HRM;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\HRM\DepartmentRequestForm;
 use App\Models\Departments;
+use App\Models\Employees;
 use Illuminate\Support\Facades\Auth;
 
 class DepartmentsController extends Controller
@@ -85,5 +86,11 @@ class DepartmentsController extends Controller
         $department->status = '0';
         $department->update();
         return redirect()->back()->with('message', 'Successfully Deactivate Department');
+    }
+
+    public function department($department)
+    {
+        $department = Employees::where('department', $department)->get();
+        return view('pages.hrm.departments.employees', ['department' => $department]);
     }
 }

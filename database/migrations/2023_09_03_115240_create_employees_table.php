@@ -31,6 +31,7 @@ return new class extends Migration
             $table->date('join_date');
             $table->string('special_note');
             $table->tinyInteger('status')->default('0')->comment('0=InActive, 1=Active');
+            $table->tinyInteger('account_status')->default('0')->comment('0=no create, 1=created');
             $table->unsignedBigInteger('created_by');
             $table->foreign('department')->references('id')->on('departments')->onDelete('cascade');
             $table->foreign('designation')->references('id')->on('designations')->onDelete('cascade');

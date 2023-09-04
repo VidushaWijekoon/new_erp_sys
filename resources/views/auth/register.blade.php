@@ -1,22 +1,24 @@
-@extends('layouts.app')
-
+@section('title', 'Create New User')
+@extends('layouts.admin.app')
 @section('content')
-    <div class="container">
-        <div class="row justify-content-center align-items-center" style="min-height: 80vh">
-            <div class="col-md-5">
-                <div class="card">
+    <div class="row justify-content-between">
+        <div class="col-12 col-lg-6">
+            <div class="card">
+                <div class="card-header" style="background: #222e3c">
+                    <span class="card-title mb-0 d-flex justify-content-between">
+                        <h4 style="color: #e9ecef">{{ __('Create New User') }}</h4>
+                    </span>
+                </div>
+                <div class="card-body">
+                    <form method="POST" action="{{ route('register') }}">
+                        @csrf
+                        <div class="row">
+                            <div class="col-md-12">
 
-                    <div class="card-body">
-                        <div class="card-title d-flex justify-content-center">
-                            <img src="{{ asset('images/company/logortbig.png') }}" alt="Company Logo" width="150">
-                        </div>
-                        <hr>
-                        <form method="POST" action="{{ route('register') }}">
-                            @csrf
-
-                            <div class="row mb-3">
-                                <label for="name" class="form-label">{{ __('Name') }} </label>
-                                <div class="">
+                                <div class="form-group">
+                                    <label class="form-label">
+                                        <span>{{ __('Name') }}</span>
+                                    </label>
                                     <input id="name" type="text"
                                         class="form-control @error('name') is-invalid @enderror" name="name"
                                         value="{{ old('name') }}" required autocomplete="name" autofocus
@@ -28,27 +30,50 @@
                                         </span>
                                     @enderror
                                 </div>
-                            </div>
 
-                            <div class="row mb-3">
-                                <label for="email" class="form-label">{{ __('Email Address') }} </label>
-                                <div class="">
-                                    <input id="email" type="email"
-                                        class="form-control @error('email') is-invalid @enderror" name="email"
-                                        value="{{ old('email') }}" required autocomplete="email" autofocus
-                                        style="border-radius: 0">
+                                <div class="form-group">
+                                    <label class="form-label">
+                                        <span>{{ __('EMP ID') }}</span>
+                                    </label>
+                                    <select class="custom-select rounded-0" name="emp_id" required>
+                                        <option value="" selected>Please Select the EMP ID</option>
+                                        @foreach ($available_users as $emp)
+                                            <option value="{{ $emp->id }}" class="text-capitalize">
+                                                {{ $emp->id }} - {{ $emp->fullname }} -
+                                                {{ $emp->designation_name->designation_name }}
+                                            </option>
+                                        @endforeach
+                                    </select>
 
-                                    @error('email')
+                                    @error('emp_id')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
                                         </span>
                                     @enderror
                                 </div>
-                            </div>
 
-                            <div class="row mb-3">
-                                <label for="username" class="form-label">{{ __('Username') }} </label>
-                                <div class="">
+                                <div class="form-group">
+                                    <label class="form-label">
+                                        <span>{{ __('Role') }}</span>
+                                    </label>
+                                    <select class="custom-select rounded-0" name="role" required>
+                                        <option value="" selected>Please Select the Designation</option>
+                                        @foreach ($role as $emp)
+                                            <option value="{{ $emp->id }}" class="text-capitalize">
+                                                {{ $emp->designation_name }}
+                                            </option>
+                                        @endforeach
+                                    </select>
+
+                                    @error('role')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label">{{ __('Username') }}</label>
                                     <input id="username" type="text"
                                         class="form-control @error('username') is-invalid @enderror" name="username"
                                         value="{{ old('username') }}" required autocomplete="username" autofocus
@@ -60,11 +85,9 @@
                                         </span>
                                     @enderror
                                 </div>
-                            </div>
 
-                            <div class="row mb-3">
-                                <label for="password" class="form-label">{{ __('Password') }} </label>
-                                <div class="">
+                                <div class="form-group">
+                                    <label class="form-label">{{ __('Password') }}</label>
                                     <input id="password" type="password"
                                         class="form-control @error('password') is-invalid @enderror" name="password"
                                         required autocomplete="current-password" style="border-radius: 0">
@@ -75,31 +98,63 @@
                                         </span>
                                     @enderror
                                 </div>
-                            </div>
 
-                            <div class="row mb-3">
-                                <label for="password-confirm"
-                                    class="form-label">{{ __('Confirm
-                                                                                                                                                                                                                    Password') }}</label>
-
-                                <div class="">
+                                <div class="form-group">
+                                    <label class="form-label">{{ __('Confirm Password') }}</label>
                                     <input id="password-confirm" type="password" class="form-control"
                                         name="password_confirmation" required autocomplete="new-password"
                                         style="border-radius: 0">
+                                    @error('password')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
                                 </div>
+                                <a href="{{ route('users.index') }}" type="button"
+                                    class="btn btn-secondary btn-sm">{{ __('Close') }}</a>
+                                <button type="submit" class="btn btn-primary btn-sm">{{ __('Save Changes') }}</button>
                             </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
 
-                            <div class="row mb-0">
-                                <div class="offset-md-4">
-                                    <button type="submit" class="btn btn-sm btn-outline-info px-4"
-                                        style="border-radius: 0">
-                                        {{ __('Register') }}
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header" style="background: #222e3c">
+                    <span class="card-title mb-0 d-flex justify-content-between">
+                        <h4 style="color: #e9ecef">{{ __('Available Users to Create') }}</h4>
+                    </span>
+                </div>
+
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>EMP ID</th>
+                                    <th>EMP Fullname</th>
+                                    <th>EMP Department</th>
+                                    <th>EMP Designation</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @forelse ($available_users as $availableUsers)
+                                    <tr>
+                                        <td>{{ $availableUsers->id }}</td>
+                                        <td>{{ $availableUsers->fullname }}</td>
+                                        <td>{{ $availableUsers->department_name->department_name }}</td>
+                                        <td>{{ $availableUsers->designation_name->designation_name }}</td>
+                                    </tr>
+                                @empty
+                                    <span class="text-danger">No Available Employees to Create New User</span>
+                                @endforelse
+                            </tbody>
+                        </table>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>

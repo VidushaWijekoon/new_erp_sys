@@ -50,7 +50,7 @@
             </div>
         </div>
 
-        <div class="col-md-4">
+        <div class="col-md-5">
             <div class="card">
                 <div class="card-header" style="background: #222e3c">
                     <span class="card-title mb-0 d-flex justify-content-between">
@@ -60,17 +60,26 @@
 
                 <div class="card-body">
                     <div class="table-responsive">
-                        @forelse ($allD as $departmentsItem)
-                            <div class="d-flex justify-content-between">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Department Name</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @forelse ($allD as $departmentsItem)
+                                    <tr>
+                                        <td>{{ $departmentsItem->department_name }}</td>
+                                        <td>{{ $departmentsItem->description }}</td>
 
-                                <span
-                                    class="d-flex align-items-center text-capitalize mb-2">{{ $departmentsItem->department_name }}</span>
-                                <span
-                                    class="d-flex align-items-center text-capitalize mb-2">{{ $departmentsItem->description }}</span>
-                            </div>
-                        @empty
-                            <span class="text-danger">{{ __('Data Not Found') }}</span>
-                        @endforelse
+                                    </tr>
+                                @empty
+                                    <span class="text-danger">No Available Employees to Create New User</span>
+                                @endforelse
+                            </tbody>
+                        </table>
+
                     </div>
                 </div>
 

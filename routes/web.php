@@ -1,13 +1,15 @@
 <?php
 
-use App\Http\Controllers\Admin\DashboardController;
-use App\Http\Controllers\Admin\HRM\DepartmentsController;
-use App\Http\Controllers\Admin\HRM\DesignationsController;
-use App\Http\Controllers\Admin\HRM\DocumentManagementController;
-use App\Http\Controllers\Admin\HRM\EmployeeController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\Users\UsersController;
+use App\Http\Controllers\Admin\HRM\EmployeeController;
+use App\Http\Controllers\Admin\HRM\DepartmentsController;
+use App\Http\Controllers\Admin\HRM\DesignationsController;
+use App\Http\Controllers\Admin\HRM\DocumentManagementController;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,6 +41,7 @@ Route::prefix('/admin')->middleware('auth', 'isAdmin')->group(function () {
         Route::get('/department/{department}/destroy', 'destroy')->name('department.destroy');
         Route::get('/department/{department}/activate', 'activate')->name('department.activate');
         Route::get('/department/{department}/dectivate', 'dectivate')->name('department.dectivate');
+        Route::get('/department/{department}/department', 'department')->name('department.department');
     });
 
     Route::controller(DesignationsController::class)->group(function () {
@@ -51,6 +54,7 @@ Route::prefix('/admin')->middleware('auth', 'isAdmin')->group(function () {
         Route::get('/designation/{designation}/destroy', 'destroy')->name('designation.destroy');
         Route::get('/designation/{designation}/activate', 'activate')->name('designation.activate');
         Route::get('/designation/{designation}/dectivate', 'dectivate')->name('designation.dectivate');
+        Route::get('/designation/{designation}/designation', 'designation')->name('designation.designation');
     });
 
     Route::controller(EmployeeController::class)->group(function () {
@@ -64,4 +68,15 @@ Route::prefix('/admin')->middleware('auth', 'isAdmin')->group(function () {
         Route::get('/employee/{employee}/activate', 'activate')->name('employee.activate');
         Route::get('/employee/{employee}/dectivate', 'dectivate')->name('employee.dectivate');
     });
+
+    Route::controller(UsersController::class)->group(function () {
+        Route::get('/users', 'index')->name('users.index');
+        Route::put('/user/{user}/edit', 'edit')->name('user.edit');
+        Route::put('/user/{user}/', 'update')->name('user.update');
+        Route::get('/user/{user}/destroy', 'destroy')->name('user.destroy');
+        Route::get('/user/{user}/activate', 'activate')->name('user.activate');
+        Route::get('/user/{user}/dectivate', 'dectivate')->name('user.dectivate');
+    });
+
+    Route::get('/register', [RegisterController::class, 'index'])->name('user.register');
 });

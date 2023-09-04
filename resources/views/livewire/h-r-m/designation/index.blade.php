@@ -5,9 +5,23 @@
         </div>
     @endif
     <div class="container-fluid p-0">
+        <div class="d-flex justify-content-between">
+            <div class="row mb-2 mb-xl-3">
+                <div class="col-auto d-none d-sm-block">
+                    <h3><strong class="mx-2">{{ __('HRM') }}</strong> {{ __('Designations') }}</h3>
+                </div>
+            </div>
+            <div class="row mb-2 mb-xl-3">
+                <div class="col-auto d-none d-sm-block">
+                    <a href="{{ route('document-management.index') }}">
+                        <i class="fa-solid fa-home fa-2x text-info"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
         <div class="row mb-2 mb-xl-3">
             <div class="col-auto d-none d-sm-block">
-                <h3><strong class="mx-2">{{ __('HRM') }}</strong> {{ __('Designations') }}</h3>
+
             </div>
         </div>
     </div>
@@ -36,9 +50,26 @@
                         @forelse ($designation as $designationItem)
                             <tr>
                                 <td>{{ $x++ }}</td>
-                                <td>{{ $designationItem->id }}</td>
-                                <td class="text-capitalize">{{ $designationItem->designation_name }}</td>
-                                <td class="text-capitalize">{{ $designationItem->description }}</td>
+                                <td>
+                                    <a href="{{ url('admin/designation/' . $designationItem->id . '/designation') }}">
+                                        {{ $designationItem->id }}
+                                    </a>
+                                </td>
+                                <td class="text-capitalize">
+                                    <a href="{{ url('admin/designation/' . $designationItem->id . '/designation') }}">
+                                        {{ $designationItem->designation_name }}</a>
+                                </td>
+                                <td class="text-capitalize">
+                                    <a href="{{ url('admin/designation/' . $designationItem->id . '/designation') }}">
+                                        {{ $designationItem->description }}</a>
+                                </td>
+                                <td>
+                                    @if ($designationItem->status == 1)
+                                        <span class="badge badge-success">Active</span>
+                                    @else
+                                        <span class="badge badge-danger">Not Active</span>
+                                    @endif
+                                </td>
                                 <td>
                                     @if ($designationItem->status == 1)
                                         <span class="badge badge-success">Active</span>

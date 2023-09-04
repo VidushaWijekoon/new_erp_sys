@@ -50,27 +50,37 @@
             </div>
         </div>
 
-        <div class="col-md-4">
+        <div class="col-md-5">
             <div class="card">
                 <div class="card-header" style="background: #222e3c">
                     <span class="card-title mb-0 d-flex justify-content-between">
-                        <h4 style="color: #e9ecef">{{ __('Existing  Department') }}</h4>
+                        <h4 style="color: #e9ecef">{{ __('Existing  Designation') }}</h4>
                     </span>
                 </div>
 
                 <div class="card-body">
                     <div class="table-responsive">
-                        @forelse ($allD as $designationsItem)
-                            <div class="d-flex justify-content-between">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Designation Name</th>
+                                    <th>Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @forelse ($allD as $designationItem)
+                                    <tr>
+                                        <td>{{ $designationItem->designation_name }}</td>
+                                        <td>{{ $designationItem->description }}</td>
 
-                                <span
-                                    class="d-flex align-items-center text-capitalize mb-2">{{ $designationsItem->designation_name }}</span>
-                                <span
-                                    class="d-flex align-items-center text-capitalize mb-2">{{ $designationsItem->description }}</span>
-                            </div>
-                        @empty
-                            <span class="text-danger">{{ __('Data Not Found') }}</span>
-                        @endforelse
+                                    </tr>
+                                @empty
+                                    <span class="text-danger">No Available Employees to Create New
+                                        User</span>
+                                @endforelse
+                            </tbody>
+                        </table>
+
                     </div>
                 </div>
 

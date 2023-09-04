@@ -157,16 +157,16 @@
                 </a>
                 <ul id="users" class="sidebar-dropdown list-unstyled collapse" data-parent="#sidebar">
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="#">Create New User</a>
+                        <a class="sidebar-link" href="{{ route('user.register') }}">Create New User</a>
                     </li>
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="#">Disciplinary List</a>
+                        <a class="sidebar-link" href="{{ route('users.index') }}">Disciplinary List</a>
                     </li>
                 </ul>
             </li>
 
             <li class="sidebar-item">
-                <a class="sidebar-link" href="pages-settings.html">
+                <a class="sidebar-link" href="#">
                     <i class="align-middle" data-feather="settings"></i>
                     <span class="align-middle">Settings</span>
                 </a>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin\HRM;
 
+use App\Models\Employees;
 use App\Models\Designations;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
@@ -85,5 +86,11 @@ class DesignationsController extends Controller
         $designation->status = '0';
         $designation->update();
         return redirect()->back()->with('message', 'Successfully Deactivate designation');
+    }
+
+    public function designation($designation)
+    {
+        $designation  = Employees::where('designation', $designation)->get();
+        return view('pages.hrm.designations.employees', ['designation' => $designation]);
     }
 }
