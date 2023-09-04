@@ -49,30 +49,10 @@
                         </div>
 
                         <div class="col-sm-3">
-                            <a href="#">
+                            <a href="{{ route('employee-salary.index') }}">
                                 <div class="card">
                                     <div class="card-body d-flex align-items-center justify-content-between">
-                                        <h1 class="display-5 mt-1 mb-3">{{ __('Letter Request') }}</h1>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="col-sm-3">
-                            <a href="#">
-                                <div class="card">
-                                    <div class="card-body d-flex align-items-center justify-content-between">
-                                        <h1 class="display-5 mt-1 mb-3">{{ __('Payroll') }}</h1>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-
-                        <div class="col-sm-3">
-                            <a href="#">
-                                <div class="card">
-                                    <div class="card-body d-flex align-items-center justify-content-between">
-                                        <h1 class="display-5 mt-1 mb-3">{{ __('Reports') }}</h1>
+                                        <h1 class="display-5 mt-1 mb-3">{{ __('Salary') }}</h1>
                                     </div>
                                 </div>
                             </a>

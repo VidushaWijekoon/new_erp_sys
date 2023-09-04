@@ -24,7 +24,7 @@
         <div class="col-12 col-lg-8 col-xxl-9 d-flex">
             <div class="card flex-fill">
                 <div class="card-header">
-                    <a href="{{ route('department.create') }}"
+                    <a href="{{ route('leaves.create') }}"
                         class="btn btn-sm btn-primary">{{ __('Create New Leaves') }}</a>
                 </div>
                 <table class="table table-hover my-0">

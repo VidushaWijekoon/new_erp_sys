@@ -10,4 +10,9 @@ class AttendanceController extends Controller
     {
         return view('pages.payroll_management.attendance.index');
     }
+
+    public function create()
+    {
+        return view('pages.payroll_management.attendance.create');
+    }
 }

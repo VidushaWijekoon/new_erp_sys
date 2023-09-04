@@ -12,6 +12,7 @@ use App\Http\Controllers\Admin\HRM\DesignationsController;
 use App\Http\Controllers\Admin\HRM\DocumentManagementController;
 use App\Http\Controllers\Admin\HRM\PayrollManagementController;
 use App\Http\Controllers\Admin\Payroll\AttendanceController;
+use App\Http\Controllers\Admin\Payroll\EmployeeSalaryController;
 use App\Http\Controllers\Admin\Payroll\HolidaysController;
 use App\Http\Controllers\Admin\Payroll\LeavesController;
 
@@ -99,9 +100,17 @@ Route::prefix('/admin')->middleware('auth', 'isAdmin')->group(function () {
 
     Route::controller(LeavesController::class)->group(function () {
         Route::get('/leaves', 'index')->name('leaves.index');
+        Route::get('/leaves/create', 'create')->name('leaves.create');
     });
 
     Route::controller(AttendanceController::class)->group(function () {
         Route::get('/attendance', 'index')->name('attendance.index');
+        Route::get('/attendance/create', 'create')->name('attendance.create');
+    });
+
+    Route::controller(EmployeeSalaryController::class)->group(function () {
+        Route::get('/employee-salary', 'index')->name('employee-salary.index');
+        Route::get('/employee-salary/create', 'create')->name('employee-salary.create');
+        Route::get('/employee-salary/payslip', 'payslip')->name('employee-salary.payslip');
     });
 });

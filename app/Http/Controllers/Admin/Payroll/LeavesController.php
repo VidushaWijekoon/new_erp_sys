@@ -10,4 +10,9 @@ class LeavesController extends Controller
     {
         return view('pages.payroll_management.leaves.index');
     }
+
+    public function create()
+    {
+        return view('pages.payroll_management.leaves.create');
+    }
 }
