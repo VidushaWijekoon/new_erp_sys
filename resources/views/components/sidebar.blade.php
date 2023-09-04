@@ -42,28 +42,10 @@
                         <a class="sidebar-link" href="#">Customer Management</a>
                     </li>
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="#">Appointment Scheduling</a>
-                    </li>
-                    <li class="sidebar-item">
-                        <a class="sidebar-link" href="#">Target Management</a>
-                    </li>
-                    <li class="sidebar-item">
                         <a class="sidebar-link" href="#">Quotation Management</a>
                     </li>
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="#">Opportunity Management</a>
-                    </li>
-                    <li class="sidebar-item">
-                        <a class="sidebar-link" href="#">Sales Estimation</a>
-                    </li>
-                    <li class="sidebar-item">
                         <a class="sidebar-link" href="#">Sales Informations</a>
-                    </li>
-                    <li class="sidebar-item">
-                        <a class="sidebar-link" href="#">Campaign Informations</a>
-                    </li>
-                    <li class="sidebar-item">
-                        <a class="sidebar-link" href="#">Reporting and Dashboard</a>
                     </li>
                 </ul>
             </li>

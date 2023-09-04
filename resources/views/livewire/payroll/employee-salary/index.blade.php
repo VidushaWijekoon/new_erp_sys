@@ -23,10 +23,6 @@
     <div class="row">
         <div class="col-12 col-lg-8 col-xxl-9 d-flex">
             <div class="card flex-fill">
-                <div class="card-header">
-                    <a href="{{ route('employee-salary.create') }}"
-                        class="btn btn-sm btn-primary">{{ __('Add Salary') }}</a>
-                </div>
                 <table class="table table-hover my-0">
                     <thead>
                         <tr>
@@ -43,7 +39,9 @@
                     <tbody>
                         <tr>
                             <td>1</td>
-                            <td>Vidusha Wijekoon</td>
+                            <td>
+                                <a href="{{ route('employee-salary.create') }}">Vidusha Wijekoon</a>
+                            </td>
                             <td>0001</td>
                             <td>2023-10-23</td>
                             <td>$2302</td>

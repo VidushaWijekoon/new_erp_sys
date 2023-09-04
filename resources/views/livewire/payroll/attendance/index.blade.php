@@ -23,10 +23,6 @@
     <div class="row">
         <div class="col-12 col-lg-12 col-xxl-12 d-flex">
             <div class="card flex-fill">
-                <div class="card-header">
-                    <a href="{{ route('attendance.create') }}"
-                        class="btn btn-sm btn-primary">{{ __('Create New Attendance') }}</a>
-                </div>
                 <div class="table-responsive">
                     <table class="table table-striped custom-table mb-0">
                         <thead>
@@ -66,7 +62,9 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td>Albina Simonis</td>
+                                <td>
+                                    <a href="{{ route('attendance.create') }}">Albina Simonis</a>
+                                </td>
                                 <td><i class="fa fa-check text-success"></i> </td>
                                 <td><i class="fa fa-check text-success"></i> </td>
                                 <td><i class="fa fa-check text-success"></i> </td>
@@ -107,7 +105,9 @@
                                 <td><i class="fa fa-check text-success"></i> </td>
                             </tr>
                             <tr>
-                                <td>Cristina Groves</td>
+                                <td>
+                                    <a href="{{ route('attendance.create') }}">Cristina Groves</a>
+                                </td>
                                 <td><i class="fa fa-check text-success"></i> </td>
                                 <td><i class="fa fa-check text-success"></i> </td>
                                 <td><i class="fa fa-check text-success"></i> </td>
@@ -140,7 +140,9 @@
                                 <td><i class="fa fa-check text-success"></i> </td>
                             </tr>
                             <tr>
-                                <td>Haylie Feeney</td>
+                                <td>
+                                    <a href="{{ route('attendance.create') }}">Haylie Feeney</a>
+                                </td>
                                 <td><i class="fa fa-check text-success"></i> </td>
                                 <td><i class="fa fa-check text-success"></i> </td>
                                 <td><i class="fa fa-check text-success"></i> </td>

@@ -41,7 +41,8 @@
                 <h4 class="payslip-title">Payslip for the month of July 2018</h4>
                 <div class="row">
                     <div class="col-sm-6 m-b-20">
-                        <img src="assets/img/logo-dark.png" class="inv-logo" alt="">
+                        <img src="{{ asset('images/company/logortbig.png') }}" class="inv-logo my-3" alt=""
+                            width="150">
                         <ul class="list-unstyled mb-0">
                             <li>PreClinic</li>
                             <li>3864 Quiet Valley Lane,</li>
@@ -61,7 +62,7 @@
                     <div class="col-lg-12 m-b-20">
                         <ul class="list-unstyled">
                             <li>
-                                <h5 class="mb-0"><strong>Albina Simonis</strong></h5>
+                                <h5 class="mb-0 mt-3"><strong>Albina Simonis</strong></h5>
                             </li>
                             <li><span>Nurse</span></li>
                             <li>Employee ID: NS-0001</li>
@@ -123,7 +124,8 @@
                         </div>
                     </div>
                     <div class="col-sm-12">
-                        <p><strong>Net Salary: $59698</strong> (Fifty nine thousand six hundred and ninety eight only.)
+                        <p class="d-flex justify-content-end">
+                            <strong>Net Salary: $59698</strong>
                         </p>
                     </div>
                 </div>
