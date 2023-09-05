@@ -48,8 +48,16 @@
                         @forelse ($employees as $employeesItem)
                             <tr>
                                 <td>{{ $x++ }}</td>
-                                <td>{{ $employeesItem->id }}</td>
-                                <td>{{ $employeesItem->fullname }}</td>
+                                <td>
+                                    <a href="{{ url('admin/employee/' . $employeesItem->id . '/view_employee') }}">
+                                        {{ $employeesItem->id }}
+                                    </a>
+                                </td>
+                                <td>
+                                    <a href="{{ url('admin/employee/' . $employeesItem->id . '/view_employee') }}">
+                                        {{ $employeesItem->fullname }}
+                                    </a>
+                                </td>
                                 <td>{{ $employeesItem->contact_number }}</td>
                                 <td>{{ $employeesItem->resident_country }}</td>
                                 <td>{{ $employeesItem->department_name->department_name }}</td>

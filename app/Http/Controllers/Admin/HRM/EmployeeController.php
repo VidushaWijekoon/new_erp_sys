@@ -165,4 +165,18 @@ class EmployeeController extends Controller
         $employee->update();
         return redirect()->back()->with('message', 'Successfully Deactivate Employee');
     }
+
+    public function view_employee($employee)
+    {
+        $employeesItem = Employees::findOrFail($employee);
+        $employee = Employees::findOrFail($employee);
+        return view('pages.hrm.employees.view_employee', compact('employeesItem'));
+    }
+
+    public function performance($employee)
+    {
+        $employeesItem = Employees::findOrFail($employee);
+        $employee = Employees::findOrFail($employee);
+        return view('pages.hrm.employees.performance', compact('employeesItem'));
+    }
 }

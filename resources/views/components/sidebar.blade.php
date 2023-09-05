@@ -7,7 +7,7 @@
         <ul class="sidebar-nav">
             <li class="sidebar-header">Pages</li>
 
-            <li class="sidebar-item active">
+            <li class="sidebar-item">
                 <a class="sidebar-link" href="{{ url('admin/dashboard') }}">
                     <i class="align-middle" data-feather="sliders"></i>
                     <span class="align-middle">Dashboard</span>
@@ -36,13 +36,13 @@
                 </a>
                 <ul id="sales" class="sidebar-dropdown list-unstyled collapse" data-parent="#sidebar">
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="#">Sales</a>
+                        <a class="sidebar-link" href="{{ route('sales.dashboard') }}">Sales</a>
                     </li>
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="#">Customer Management</a>
+                        <a class="sidebar-link" href="{{ route('customer.index') }}">Customer Management</a>
                     </li>
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="#">Quotation Management</a>
+                        <a class="sidebar-link" href="{{ route('quotation.index') }}">Quotation Management</a>
                     </li>
                     <li class="sidebar-item">
                         <a class="sidebar-link" href="#">Sales Informations</a>

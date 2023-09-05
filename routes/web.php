@@ -15,6 +15,9 @@ use App\Http\Controllers\Admin\Payroll\AttendanceController;
 use App\Http\Controllers\Admin\Payroll\EmployeeSalaryController;
 use App\Http\Controllers\Admin\Payroll\HolidaysController;
 use App\Http\Controllers\Admin\Payroll\LeavesController;
+use App\Http\Controllers\Admin\Sales\CustomersController;
+use App\Http\Controllers\Admin\Sales\QuotationsController;
+use App\Http\Controllers\Admin\Sales\SalesDashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,6 +36,12 @@ Route::get('/', [LoginController::class, 'index'])->name('loginpage');
 
 Route::prefix('/admin')->middleware('auth', 'isAdmin')->group(function () {
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('admin.dashboard');
+
+    /*
+    |--------------------------------------------------------------------------
+    | HRM
+    |--------------------------------------------------------------------------
+    */
 
     Route::get('/document-management', [DocumentManagementController::class, 'index'])->name('document-management.index');
     Route::get('/payroll-management', [PayrollManagementController::class, 'index'])->name('payroll-management.index');
@@ -73,6 +82,8 @@ Route::prefix('/admin')->middleware('auth', 'isAdmin')->group(function () {
         Route::get('/employee/{employee}/destroy', 'destroy')->name('employee.destroy');
         Route::get('/employee/{employee}/activate', 'activate')->name('employee.activate');
         Route::get('/employee/{employee}/dectivate', 'dectivate')->name('employee.dectivate');
+        Route::get('/employee/{employee}/view_employee', 'view_employee')->name('employee.view_employee');
+        Route::get('/employee/{employee}/performance', 'performance')->name('employee.performance');
     });
 
     Route::controller(UsersController::class)->group(function () {
@@ -112,5 +123,24 @@ Route::prefix('/admin')->middleware('auth', 'isAdmin')->group(function () {
         Route::get('/employee-salary', 'index')->name('employee-salary.index');
         Route::get('/employee-salary/create', 'create')->name('employee-salary.create');
         Route::get('/employee-salary/payslip', 'payslip')->name('employee-salary.payslip');
+    });
+
+    /*
+    |--------------------------------------------------------------------------
+    | Sales
+    |--------------------------------------------------------------------------
+    */
+
+    Route::get('sales', [SalesDashboardController::class, 'index'])->name('sales.dashboard');
+
+    Route::controller(CustomersController::class)->group(function () {
+        Route::get('/customer', 'index')->name('customer.index');
+        Route::get('/customer/create', 'create')->name('customer.create');
+        Route::get('/customer/{customer}/view_customer', 'view_customer')->name('customer.view_customer');
+    });
+
+    Route::controller(QuotationsController::class)->group(function () {
+        Route::get('/quotation', 'index')->name('quotation.index');
+        Route::get('/quotation/create', 'create')->name('quotation.create');
     });
 });

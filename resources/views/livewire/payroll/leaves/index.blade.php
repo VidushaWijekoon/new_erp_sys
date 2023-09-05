@@ -37,73 +37,144 @@
                             <th>To</th>
                             <th>No of Days</th>
                             <th>Reason</th>
-                            <th>Status</th>
                             <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
+                            <td>1</td>
                             <td>Project Apollo</td>
+                            <td>Casual Leave</td>
                             <td class="d-none d-xl-table-cell">01/01/2020</td>
                             <td class="d-none d-xl-table-cell">31/06/2020</td>
-                            <td><span class="badge badge-success">Done</span></td>
-                            <td class="d-none d-md-table-cell">Vanessa Tucker</td>
-                        </tr>
-                        <tr>
-                            <td>Project Fireball</td>
-                            <td class="d-none d-xl-table-cell">01/01/2020</td>
-                            <td class="d-none d-xl-table-cell">31/06/2020</td>
-                            <td>
-                                <span class="badge badge-danger">Cancelled</span>
+                            <td>2</td>
+                            <td class="d-none d-md-table-cell">Personal Reason</td>
+                            <td class="table-action">
+
+                                <a href="#">
+                                    <i class="fa-solid fa-eye mx-1 text-primary"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa-solid fa-pen mx-1 text-info"></i>
+                                </a>
+                                <a href="#"
+                                    onclick="return confirm('Are you sure you want to delete this employee')">
+                                    <i class="fa-solid fa-trash mx-1 text-danger"></i>
+                                </a>
                             </td>
-                            <td class="d-none d-md-table-cell">William Harris</td>
                         </tr>
                         <tr>
-                            <td>Project Hades</td>
+                            <td>2</td>
+                            <td>Project Apollo</td>
+                            <td>Casual Leave</td>
                             <td class="d-none d-xl-table-cell">01/01/2020</td>
                             <td class="d-none d-xl-table-cell">31/06/2020</td>
-                            <td><span class="badge badge-success">Done</span></td>
-                            <td class="d-none d-md-table-cell">Sharon Lessman</td>
-                        </tr>
-                        <tr>
-                            <td>Project Nitro</td>
-                            <td class="d-none d-xl-table-cell">01/01/2020</td>
-                            <td class="d-none d-xl-table-cell">31/06/2020</td>
-                            <td>
-                                <span class="badge badge-warning">In progress</span>
+                            <td>2</td>
+                            <td class="d-none d-md-table-cell">Personal Reason</td>
+                            <td class="table-action">
+
+                                <a href="#">
+                                    <i class="fa-solid fa-eye mx-1 text-primary"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa-solid fa-pen mx-1 text-info"></i>
+                                </a>
+                                <a href="#"
+                                    onclick="return confirm('Are you sure you want to delete this employee')">
+                                    <i class="fa-solid fa-trash mx-1 text-danger"></i>
+                                </a>
                             </td>
-                            <td class="d-none d-md-table-cell">Vanessa Tucker</td>
                         </tr>
                         <tr>
-                            <td>Project Phoenix</td>
+                            <td>2</td>
+                            <td>Project Apollo</td>
+                            <td>Casual Leave</td>
                             <td class="d-none d-xl-table-cell">01/01/2020</td>
                             <td class="d-none d-xl-table-cell">31/06/2020</td>
-                            <td><span class="badge badge-success">Done</span></td>
-                            <td class="d-none d-md-table-cell">William Harris</td>
-                        </tr>
-                        <tr>
-                            <td>Project X</td>
-                            <td class="d-none d-xl-table-cell">01/01/2020</td>
-                            <td class="d-none d-xl-table-cell">31/06/2020</td>
-                            <td><span class="badge badge-success">Done</span></td>
-                            <td class="d-none d-md-table-cell">Sharon Lessman</td>
-                        </tr>
-                        <tr>
-                            <td>Project Romeo</td>
-                            <td class="d-none d-xl-table-cell">01/01/2020</td>
-                            <td class="d-none d-xl-table-cell">31/06/2020</td>
-                            <td><span class="badge badge-success">Done</span></td>
-                            <td class="d-none d-md-table-cell">Christina Mason</td>
-                        </tr>
-                        <tr>
-                            <td>Project Wombat</td>
-                            <td class="d-none d-xl-table-cell">01/01/2020</td>
-                            <td class="d-none d-xl-table-cell">31/06/2020</td>
-                            <td>
-                                <span class="badge badge-warning">In progress</span>
+                            <td>2</td>
+                            <td class="d-none d-md-table-cell">Personal Reason</td>
+                            <td class="table-action">
+
+                                <a href="#">
+                                    <i class="fa-solid fa-eye mx-1 text-primary"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa-solid fa-pen mx-1 text-info"></i>
+                                </a>
+                                <a href="#"
+                                    onclick="return confirm('Are you sure you want to delete this employee')">
+                                    <i class="fa-solid fa-trash mx-1 text-danger"></i>
+                                </a>
                             </td>
-                            <td class="d-none d-md-table-cell">William Harris</td>
                         </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Project Apollo</td>
+                            <td>Casual Leave</td>
+                            <td class="d-none d-xl-table-cell">01/01/2020</td>
+                            <td class="d-none d-xl-table-cell">31/06/2020</td>
+                            <td>2</td>
+                            <td class="d-none d-md-table-cell">Personal Reason</td>
+                            <td class="table-action">
+
+                                <a href="#">
+                                    <i class="fa-solid fa-eye mx-1 text-primary"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa-solid fa-pen mx-1 text-info"></i>
+                                </a>
+                                <a href="#"
+                                    onclick="return confirm('Are you sure you want to delete this employee')">
+                                    <i class="fa-solid fa-trash mx-1 text-danger"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Project Apollo</td>
+                            <td>Casual Leave</td>
+                            <td class="d-none d-xl-table-cell">01/01/2020</td>
+                            <td class="d-none d-xl-table-cell">31/06/2020</td>
+                            <td>2</td>
+                            <td class="d-none d-md-table-cell">Personal Reason</td>
+                            <td class="table-action">
+
+                                <a href="#">
+                                    <i class="fa-solid fa-eye mx-1 text-primary"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa-solid fa-pen mx-1 text-info"></i>
+                                </a>
+                                <a href="#"
+                                    onclick="return confirm('Are you sure you want to delete this employee')">
+                                    <i class="fa-solid fa-trash mx-1 text-danger"></i>
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Project Apollo</td>
+                            <td>Casual Leave</td>
+                            <td class="d-none d-xl-table-cell">01/01/2020</td>
+                            <td class="d-none d-xl-table-cell">31/06/2020</td>
+                            <td>2</td>
+                            <td class="d-none d-md-table-cell">Personal Reason</td>
+                            <td class="table-action">
+
+                                <a href="#">
+                                    <i class="fa-solid fa-eye mx-1 text-primary"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa-solid fa-pen mx-1 text-info"></i>
+                                </a>
+                                <a href="#"
+                                    onclick="return confirm('Are you sure you want to delete this employee')">
+                                    <i class="fa-solid fa-trash mx-1 text-danger"></i>
+                                </a>
+                            </td>
+                        </tr>
+
+
                     </tbody>
                 </table>
             </div>

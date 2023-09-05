@@ -10,6 +10,7 @@ legend {
 
 input[type="text"],
 input[type="date"],
+input[type="number"],
 input[type="email"] {
     font-size: 12px;
 }
