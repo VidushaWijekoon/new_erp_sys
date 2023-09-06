@@ -28,9 +28,8 @@
         </div>
         <div class="col-sm-7 col-8 text-right m-b-30">
             <div class="btn-group btn-group-sm">
-                <button class="btn btn-white btn-outline-info">CSV</button>
-                <button class="btn btn-white btn-outline-info">PDF</button>
-                <button class="btn btn-white btn-outline-info"><i class="fa fa-print fa-lg"></i> Print</button>
+                <button class="btn btn-white btn-outline-info"><i class="fa-solid fa-file-csv mx-1"></i>CSV</button>
+                <button class="btn btn-white btn-outline-info"><i class="fa-solid fa-file-pdf mx-1"></i>PDF</button>
             </div>
         </div>
     </div>
