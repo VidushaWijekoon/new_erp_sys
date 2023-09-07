@@ -110,7 +110,7 @@
                                         <strong>
                                             <h4>3 : <span>Invoices</span></h4>
                                         </strong>
-                                        <a href="">
+                                        <a href="{{ route('invoices.index') }}">
                                             <i class="fa-solid fa-circle-plus fa-2x text-primary"></i>
                                         </a>
                                     </div>

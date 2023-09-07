@@ -5,9 +5,12 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\Sales\LeadsController;
 use App\Http\Controllers\Admin\Users\UsersController;
 use App\Http\Controllers\Admin\HRM\EmployeeController;
+use App\Http\Controllers\Admin\Sales\VendorsController;
 use App\Http\Controllers\Admin\Payroll\LeavesController;
+use App\Http\Controllers\Admin\Sales\InvoicesController;
 use App\Http\Controllers\Admin\HRM\DepartmentsController;
 use App\Http\Controllers\Admin\HRM\HRDashboardController;
 use App\Http\Controllers\Admin\Sales\CustomersController;
@@ -20,15 +23,13 @@ use App\Http\Controllers\Admin\Sales\SalesDashboardController;
 use App\Http\Controllers\Admin\HRM\PayrollManagementController;
 use App\Http\Controllers\Admin\HRM\DocumentManagementController;
 use App\Http\Controllers\Admin\Payroll\EmployeeSalaryController;
+use App\Http\Controllers\Admin\Sales\SalesLeadsDashboardController;
 use App\Http\Controllers\Admin\Accounts\AccountsDashboardController;
 use App\Http\Controllers\Admin\ECommerce\ECommerceDashboardController;
 use App\Http\Controllers\Admin\Procurement\ProcurementDashboardController;
 use App\Http\Controllers\Admin\InventoryManagement\InventoryManagementDashboardController;
-use App\Http\Controllers\Admin\Sales\LeadsController;
-use App\Http\Controllers\Admin\Sales\SalesLeadsDashboardController;
-use App\Http\Controllers\Admin\Sales\VendorsController;
-use App\Http\Controllers\Admin\SupplyChainManagement\SupplyChainManagementDashboardController;
 use App\Http\Controllers\Admin\WarehouseManagement\WarehouseManagementDashboardController;
+use App\Http\Controllers\Admin\SupplyChainManagement\SupplyChainManagementDashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -158,7 +159,6 @@ Route::prefix('/admin')->middleware('auth', 'isAdmin')->group(function () {
 
     Route::get('sales-dahsboard', [SalesDashboardController::class, 'index'])->name('sales.dashboard');
     Route::get('sales-leads', [SalesLeadsDashboardController::class, 'index'])->name('sales-leads');
-    Route::get('leads', [LeadsController::class, 'index'])->name('leads');
     Route::get('vendors', [VendorsController::class, 'index'])->name('sales-vendors');
 
     Route::controller(CustomersController::class)->group(function () {
@@ -170,5 +170,15 @@ Route::prefix('/admin')->middleware('auth', 'isAdmin')->group(function () {
     Route::controller(QuotationsController::class)->group(function () {
         Route::get('/quotation', 'index')->name('quotation.index');
         Route::get('/quotation/create', 'create')->name('quotation.create');
+    });
+
+    Route::controller(InvoicesController::class)->group(function () {
+        Route::get('/invoices', 'index')->name('invoices.index');
+        Route::get('/invoices/create', 'create')->name('invoices.create');
+    });
+
+    Route::controller(LeadsController::class)->group(function () {
+        Route::get('/leads', 'index')->name('leads');
+        Route::get('/leads/create', 'create')->name('leads-create');
     });
 });
