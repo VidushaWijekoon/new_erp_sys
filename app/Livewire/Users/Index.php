@@ -14,7 +14,17 @@ class Index extends Component
 
     public function render()
     {
+
+        $userList = User::all('id');
+        $userCount = $userList->count();
+
         $users = User::orderBy('username', 'ASC')->paginate(20);
-        return view('livewire.users.index', ['users' => $users]);
+        return view(
+            'livewire.users.index',
+            [
+                'users' => $users,
+                'userCount' => $userCount
+            ]
+        );
     }
 }

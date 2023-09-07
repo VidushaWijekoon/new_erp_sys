@@ -21,6 +21,9 @@
                 </a>
                 <ul id="hrm" class="sidebar-dropdown list-unstyled collapse" data-parent="#sidebar">
                     <li class="sidebar-item">
+                        <a class="sidebar-link" href="{{ route('hrm-dashboard.index') }}">HR Dashboard</a>
+                    </li>
+                    <li class="sidebar-item">
                         <a class="sidebar-link" href="{{ route('document-management.index') }}">Document Management</a>
                     </li>
                     <li class="sidebar-item">
@@ -36,7 +39,7 @@
                 </a>
                 <ul id="sales" class="sidebar-dropdown list-unstyled collapse" data-parent="#sidebar">
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="{{ route('sales.dashboard') }}">Sales</a>
+                        <a class="sidebar-link" href="{{ route('sales.dashboard') }}">Sales Dashboard</a>
                     </li>
                     <li class="sidebar-item">
                         <a class="sidebar-link" href="{{ route('customer.index') }}">Customer Management</a>
@@ -57,7 +60,7 @@
                 </a>
                 <ul id="accounts" class="sidebar-dropdown list-unstyled collapse" data-parent="#sidebar">
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="#">Accounts</a>
+                        <a class="sidebar-link" href="{{ route('accounts-dashboard.index') }}">Accounts Dashboard</a>
                     </li>
                     <li class="sidebar-item">
                         <a class="sidebar-link" href="#">Invocing</a>
@@ -83,7 +86,9 @@
                     <span class="align-middle">POS</span>
                 </a>
                 <ul id="pos" class="sidebar-dropdown list-unstyled collapse" data-parent="#sidebar">
-
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="{{ route('pos-dashboard.index') }}">POS Dashboard</a>
+                    </li>
                     <li class="sidebar-item">
                         <a class="sidebar-link" href="#">POS Items</a>
                     </li>
@@ -99,35 +104,71 @@
                 </ul>
             </li>
 
+            <li class="sidebar-item">
+                <a href="#ecom" data-toggle="collapse" class="sidebar-link collapsed">
+                    <i class="fa-brands fa-opencart"></i>
+                    <span class="align-middle">E-Commerce</span>
+                </a>
+                <ul id="ecom" class="sidebar-dropdown list-unstyled collapse" data-parent="#sidebar">
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="{{ route('e-commerce-dashboard.index') }}">E-Commerce
+                            Dashboard</a>
+                    </li>
+                </ul>
+            </li>
+
             <li class="sidebar-header">Supply Chain Management</li>
 
-
             <li class="sidebar-item">
-                <a class="sidebar-link" href="#">
+                <a href="#procurement" data-toggle="collapse" class="sidebar-link collapsed">
                     <i class="align-middle" data-feather="codepen"></i>
                     <span class="align-middle">Procurement</span>
                 </a>
+                <ul id="procurement" class="sidebar-dropdown list-unstyled collapse" data-parent="#sidebar">
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="{{ route('procurement-dashboard.index') }}">Procurement
+                            Dashboard</a>
+                    </li>
+                </ul>
             </li>
 
             <li class="sidebar-item">
-                <a class="sidebar-link" href="#">
+                <a href="#inventory" data-toggle="collapse" class="sidebar-link collapsed">
                     <i class="align-middle" data-feather="box"></i>
                     <span class="align-middle">Inventory Management</span>
                 </a>
+                <ul id="inventory" class="sidebar-dropdown list-unstyled collapse" data-parent="#sidebar">
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="{{ route('inventory-management-dashboard') }}">Inventory
+                            Dashboard</a>
+                    </li>
+                </ul>
             </li>
 
             <li class="sidebar-item">
-                <a class="sidebar-link" href="#">
+                <a href="#warehouse" data-toggle="collapse" class="sidebar-link collapsed">
                     <i class="align-middle" data-feather="package"></i>
                     <span class="align-middle">Warehouse Management</span>
                 </a>
+                <ul id="warehouse" class="sidebar-dropdown list-unstyled collapse" data-parent="#sidebar">
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="{{ route('warehouse-management-dashoard') }}">Warehouse
+                            Dashboard</a>
+                    </li>
+                </ul>
             </li>
 
             <li class="sidebar-item">
-                <a class="sidebar-link" href="#">
+                <a href="#scm" data-toggle="collapse" class="sidebar-link collapsed">
                     <i class="align-middle" data-feather="filter"></i>
-                    <span class="align-middle">Import & Export</span>
+                    <span class="align-middle">SCM Management</span>
                 </a>
+                <ul id="scm" class="sidebar-dropdown list-unstyled collapse" data-parent="#sidebar">
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="{{ route('supply-chain-management-dashboard') }}">SCM
+                            Dashboard</a>
+                    </li>
+                </ul>
             </li>
 
             <li class="sidebar-header">Users & Authentications</li>

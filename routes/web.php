@@ -7,17 +7,25 @@ use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\Users\UsersController;
 use App\Http\Controllers\Admin\HRM\EmployeeController;
-use App\Http\Controllers\Admin\HRM\DepartmentsController;
-use App\Http\Controllers\Admin\HRM\DesignationsController;
-use App\Http\Controllers\Admin\HRM\DocumentManagementController;
-use App\Http\Controllers\Admin\HRM\PayrollManagementController;
-use App\Http\Controllers\Admin\Payroll\AttendanceController;
-use App\Http\Controllers\Admin\Payroll\EmployeeSalaryController;
-use App\Http\Controllers\Admin\Payroll\HolidaysController;
 use App\Http\Controllers\Admin\Payroll\LeavesController;
+use App\Http\Controllers\Admin\HRM\DepartmentsController;
+use App\Http\Controllers\Admin\HRM\HRDashboardController;
 use App\Http\Controllers\Admin\Sales\CustomersController;
+use App\Http\Controllers\Admin\HRM\DesignationsController;
+use App\Http\Controllers\Admin\Payroll\HolidaysController;
+use App\Http\Controllers\Admin\POS\POSDashboardController;
 use App\Http\Controllers\Admin\Sales\QuotationsController;
+use App\Http\Controllers\Admin\Payroll\AttendanceController;
 use App\Http\Controllers\Admin\Sales\SalesDashboardController;
+use App\Http\Controllers\Admin\HRM\PayrollManagementController;
+use App\Http\Controllers\Admin\HRM\DocumentManagementController;
+use App\Http\Controllers\Admin\Payroll\EmployeeSalaryController;
+use App\Http\Controllers\Admin\Accounts\AccountsDashboardController;
+use App\Http\Controllers\Admin\ECommerce\ECommerceDashboardController;
+use App\Http\Controllers\Admin\Procurement\ProcurementDashboardController;
+use App\Http\Controllers\Admin\InventoryManagement\InventoryManagementDashboardController;
+use App\Http\Controllers\Admin\SupplyChainManagement\SupplyChainManagementDashboardController;
+use App\Http\Controllers\Admin\WarehouseManagement\WarehouseManagementDashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,6 +53,14 @@ Route::prefix('/admin')->middleware('auth', 'isAdmin')->group(function () {
 
     Route::get('/document-management', [DocumentManagementController::class, 'index'])->name('document-management.index');
     Route::get('/payroll-management', [PayrollManagementController::class, 'index'])->name('payroll-management.index');
+    Route::get('/hrm-dashboard', [HRDashboardController::class, 'index'])->name('hrm-dashboard.index');
+    Route::get('/accounts-dashboard', [AccountsDashboardController::class, 'index'])->name('accounts-dashboard.index');
+    Route::get('/pos-dashboard', [POSDashboardController::class, 'index'])->name('pos-dashboard.index');
+    Route::get('/e-commerce-dashboard', [ECommerceDashboardController::class, 'index'])->name('e-commerce-dashboard.index');
+    Route::get('/procurement-dashboard', [ProcurementDashboardController::class, 'index'])->name('procurement-dashboard.index');
+    Route::get('/inventory-management-dashboard', [InventoryManagementDashboardController::class, 'index'])->name('inventory-management-dashboard');
+    Route::get('/warehouse-management-dashboard', [WarehouseManagementDashboardController::class, 'index'])->name('warehouse-management-dashoard');
+    Route::get('/supply-chain-management-dashboard', [SupplyChainManagementDashboardController::class, 'index'])->name('supply-chain-management-dashboard');
 
     Route::controller(DepartmentsController::class)->group(function () {
         Route::get('/department', 'index')->name('department.index');
