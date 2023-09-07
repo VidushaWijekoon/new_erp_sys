@@ -71,23 +71,33 @@
                                 <td class="table-action">
                                     @if ($departmentItem->status == '1')
                                         <a href="{{ url('admin/department/' . $departmentItem->id . '/dectivate') }}"
-                                            onclick="return confirm('Are you sure you want to deactivate this department')">
+                                            onclick="return confirm('Are you sure you want to deactivate this department')"
+                                            data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                            title="Deactivate {{ $departmentItem->department_name }}">
                                             <i class="fa-solid fa-circle-xmark mx-1 text-danger"></i>
                                         </a>
                                     @elseif($departmentItem->status == '0')
                                         <a href="{{ url('admin/department/' . $departmentItem->id . '/activate') }}"
-                                            onclick="return confirm('Are you sure you want to activate this department')">
+                                            onclick="return confirm('Are you sure you want to activate this department')"
+                                            data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                            title="Activate {{ $departmentItem->department_name }} ">
                                             <i class="fa-solid fa-circle-check mx-1 text-success"></i>
                                         </a>
                                     @endif
-                                    <a href="{{ url('admin/department/' . $departmentItem->id . '/show') }}">
+                                    <a href="{{ url('admin/department/' . $departmentItem->id . '/show') }}"
+                                        data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                        title="Show {{ $departmentItem->department_name }}">
                                         <i class="fa-solid fa-eye mx-1 text-primary"></i>
                                     </a>
-                                    <a href="{{ url('admin/department/' . $departmentItem->id . '/edit') }}">
+                                    <a href="{{ url('admin/department/' . $departmentItem->id . '/edit') }}"
+                                        data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                        title="Edit {{ $departmentItem->department_name }}">
                                         <i class="fa-solid fa-pen mx-1 text-info"></i>
                                     </a>
                                     <a href="{{ url('admin/department/' . $departmentItem->id . '/destroy') }}"
-                                        onclick="return confirm('Are you sure you want to delete this department')">
+                                        onclick="return confirm('Are you sure you want to delete this department')"
+                                        data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                        title="Delete {{ $departmentItem->department_name }}">
                                         <i class="fa-solid fa-trash mx-1 text-danger"></i>
                                     </a>
                                 </td>

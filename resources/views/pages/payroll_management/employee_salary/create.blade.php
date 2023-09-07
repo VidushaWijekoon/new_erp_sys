@@ -24,7 +24,7 @@
                             <div class="form-group">
                                 <label class="form-label">{{ __('Employee Name and ID') }}</label>
                                 <select class="custom-select rounded-0">
-                                    <option>Select Leave Type</option>
+                                    <option>Please Select Employee ID</option>
                                     <option>{{ __('Vidusha Wijekoon - 0001') }}</option>
                                     <option>{{ __('Vidusha Wijekoon - 0002') }}</option>
                                     <option>{{ __('Vidusha Wijekoon - 0003') }}</option>
@@ -34,7 +34,8 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label class="form-label">{{ __('Net Salary') }}</label>
-                                <input type="text" class="form-control" placeholder="Net Salary">
+                                <input type="text" class="form-control" placeholder="Net Salary" disabled readonly
+                                    value="2500">
                             </div>
                         </div>
                     </div>
@@ -51,7 +52,7 @@
                                     <label class="col-form-label col-sm-3 text-sm-start">{{ __('Basic') }}</label>
                                     <div class="col-sm-9">
                                         <input type="text" class="form-control rounded-0" name="fullname"
-                                            placeholder="Basic" required>
+                                            placeholder="Basic Salary" required>
                                     </div>
                                     @error('fullname')
                                         <small>{{ $message }}</small>
@@ -62,7 +63,7 @@
                                     <label class="col-form-label col-sm-3 text-sm-start">{{ __('DA(40%)') }}</label>
                                     <div class="col-sm-9">
                                         <input type="text" class="form-control rounded-0" name="email"
-                                            placeholder="Email" required>
+                                            placeholder="DA Percentage" required>
                                     </div>
                                     @error('email')
                                         <small>{{ $message }}</small>
@@ -73,7 +74,7 @@
                                     <label class="col-form-label col-sm-3 text-sm-start">{{ __('HRA(15%)') }}</label>
                                     <div class="col-sm-9">
                                         <input type="text" class="form-control rounded-0" name="email"
-                                            placeholder="Email" required>
+                                            placeholder="HRA Percentage" required>
                                     </div>
                                     @error('gender')
                                         <small>{{ $message }}</small>
@@ -84,7 +85,7 @@
                                     <label class="col-form-label col-sm-3 text-sm-start">{{ __('Conveyance') }}</label>
                                     <div class="col-sm-9">
                                         <input type="text" class="form-control rounded-0" name="birthday"
-                                            placeholder="Birthday" required>
+                                            placeholder="Conveyance" required>
                                     </div>
                                     @error('birthday')
                                         <small>{{ $message }}</small>
@@ -117,7 +118,7 @@
                                 <div class="form-group row">
                                     <label class="col-form-label col-sm-3 text-sm-start">{{ __('Others') }}</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control rounded-0" placeholder="Others"
+                                        <input type="text" class="form-control rounded-0" placeholder="Others Earnings"
                                             name="passport_expiring" required>
                                     </div>
                                     @error('passport_expiring')
@@ -136,7 +137,7 @@
                                     <label class="col-form-label col-sm-3 text-sm-start">{{ __('TDS') }}</label>
                                     <div class="col-sm-9">
                                         <input type="text" class="form-control rounded-0" name="fullname"
-                                            placeholder="Basic" required>
+                                            placeholder="TDS Percentage" required>
                                     </div>
                                     @error('fullname')
                                         <small>{{ $message }}</small>
@@ -147,7 +148,7 @@
                                     <label class="col-form-label col-sm-3 text-sm-start">{{ __('ESI') }}</label>
                                     <div class="col-sm-9">
                                         <input type="text" class="form-control rounded-0" name="email"
-                                            placeholder="Email" required>
+                                            placeholder="ESI Percentage" required>
                                     </div>
                                     @error('email')
                                         <small>{{ $message }}</small>
@@ -158,7 +159,7 @@
                                     <label class="col-form-label col-sm-3 text-sm-start">{{ __('PF') }}</label>
                                     <div class="col-sm-9">
                                         <input type="text" class="form-control rounded-0" name="email"
-                                            placeholder="Email" required>
+                                            placeholder="PF Percentage" required>
                                     </div>
                                     @error('gender')
                                         <small>{{ $message }}</small>
@@ -169,7 +170,7 @@
                                     <label class="col-form-label col-sm-3 text-sm-start">{{ __('Leave') }}</label>
                                     <div class="col-sm-9">
                                         <input type="text" class="form-control rounded-0" name="birthday"
-                                            placeholder="Birthday" required>
+                                            value="4.5 Days" required readonly disabled>
                                     </div>
                                     @error('birthday')
                                         <small>{{ $message }}</small>
@@ -180,7 +181,7 @@
                                     <label class="col-form-label col-sm-3 text-sm-start">{{ __('Prof. Tax') }}</label>
                                     <div class="col-sm-9">
                                         <input type="text" class="form-control rounded-0" placeholder="Allowance"
-                                            name="passport_number" required>
+                                            name="Tex Deducations" required>
                                     </div>
                                     @error('passport_number')
                                         <small>{{ $message }}</small>
@@ -213,8 +214,8 @@
                                 <div class="form-group row">
                                     <label class="col-form-label col-sm-3 text-sm-start">{{ __('Others') }}</label>
                                     <div class="col-sm-9">
-                                        <input type="text" class="form-control rounded-0" placeholder="Fund"
-                                            name="passport_expiring" required>
+                                        <input type="text" class="form-control rounded-0"
+                                            placeholder="Others Deductions" name="passport_expiring" required>
                                     </div>
                                     @error('passport_expiring')
                                         <small>{{ $message }}</small>
@@ -226,7 +227,7 @@
 
                     </div>
 
-                    <a href="{{ route('department.index') }}" type="button"
+                    <a href="{{ route('employee-salary.index') }}" type="button"
                         class="btn btn-secondary btn-sm">{{ __('Close') }}</a>
                     <button type="submit" class="btn btn-primary btn-sm">{{ __('Save Changes') }}</button>
                 </div>

@@ -29,8 +29,10 @@
                                 </div>
                                 <div class="card-footer border-danger" style="border-top: 1px solid blue">
                                     <div class="d-flex justify-content-between align-items-center">
-                                        <i class="fa-solid fa-circle-plus fa-2x text-danger mx-4"></i>
                                         <h6><strong class="mx-2">{{ $userCount }}</strong>Users</h6>
+                                        <a href="{{ route('users') }}">
+                                            <i class="fa-solid fa-circle-plus fa-2x text-danger"></i>
+                                        </a>
                                     </div>
                                 </div>
                             </div>

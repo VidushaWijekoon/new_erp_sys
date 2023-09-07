@@ -51,14 +51,20 @@
                                 <td>{{ $allHolidays->created_at }}</td>
                                 <td>{{ $allHolidays->created_by_username->username }}</td>
                                 <td class="table-action">
-                                    <a href="{{ url('admin/holiday/' . $allHolidays->id . '/show') }}">
+                                    <a href="{{ url('admin/holiday/' . $allHolidays->id . '/show') }}"
+                                        data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                        title="Show {{ $allHolidays->holiday_name }}">
                                         <i class="fa-solid fa-eye mx-1 text-primary"></i>
                                     </a>
-                                    <a href="{{ url('admin/holiday/' . $allHolidays->id . '/edit') }}">
+                                    <a href="{{ url('admin/holiday/' . $allHolidays->id . '/edit') }}"
+                                        data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                        title="Edit {{ $allHolidays->holiday_name }}">
                                         <i class="fa-solid fa-pen mx-1 text-info"></i>
                                     </a>
                                     <a href="{{ url('admin/holiday/' . $allHolidays->id . '/destroy') }}"
-                                        onclick="return confirm('Are you sure you want to delete this holiday')">
+                                        onclick="return confirm('Are you sure you want to delete this holiday')"
+                                        data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                        title="Delete {{ $allHolidays->holiday_name }}">
                                         <i class="fa-solid fa-trash mx-1 text-danger"></i>
                                     </a>
                                 </td>

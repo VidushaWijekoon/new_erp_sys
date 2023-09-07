@@ -16,8 +16,7 @@
                             <div class="card border-success">
                                 <div class="card-header bg-transparent border-success">
                                     <div class="d-flex justify-content-between">
-                                        <h4>Customers</h4>
-                                        <i class="fa-solid fa-ellipsis-vertical mt-1"></i>
+                                        <h4>Sales Leads</h4>
                                     </div>
                                 </div>
                                 <div class="card-body">
@@ -29,9 +28,10 @@
                                     </div>
                                 </div>
                                 <div class="card-footer border-danger" style="border-top: 1px solid blue">
-                                    <div class="d-flex justify-content-between">
-                                        <i class="fa-solid fa-circle-plus fa-2x text-danger mx-4"></i>
-                                        <span><strong>14 Customers</strong></span>
+                                    <div class="d-flex justify-content-end">
+                                        <a href="{{ route('sales-leads') }}">
+                                            <i class="fa-solid fa-circle-plus fa-2x text-danger"></i>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -42,7 +42,6 @@
                                 <div class="card-header bg-transparent border-success">
                                     <div class="d-flex justify-content-between">
                                         <h4>Activities</h4>
-                                        <i class="fa-solid fa-ellipsis-vertical mt-1"></i>
                                     </div>
                                 </div>
                                 <div class="card-body">
@@ -54,9 +53,10 @@
                                     </div>
                                 </div>
                                 <div class="card-footer border-danger" style="border-top: 1px solid blue">
-                                    <div class="d-flex justify-content-between">
-                                        <i class="fa-solid fa-circle-plus fa-2x text-info mx-4"></i>
-                                        <span><strong>14 DUE NOW</strong></span>
+                                    <div class="d-flex justify-content-end">
+                                        <a href="">
+                                            <i class="fa-solid fa-circle-plus fa-2x text-info"></i>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -66,33 +66,7 @@
                             <div class="card border-success">
                                 <div class="card-header bg-transparent border-success">
                                     <div class="d-flex justify-content-between">
-                                        <h4>Opportunities</h4>
-                                        <i class="fa-solid fa-ellipsis-vertical mt-1"></i>
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <div class="d-flex justify-content-between">
-                                        <i class="fa-solid fa-briefcase fa-4x mt-1 p-3 text-warning"></i>
-                                        <span class="d-flex align-items-center" style="text-align: end">
-                                            Manage potential business to maximize sales.
-                                        </span>
-                                    </div>
-                                </div>
-                                <div class="card-footer border-danger" style="border-top: 1px solid blue">
-                                    <div class="d-flex justify-content-between">
-                                        <i class="fa-solid fa-circle-plus fa-2x text-warning mx-4"></i>
-                                        <span><strong>0 PIPELINE</strong></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3">
-                            <div class="card border-success">
-                                <div class="card-header bg-transparent border-success">
-                                    <div class="d-flex justify-content-between">
-                                        <h4>Estimates</h4>
-                                        <i class="fa-solid fa-ellipsis-vertical mt-1"></i>
+                                        <h4>Quoatations</h4>
                                     </div>
                                 </div>
                                 <div class="card-body">
@@ -105,8 +79,12 @@
                                 </div>
                                 <div class="card-footer border-danger" style="border-top: 1px solid blue">
                                     <div class="d-flex justify-content-between">
-                                        <i class="fa-solid fa-circle-plus fa-2x text-success mx-4"></i>
-                                        <span><strong>14 ACTIVE</strong></span>
+                                        <strong>
+                                            <h4>3 : <span>Quoatations</span></h4>
+                                        </strong>
+                                        <a href="{{ route('quotation.index') }}">
+                                            <i class="fa-solid fa-circle-plus fa-2x text-success"></i>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -117,7 +95,6 @@
                                 <div class="card-header bg-transparent border-success">
                                     <div class="d-flex justify-content-between">
                                         <h4>Invoices</h4>
-                                        <i class="fa-solid fa-ellipsis-vertical mt-1"></i>
                                     </div>
                                 </div>
                                 <div class="card-body">
@@ -130,8 +107,12 @@
                                 </div>
                                 <div class="card-footer border-danger" style="border-top: 1px solid blue">
                                     <div class="d-flex justify-content-between">
-                                        <i class="fa-solid fa-circle-plus fa-2x text-primary mx-4"></i>
-                                        <span><strong>14 OVERDUE</strong></span>
+                                        <strong>
+                                            <h4>3 : <span>Invoices</span></h4>
+                                        </strong>
+                                        <a href="">
+                                            <i class="fa-solid fa-circle-plus fa-2x text-primary"></i>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -142,7 +123,6 @@
                                 <div class="card-header bg-transparent border-success">
                                     <div class="d-flex justify-content-between">
                                         <h4>Email Campaigns</h4>
-                                        <i class="fa-solid fa-ellipsis-vertical mt-1"></i>
                                     </div>
                                 </div>
                                 <div class="card-body">
@@ -155,9 +135,10 @@
                                     </div>
                                 </div>
                                 <div class="card-footer border-danger" style="border-top: 1px solid blue">
-                                    <div class="d-flex justify-content-between">
-                                        <i class="fa-solid fa-circle-plus fa-2x text-secondary mx-4"></i>
-                                        <span><strong>14 ONGOING</strong></span>
+                                    <div class="d-flex justify-content-end">
+                                        <a href="">
+                                            <i class="fa-solid fa-circle-plus fa-2x text-secondary"></i>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -168,7 +149,6 @@
                                 <div class="card-header bg-transparent border-success">
                                     <div class="d-flex justify-content-between">
                                         <h4>Sales Reports</h4>
-                                        <i class="fa-solid fa-ellipsis-vertical mt-1"></i>
                                     </div>
                                 </div>
                                 <div class="card-body">
@@ -181,65 +161,11 @@
                                     </div>
                                 </div>
                                 <div class="card-footer border-danger" style="border-top: 1px solid blue">
-                                    <div class="d-flex justify-content-between">
-                                        <i class="fa-solid fa-circle-plus fa-2x mx-4"
-                                            style="color: rgb(46, 124, 111)"></i>
-                                        <span><strong>14 TODAY</strong></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3">
-                            <div class="card border-success">
-                                <div class="card-header bg-transparent border-success">
-                                    <div class="d-flex justify-content-between">
-                                        <h4>Web to Lead</h4>
-                                        <i class="fa-solid fa-ellipsis-vertical mt-1"></i>
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <div class="d-flex justify-content-between">
-                                        <i class="fa-solid fa-globe fa-4x mt-1 p-3"
-                                            style="color: rgb(101, 161, 32)"></i>
-                                        <span class="d-flex align-items-center" style="text-align: end">
-                                            Web to lead forms capture information directly from your website and
-                                            automatically create a contact and a sales opportunity.
-                                        </span>
-                                    </div>
-                                </div>
-                                <div class="card-footer border-danger" style="border-top: 1px solid blue">
-                                    <div class="d-flex justify-content-between">
-                                        <i class="fa-solid fa-circle-plus fa-2x mx-4"
-                                            style="color: rgb(101, 161, 32)"></i>
-                                        <span><strong>14 RESPONSES</strong></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3">
-                            <div class="card border-success">
-                                <div class="card-header bg-transparent border-success">
-                                    <div class="d-flex justify-content-between">
-                                        <h4>Items</h4>
-                                        <i class="fa-solid fa-ellipsis-vertical mt-1"></i>
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <div class="d-flex justify-content-between">
-                                        <i class="fa-solid fa-layer-group fa-4x mt-1 p-3"
-                                            style="color: rgb(161, 32, 111)"></i>
-                                        <span class="d-flex align-items-center" style="text-align: end">
-                                            The products and services you buy or sell.
-                                        </span>
-                                    </div>
-                                </div>
-                                <div class="card-footer border-danger" style="border-top: 1px solid blue">
-                                    <div class="d-flex justify-content-between">
-                                        <i class="fa-solid fa-circle-plus fa-2x mx-4"
-                                            style="color: rgb(161, 32, 111)"></i>
-                                        <span><strong>14 ACTIVE</strong></span>
+                                    <div class="d-flex justify-content-end">
+                                        <a href="">
+                                            <i class="fa-solid fa-circle-plus fa-2x mx-4"
+                                                style="color: rgb(46, 124, 111)"></i>
+                                        </a>
                                     </div>
                                 </div>
                             </div>

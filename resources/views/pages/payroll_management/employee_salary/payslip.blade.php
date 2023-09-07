@@ -16,7 +16,7 @@
             </div>
             <div class="row mb-2 mb-xl-3">
                 <div class="col-auto d-none d-sm-block">
-                    <a href="{{ route('document-management.index') }}">
+                    <a href="{{ route('employee-salary.index') }}">
                         <i class="fa-solid fa-home fa-2x text-info"></i>
                     </a>
                 </div>

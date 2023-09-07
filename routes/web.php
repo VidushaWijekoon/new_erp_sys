@@ -24,6 +24,9 @@ use App\Http\Controllers\Admin\Accounts\AccountsDashboardController;
 use App\Http\Controllers\Admin\ECommerce\ECommerceDashboardController;
 use App\Http\Controllers\Admin\Procurement\ProcurementDashboardController;
 use App\Http\Controllers\Admin\InventoryManagement\InventoryManagementDashboardController;
+use App\Http\Controllers\Admin\Sales\LeadsController;
+use App\Http\Controllers\Admin\Sales\SalesLeadsDashboardController;
+use App\Http\Controllers\Admin\Sales\VendorsController;
 use App\Http\Controllers\Admin\SupplyChainManagement\SupplyChainManagementDashboardController;
 use App\Http\Controllers\Admin\WarehouseManagement\WarehouseManagementDashboardController;
 
@@ -102,15 +105,6 @@ Route::prefix('/admin')->middleware('auth', 'isAdmin')->group(function () {
         Route::get('/employee/{employee}/performance', 'performance')->name('employee.performance');
     });
 
-    Route::controller(UsersController::class)->group(function () {
-        Route::get('/users', 'index')->name('users.index');
-        Route::put('/user/{user}/edit', 'edit')->name('user.edit');
-        Route::put('/user/{user}/', 'update')->name('user.update');
-        Route::get('/user/{user}/destroy', 'destroy')->name('user.destroy');
-        Route::get('/user/{user}/activate', 'activate')->name('user.activate');
-        Route::get('/user/{user}/dectivate', 'dectivate')->name('user.dectivate');
-    });
-
     Route::get('/register', [RegisterController::class, 'index'])->name('user.register');
 
     Route::controller(HolidaysController::class)->group(function () {
@@ -143,11 +137,29 @@ Route::prefix('/admin')->middleware('auth', 'isAdmin')->group(function () {
 
     /*
     |--------------------------------------------------------------------------
+    | Users
+    |--------------------------------------------------------------------------
+    */
+
+    Route::controller(UsersController::class)->group(function () {
+        Route::get('/users', 'index')->name('users.index');
+        Route::put('/user/{user}/edit', 'edit')->name('user.edit');
+        Route::put('/user/{user}/', 'update')->name('user.update');
+        Route::get('/user/{user}/destroy', 'destroy')->name('user.destroy');
+        Route::get('/user/{user}/activate', 'activate')->name('user.activate');
+        Route::get('/user/{user}/dectivate', 'dectivate')->name('user.dectivate');
+    });
+
+    /*
+    |--------------------------------------------------------------------------
     | Sales
     |--------------------------------------------------------------------------
     */
 
-    Route::get('sales', [SalesDashboardController::class, 'index'])->name('sales.dashboard');
+    Route::get('sales-dahsboard', [SalesDashboardController::class, 'index'])->name('sales.dashboard');
+    Route::get('sales-leads', [SalesLeadsDashboardController::class, 'index'])->name('sales-leads');
+    Route::get('leads', [LeadsController::class, 'index'])->name('leads');
+    Route::get('vendors', [VendorsController::class, 'index'])->name('sales-vendors');
 
     Route::controller(CustomersController::class)->group(function () {
         Route::get('/customer', 'index')->name('customer.index');

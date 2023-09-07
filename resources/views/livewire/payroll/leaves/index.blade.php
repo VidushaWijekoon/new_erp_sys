@@ -13,7 +13,7 @@
             </div>
             <div class="row mb-2 mb-xl-3">
                 <div class="col-auto d-none d-sm-block">
-                    <a href="{{ route('document-management.index') }}">
+                    <a href="{{ route('payroll-management.index') }}">
                         <i class="fa-solid fa-home fa-2x text-info"></i>
                     </a>
                 </div>
@@ -50,15 +50,15 @@
                             <td>2</td>
                             <td class="d-none d-md-table-cell">Personal Reason</td>
                             <td class="table-action">
-
-                                <a href="#">
+                                <a href="#" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Show">
                                     <i class="fa-solid fa-eye mx-1 text-primary"></i>
                                 </a>
-                                <a href="#">
+                                <a href="#" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit">
                                     <i class="fa-solid fa-pen mx-1 text-info"></i>
                                 </a>
                                 <a href="#"
-                                    onclick="return confirm('Are you sure you want to delete this employee')">
+                                    onclick="return confirm('Are you sure you want to delete this employee')"
+                                    data-bs-toggle="tooltip" data-bs-placement="bottom" title="Delete">
                                     <i class="fa-solid fa-trash mx-1 text-danger"></i>
                                 </a>
                             </td>
@@ -72,15 +72,15 @@
                             <td>2</td>
                             <td class="d-none d-md-table-cell">Personal Reason</td>
                             <td class="table-action">
-
-                                <a href="#">
+                                <a href="#" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Show">
                                     <i class="fa-solid fa-eye mx-1 text-primary"></i>
                                 </a>
-                                <a href="#">
+                                <a href="#" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit">
                                     <i class="fa-solid fa-pen mx-1 text-info"></i>
                                 </a>
                                 <a href="#"
-                                    onclick="return confirm('Are you sure you want to delete this employee')">
+                                    onclick="return confirm('Are you sure you want to delete this employee')"
+                                    data-bs-toggle="tooltip" data-bs-placement="bottom" title="Delete">
                                     <i class="fa-solid fa-trash mx-1 text-danger"></i>
                                 </a>
                             </td>
@@ -94,15 +94,15 @@
                             <td>2</td>
                             <td class="d-none d-md-table-cell">Personal Reason</td>
                             <td class="table-action">
-
-                                <a href="#">
+                                <a href="#" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Show">
                                     <i class="fa-solid fa-eye mx-1 text-primary"></i>
                                 </a>
-                                <a href="#">
+                                <a href="#" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit">
                                     <i class="fa-solid fa-pen mx-1 text-info"></i>
                                 </a>
                                 <a href="#"
-                                    onclick="return confirm('Are you sure you want to delete this employee')">
+                                    onclick="return confirm('Are you sure you want to delete this employee')"
+                                    data-bs-toggle="tooltip" data-bs-placement="bottom" title="Delete">
                                     <i class="fa-solid fa-trash mx-1 text-danger"></i>
                                 </a>
                             </td>
@@ -116,15 +116,15 @@
                             <td>2</td>
                             <td class="d-none d-md-table-cell">Personal Reason</td>
                             <td class="table-action">
-
-                                <a href="#">
+                                <a href="#" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Show">
                                     <i class="fa-solid fa-eye mx-1 text-primary"></i>
                                 </a>
-                                <a href="#">
+                                <a href="#" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit">
                                     <i class="fa-solid fa-pen mx-1 text-info"></i>
                                 </a>
                                 <a href="#"
-                                    onclick="return confirm('Are you sure you want to delete this employee')">
+                                    onclick="return confirm('Are you sure you want to delete this employee')"
+                                    data-bs-toggle="tooltip" data-bs-placement="bottom" title="Delete">
                                     <i class="fa-solid fa-trash mx-1 text-danger"></i>
                                 </a>
                             </td>
@@ -138,15 +138,17 @@
                             <td>2</td>
                             <td class="d-none d-md-table-cell">Personal Reason</td>
                             <td class="table-action">
-
-                                <a href="#">
+                                <a href="#" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                    title="Show">
                                     <i class="fa-solid fa-eye mx-1 text-primary"></i>
                                 </a>
-                                <a href="#">
+                                <a href="#" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                    title="Edit">
                                     <i class="fa-solid fa-pen mx-1 text-info"></i>
                                 </a>
                                 <a href="#"
-                                    onclick="return confirm('Are you sure you want to delete this employee')">
+                                    onclick="return confirm('Are you sure you want to delete this employee')"
+                                    data-bs-toggle="tooltip" data-bs-placement="bottom" title="Delete">
                                     <i class="fa-solid fa-trash mx-1 text-danger"></i>
                                 </a>
                             </td>
@@ -160,15 +162,17 @@
                             <td>2</td>
                             <td class="d-none d-md-table-cell">Personal Reason</td>
                             <td class="table-action">
-
-                                <a href="#">
+                                <a href="#" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                    title="Show">
                                     <i class="fa-solid fa-eye mx-1 text-primary"></i>
                                 </a>
-                                <a href="#">
+                                <a href="#" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                    title="Edit">
                                     <i class="fa-solid fa-pen mx-1 text-info"></i>
                                 </a>
                                 <a href="#"
-                                    onclick="return confirm('Are you sure you want to delete this employee')">
+                                    onclick="return confirm('Are you sure you want to delete this employee')"
+                                    data-bs-toggle="tooltip" data-bs-placement="bottom" title="Delete">
                                     <i class="fa-solid fa-trash mx-1 text-danger"></i>
                                 </a>
                             </td>

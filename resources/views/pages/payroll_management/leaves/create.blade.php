@@ -66,7 +66,7 @@
                                     <label>Leave Reason <span class="text-danger">*</span></label>
                                     <textarea rows="4" cols="5" class="form-control"></textarea>
                                 </div>
-                                <a href="{{ route('department.index') }}" type="button"
+                                <a href="{{ route('leaves.index') }}" type="button"
                                     class="btn btn-secondary btn-sm">{{ __('Close') }}</a>
                                 <button type="submit" class="btn btn-primary btn-sm">{{ __('Save Changes') }}</button>
                             </div>

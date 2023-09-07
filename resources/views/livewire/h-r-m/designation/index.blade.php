@@ -70,35 +70,38 @@
                                         <span class="badge badge-danger">Not Active</span>
                                     @endif
                                 </td>
-                                <td>
-                                    @if ($designationItem->status == 1)
-                                        <span class="badge badge-success">Active</span>
-                                    @else
-                                        <span class="badge badge-danger">Not Active</span>
-                                    @endif
-                                </td>
                                 <td>{{ $designationItem->created_at }}</td>
                                 <td class="text-capitalize">{{ $designationItem->created_by_username->username }}</td>
                                 <td class="table-action">
                                     @if ($designationItem->status == '1')
                                         <a href="{{ url('admin/designation/' . $designationItem->id . '/dectivate') }}"
-                                            onclick="return confirm('Are you sure you want to deactivate this designation')">
+                                            onclick="return confirm('Are you sure you want to deactivate this designation')"
+                                            data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                            title="Deactivate {{ $designationItem->designation_name }}">
                                             <i class="fa-solid fa-circle-xmark mx-1 text-danger"></i>
                                         </a>
                                     @elseif($designationItem->status == '0')
                                         <a href="{{ url('admin/designation/' . $designationItem->id . '/activate') }}"
-                                            onclick="return confirm('Are you sure you want to activate this designation')">
+                                            onclick="return confirm('Are you sure you want to activate this designation')"
+                                            data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                            title="Activate {{ $designationItem->designation_name }}">
                                             <i class="fa-solid fa-circle-check mx-1 text-success"></i>
                                         </a>
                                     @endif
-                                    <a href="{{ url('admin/designation/' . $designationItem->id . '/show') }}">
+                                    <a href="{{ url('admin/designation/' . $designationItem->id . '/show') }}"
+                                        data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                        title="Show {{ $designationItem->designation_name }}">
                                         <i class="fa-solid fa-eye mx-1 text-primary"></i>
                                     </a>
-                                    <a href="{{ url('admin/designation/' . $designationItem->id . '/edit') }}">
+                                    <a href="{{ url('admin/designation/' . $designationItem->id . '/edit') }}"
+                                        data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                        title="Edit {{ $designationItem->designation_name }}">
                                         <i class="fa-solid fa-pen mx-1 text-info"></i>
                                     </a>
                                     <a href="{{ url('admin/designation/' . $designationItem->id . '/destroy') }}"
-                                        onclick="return confirm('Are you sure you want to delete this designation')">
+                                        onclick="return confirm('Are you sure you want to delete this designation')"
+                                        data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                        title="Delete {{ $designationItem->designation_name }}">
                                         <i class="fa-solid fa-trash mx-1 text-danger"></i>
                                     </a>
                                 </td>

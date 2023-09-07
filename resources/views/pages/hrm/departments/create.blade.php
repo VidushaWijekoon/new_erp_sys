@@ -72,7 +72,6 @@
                                     <tr>
                                         <td>{{ $departmentsItem->department_name }}</td>
                                         <td>{{ $departmentsItem->description }}</td>
-
                                     </tr>
                                 @empty
                                     <span class="text-danger">No Available Employees to Create New User</span>

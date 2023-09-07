@@ -21,49 +21,71 @@
                         @csrf
                         <div class="row">
                             <div class="col-md-12">
-                                <div class="form-group">
-                                    <label>Employee ID<span class="text-danger">*</span></label>
-                                    <select class="custom-select rounded-0">
-                                        <option>Select Leave Type</option>
-                                        <option>Casual Leave 12 Days</option>
-                                        <option>Medical Leave</option>
-                                        <option>Loss of Pay-(No Pay)</option>
-                                    </select>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Employee ID<span class="text-danger">*</span></label>
+                                            <input type="text" class="form-control rounded-0" value="EMP-0001"
+                                                name="passport_expiring" required disabled readonly>
+                                        </div>
+                                    </div>
                                 </div>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Date <span class="text-danger">*</span></label>
+                                            <input type="date" class="form-control rounded-0" value="EMP-0001"
+                                                name="passport_expiring" required>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>In Time <span class="text-danger">*</span></label>
+                                            <input type="time" class="form-control rounded-0" value="EMP-0001"
+                                                name="passport_expiring" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Exit Time <span class="text-danger">*</span></label>
+                                            <input type="time" class="form-control rounded-0" value="EMP-0001"
+                                                name="passport_expiring" required>
+                                        </div>
+                                    </div>
+                                </div>
+
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="form-group">
-                                            <label>Date <span class="text-danger">*</span></label>
+                                            <label>Type <span class="text-danger">*</span></label>
                                             <select class="custom-select rounded-0">
                                                 <option>Select Leave Type</option>
-                                                <option>Casual Leave 12 Days</option>
+                                                <option>Full Day</option>
+                                                <option>Half Day - (Approved)</option>
+                                                <option>Half Day - (Not Approved)</option>
                                                 <option>Medical Leave</option>
-                                                <option>Loss of Pay-(No Pay)</option>
+                                                <option>Paid Leave</option>
+                                                <option>No Leave</option>
+                                                <option>On Vacation</option>
                                             </select>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div class="form-group">
-                                    <label>Attendance<span class="text-danger">*</span></label>
-                                    <div>
-                                        <label class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="inline-radios-example"
-                                                value="option1">
-                                            <span class="form-check-label">
-                                                Present
-                                            </span>
-                                        </label>
-                                        <label class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="inline-radios-example"
-                                                value="option2">
-                                            <span class="form-check-label">
-                                                Absent
-                                            </span>
-                                        </label>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label>Description <span class="text-danger">*</span></label>
+                                            <textarea name="" id="" class="form-control rounded-0" rows="3"></textarea>
+                                        </div>
                                     </div>
                                 </div>
-                                <a href="{{ route('department.index') }}" type="button"
+
+                                <a href="{{ route('attendance.index') }}" type="button"
                                     class="btn btn-secondary btn-sm">{{ __('Close') }}</a>
                                 <button type="submit" class="btn btn-primary btn-sm">{{ __('Save Changes') }}</button>
                             </div>

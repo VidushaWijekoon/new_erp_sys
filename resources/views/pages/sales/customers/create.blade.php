@@ -61,7 +61,7 @@
                         <div class="row">
                             <label class="col-sm-2 col-form-label">Company Name</label>
                             <div class="col-sm-10 d-flex">
-                                <input type="text" class="form-control w-25" placeholder="Company Name"
+                                <input type="text" class="form-control w-25 rounded-0" placeholder="Company Name"
                                     name="company_name">
                             </div>
                         </div>
@@ -70,7 +70,7 @@
                         <div class="row">
                             <label class="col-sm-2 col-form-label">Company Email</label>
                             <div class="col-sm-10 d-flex">
-                                <input type="email" class="form-control w-25" placeholder="Company Email"
+                                <input type="email" class="form-control w-25 rounded-0" placeholder="Company Email"
                                     name="company_email">
                             </div>
                         </div>
@@ -80,9 +80,9 @@
                         <div class="row">
                             <label class="col-sm-2 col-form-label">Resident Country</label>
                             <div class="col-sm-10 d-flex">
-                                <select class="custom-select rounded-0" name="salutation"
-                                    style="border-radius: 5px; width: 10%;" required>
-                                    <option selected value="">--Select Salutaion--</option>
+                                <select class="custom-select rounded-0 w-25" name="salutation" style="border-radius: 5px; "
+                                    required>
+                                    <option selected value="">--Select Resident Country--</option>
                                     <option value="mr">MR</option>
                                     <option value="mrs">MRS</option>
                                     <option value="ms">MS</option>
@@ -97,15 +97,7 @@
                         <div class="row">
                             <label class="col-sm-2 col-form-label">Customer Phone</label>
                             <div class="col-sm-10 d-flex">
-                                <select class="custom-select rounded-0" name="salutation"
-                                    style="border-radius: 5px; width: 10%;" required>
-                                    <option selected value="">--Select Salutaion--</option>
-                                    <option value="mr">MR</option>
-                                    <option value="mrs">MRS</option>
-                                    <option value="ms">MS</option>
-                                    <option value="mss">MSS</option>
-                                </select>
-                                <input type="text" class="form-control w-25 mx-1" placeholder="First Name"
+                                <input type="text" class="form-control w-25 rounded-0" placeholder="Customer Phone"
                                     name="first_name" required>
                             </div>
                         </div>
@@ -115,15 +107,7 @@
                         <div class="row">
                             <label class="col-sm-2 col-form-label">Whatsapp Number</label>
                             <div class="col-sm-10 d-flex">
-                                <select class="custom-select rounded-0" name="salutation"
-                                    style="border-radius: 5px; width: 10%;" required>
-                                    <option selected value="">--Select Salutaion--</option>
-                                    <option value="mr">MR</option>
-                                    <option value="mrs">MRS</option>
-                                    <option value="ms">MS</option>
-                                    <option value="mss">MSS</option>
-                                </select>
-                                <input type="text" class="form-control w-25 mx-1" placeholder="First Name"
+                                <input type="text" class="form-control w-25 rounded-0" placeholder="Whatsapp Number"
                                     name="first_name" required>
                             </div>
                         </div>
@@ -181,7 +165,8 @@
                                                                     <label
                                                                         class="col-sm-4 col-form-label">Attention</label>
                                                                     <div class="col-sm-8 d-flex">
-                                                                        <input type="text" class="form-control w-75"
+                                                                        <input type="text"
+                                                                            class="form-control w-75 rounded-0"
                                                                             name="billing_attention">
                                                                     </div>
                                                                 </div>
@@ -207,13 +192,13 @@
                                                                 <div class="row">
                                                                     <label class="col-sm-4 col-form-label">Address</label>
                                                                     <div class="col-sm-8 d-flex">
-                                                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Street 1"
+                                                                        <textarea class="form-control rounded-0" id="exampleFormControlTextarea1" rows="3" placeholder="Street 1"
                                                                             name="billing_street1" style="width: 75%; font-size: 10px;"></textarea>
 
                                                                     </div>
                                                                     <label class="col-sm-4 col-form-label"></label>
                                                                     <div class="col-sm-8 d-flex">
-                                                                        <textarea class="form-control mt-2" id="exampleFormControlTextarea1" rows="3" placeholder="Street 2"
+                                                                        <textarea class="form-control mt-2 rounded-0" id="exampleFormControlTextarea1" rows="3" placeholder="Street 2"
                                                                             name="shipping_street2" style="width: 75%; font-size: 10px;"></textarea>
 
                                                                     </div>
@@ -224,7 +209,8 @@
                                                                 <div class="row">
                                                                     <label class="col-sm-4 col-form-label">City</label>
                                                                     <div class="col-sm-8 d-flex">
-                                                                        <input type="text" class="form-control w-75"
+                                                                        <input type="text"
+                                                                            class="form-control w-75 rounded-0"
                                                                             name="billing_city" placeholder="City">
                                                                     </div>
                                                                 </div>
@@ -233,7 +219,8 @@
                                                                 <div class="row">
                                                                     <label class="col-sm-4 col-form-label">State</label>
                                                                     <div class="col-sm-8 d-flex">
-                                                                        <input type="text" class="form-control w-75"
+                                                                        <input type="text"
+                                                                            class="form-control w-75 rounded-0"
                                                                             name="billing_state" placeholder="State">
                                                                     </div>
                                                                 </div>
@@ -243,7 +230,8 @@
                                                                     <label class="col-sm-4 col-form-label">Zip
                                                                         Code</label>
                                                                     <div class="col-sm-8 d-flex">
-                                                                        <input type="number" class="form-control w-75"
+                                                                        <input type="number"
+                                                                            class="form-control w-75 rounded-0"
                                                                             name="billing_zip_code"
                                                                             placeholder="Zip Code">
                                                                     </div>
@@ -253,7 +241,8 @@
                                                                 <div class="row">
                                                                     <label class="col-sm-4 col-form-label">Phone</label>
                                                                     <div class="col-sm-8 d-flex">
-                                                                        <input type="number" class="form-control w-75"
+                                                                        <input type="number"
+                                                                            class="form-control w-75 rounded-0"
                                                                             name="billing_customer_phone_number"
                                                                             placeholder="Phone">
                                                                     </div>
@@ -275,7 +264,8 @@
                                                                     <label
                                                                         class="col-sm-4 col-form-label">Attention</label>
                                                                     <div class="col-sm-8 d-flex">
-                                                                        <input type="text" class="form-control w-75"
+                                                                        <input type="text"
+                                                                            class="form-control w-75 rounded-0"
                                                                             name="shipping_attention">
                                                                     </div>
                                                                 </div>
@@ -316,7 +306,8 @@
                                                                 <div class="row">
                                                                     <label class="col-sm-4 col-form-label">City</label>
                                                                     <div class="col-sm-8 d-flex">
-                                                                        <input type="text" class="form-control w-75"
+                                                                        <input type="text"
+                                                                            class="form-control w-75 rounded-0"
                                                                             name="shipping_city" placeholder="City">
                                                                     </div>
                                                                 </div>
@@ -325,7 +316,8 @@
                                                                 <div class="row">
                                                                     <label class="col-sm-4 col-form-label">State</label>
                                                                     <div class="col-sm-8 d-flex">
-                                                                        <input type="text" class="form-control w-75"
+                                                                        <input type="text"
+                                                                            class="form-control w-75 rounded-0"
                                                                             name="shipping_state" placeholder="State">
                                                                     </div>
                                                                 </div>
@@ -335,7 +327,8 @@
                                                                     <label class="col-sm-4 col-form-label">Zip
                                                                         Code</label>
                                                                     <div class="col-sm-8 d-flex">
-                                                                        <input type="text" class="form-control w-75"
+                                                                        <input type="text"
+                                                                            class="form-control w-75 rounded-0"
                                                                             name="shipping_zip_code"
                                                                             placeholder="Zip Code">
                                                                     </div>
@@ -345,7 +338,8 @@
                                                                 <div class="row">
                                                                     <label class="col-sm-4 col-form-label">Phone</label>
                                                                     <div class="col-sm-8 d-flex">
-                                                                        <input type="text" class="form-control w-75"
+                                                                        <input type="text"
+                                                                            class="form-control w-75 rounded-0"
                                                                             name="shipping_customer_phone_number"
                                                                             placeholder="Phone">
                                                                     </div>
@@ -434,7 +428,7 @@
                                                     <label class="col-sm-2 col-form-label">Whatsapp
                                                         Number</label>
                                                     <div class="col-sm-10 d-flex">
-                                                        <input type="number" class="form-control w-25"
+                                                        <input type="number" class="form-control w-25 rounded-0"
                                                             placeholder="Whatsapp" name="whatsapp_number">
                                                     </div>
                                                 </div>
@@ -443,7 +437,7 @@
                                                 <div class="row">
                                                     <label class="col-sm-2 col-form-label">Facebook</label>
                                                     <div class="col-sm-10 d-flex">
-                                                        <input type="text" class="form-control w-25"
+                                                        <input type="text" class="form-control w-25 rounded-0"
                                                             placeholder="Facebook" name="facebook">
                                                     </div>
                                                 </div>
@@ -460,55 +454,31 @@
                                             <table class="table table-hover text-nowrap">
                                                 <thead>
                                                     <tr>
+                                                        <th>#</th>
                                                         <th>Salutation</th>
                                                         <th>First Name</th>
                                                         <th>Last Name</th>
                                                         <th>Email Address</th>
                                                         <th>Work Phone</th>
                                                         <th>Mobile</th>
+                                                        <th></th>
                                                     </tr>
                                                 </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>
-                                                            <select name="billing_country_region"
-                                                                class="info_select w-100 custom-select rounded-0">
-                                                                <option value="" selected>--Select Salutaion--
-                                                                </option>
-                                                                <option value="2">MR</option>
-                                                                <option value="4">MRS</option>
-                                                                <option value="6">MS</option>
-                                                                <option value="8">MSS</option>
-                                                            </select>
-                                                        </td>
-                                                        <td>
-                                                            <input type="text" class="form-control"
-                                                                placeholder="First Name" name="contact_person_first_name">
-                                                        </td>
-                                                        <td>
-                                                            <input type="text" class="form-control"
-                                                                placeholder="Last Name" name="contact_person_last_name">
-                                                        </td>
-                                                        <td>
-                                                            <input type="text" class="form-control"
-                                                                placeholder="Email" name="contact_person_email">
-                                                        </td>
-                                                        <td>
-                                                            <input type="text" class="form-control"
-                                                                placeholder="Number" name="contact_person_number">
-                                                        </td>
-                                                        <td>
-                                                            <input type="text" class="form-control"
-                                                                placeholder="Mobile" name="contact_person_mobile_number">
-                                                        </td>
-
-                                                    </tr>
-
+                                                <tbody id="tbody">
 
                                                 </tbody>
                                             </table>
 
                                         </div>
+
+                                        <table class="mb-3 mx-auto">
+                                            <tr class="">
+                                                <td>
+                                                    <input type="button" value="Add Container" onclick="addItem()"
+                                                        class="btn btn-sm btn-info mx-2 text-white" />
+                                                </td>
+                                            </tr>
+                                        </table>
 
                                         <!-- ============================================================== -->
                                         <!-- Remarks  -->
@@ -517,8 +487,8 @@
                                             aria-labelledby="custom-tabs-four-tab5-tab">
                                             <div class="form-group">
                                                 <label for="exampleFormControlTextarea1">Remark</label>
-                                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Remarks" name="remarks"
-                                                    style="width: 50%;"></textarea>
+                                                <textarea class="form-control rounded-0" id="exampleFormControlTextarea1" rows="3" placeholder="Remarks"
+                                                    name="remarks" style="width: 50%;"></textarea>
                                             </div>
                                         </div>
                                     </div>
@@ -539,3 +509,44 @@
 
     </div>
 @endsection
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+@push('scripts')
+    <script>
+        var items = 0;
+
+        var items = 0; // Initialize the items count
+
+        function addItem() {
+            items++;
+
+            var html = "<tr>";
+            html += "<td>" + items + "</td>";
+            html +=
+                '<td><input type="text" step="0.001" min="0" name="tare[]" class="form-control rounded-0" required /></td>';
+            html +=
+                '<td><input type="text" step="0.001" min="0" name="tare[]" class="form-control rounded-0" required /></td>';
+            html +=
+                '<td><input type="text" step="0.001" min="0" name="tare[]" class="form-control rounded-0" required /></td>';
+            html +=
+                '<td><input type="text" step="0.001" min="0" name="tare[]" class="form-control rounded-0" required /></td>';
+            html +=
+                '<td><input type="text" step="0.001" min="0" name="tare[]" class="form-control rounded-0" required /></td>';
+            html +=
+                '<td><input type="text" step="0.001" min="0" name="tare[]" class="form-control rounded-0" required /></td>';
+            html +=
+                "<td><button type='button' class='btn btn-sm btn-danger' onclick='deleteRow(this);'>Delete</button></td>";
+            html += "</tr>";
+
+            var row = document.getElementById("tbody").insertRow();
+            row.innerHTML = html;
+        }
+
+
+        function deleteRow(button) {
+            items--;
+            button.parentElement.parentElement.remove();
+        }
+    </script>
+@endpush
