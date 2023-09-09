@@ -9,6 +9,9 @@
 </script>
 
 <!-- Chart Js -->
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="{{ asset('vendors/chart.js/Chart.min.js') }}"></script>
+
+<!-- JQuery Js -->
+<script src="{{ asset('vendors/jquery/jquery.min.js') }}"></script>
 
 @stack('scripts')

@@ -151,7 +151,7 @@
                     </table>
 
                     <div class="d-flex justify-content-end mt-2">
-                        <a href="{{ route('customer.index') }}" type="button"
+                        <a href="{{ route('quotation.index') }}" type="button"
                             class="btn btn-secondary btn-sm mx-2">{{ __('Close') }}</a>
                         <button type="submit" class="btn btn-primary btn-sm">{{ __('Create Quoatation') }}</button>
                     </div>
@@ -162,12 +162,8 @@
 
 @endsection
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
 @push('scripts')
     <script>
-        var items = 0;
-
         var items = 0; // Initialize the items count
 
         function addItem() {
@@ -176,13 +172,13 @@
             var html = "<tr>";
             html += "<td>" + items + "</td>";
             html +=
-                '<td><input type="number" step="0.001" min="0" name="tare[]" class="form-control rounded-0" required /></td>';
+                '<td><input type="number" name="tare[]" class="form-control rounded-0" required /></td>';
             html +=
                 '<td><textarea name="no_and_kind_of_packages[]" class="form-control rounded-0" rows="1" required></textarea></td>';
             html +=
-                '<td><input type="number" step="0.001" min="0" name="tare[]" class="form-control rounded-0" required /></td>';
+                '<td><input type="number" name="tare[]" class="form-control rounded-0" required /></td>';
             html +=
-                '<td><input type="number" step="0.001" min="0" name="tare[]" class="form-control rounded-0" required /></td>';
+                '<td><input type="number" name="tare[]" class="form-control rounded-0" required /></td>';
             html +=
                 "<td><button type='button' class='btn btn-sm btn-danger' onclick='deleteRow(this);'>Delete</button></td>";
             html += "</tr>";

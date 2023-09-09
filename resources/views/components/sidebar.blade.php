@@ -42,10 +42,13 @@
                         <a class="sidebar-link" href="{{ route('sales.dashboard') }}">Sales Dashboard</a>
                     </li>
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="{{ route('customer.index') }}">Customer Management</a>
+                        <a class="sidebar-link" href="{{ route('sales-leads') }}">Leads Management</a>
                     </li>
                     <li class="sidebar-item">
                         <a class="sidebar-link" href="{{ route('quotation.index') }}">Quotation Management</a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="{{ route('invoices.index') }}">Invoice Management</a>
                     </li>
                     <li class="sidebar-item">
                         <a class="sidebar-link" href="#">Sales Informations</a>

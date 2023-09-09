@@ -41,31 +41,6 @@
                             <div class="card border-success">
                                 <div class="card-header bg-transparent border-success">
                                     <div class="d-flex justify-content-between">
-                                        <h4>Activities</h4>
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <div class="d-flex justify-content-between">
-                                        <i class="fa-regular fa-lightbulb fa-4x mt-1 text-info p-3 "></i>
-                                        <span class="d-flex align-items-center" style="text-align: end">
-                                            Assign follow-ups, history and reminders so nothing is missed
-                                        </span>
-                                    </div>
-                                </div>
-                                <div class="card-footer border-danger" style="border-top: 1px solid blue">
-                                    <div class="d-flex justify-content-end">
-                                        <a href="">
-                                            <i class="fa-solid fa-circle-plus fa-2x text-info"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3">
-                            <div class="card border-success">
-                                <div class="card-header bg-transparent border-success">
-                                    <div class="d-flex justify-content-between">
                                         <h4>Quoatations</h4>
                                     </div>
                                 </div>

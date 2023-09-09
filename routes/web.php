@@ -159,7 +159,6 @@ Route::prefix('/admin')->middleware('auth', 'isAdmin')->group(function () {
 
     Route::get('sales-dahsboard', [SalesDashboardController::class, 'index'])->name('sales.dashboard');
     Route::get('sales-leads', [SalesLeadsDashboardController::class, 'index'])->name('sales-leads');
-    Route::get('vendors', [VendorsController::class, 'index'])->name('sales-vendors');
 
     Route::controller(CustomersController::class)->group(function () {
         Route::get('/customer', 'index')->name('customer.index');
@@ -180,5 +179,10 @@ Route::prefix('/admin')->middleware('auth', 'isAdmin')->group(function () {
     Route::controller(LeadsController::class)->group(function () {
         Route::get('/leads', 'index')->name('leads');
         Route::get('/leads/create', 'create')->name('leads-create');
+    });
+
+    Route::controller(VendorsController::class)->group(function () {
+        Route::get('/vendors', 'index')->name('vendors');
+        Route::get('/vendors/create', 'create')->name('vendors-create');
     });
 });

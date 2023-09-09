@@ -20,49 +20,73 @@
                 <div class="w-100">
 
                     <div class="row">
-                        <div class="col-sm-3">
-                            <a href="{{ route('holiday.index') }}">
-                                <div class="card">
-                                    <div class="card-body d-flex align-items-center justify-content-between">
-                                        <h1 class="display-5 mt-1 mb-3">{{ __('Year Holidays') }}</h1>
-                                        <div class="mb-1">
-                                            <span class="text-danger">
-                                                <h1 class="text-danger">14</h1>
-                                            </span>
-                                        </div>
-                                    </div>
+
+                        <div class="col-lg-3 col-6">
+                            <!-- small card -->
+                            <div class="small-box bg-info">
+                                <div class="inner">
+                                    <h3>14</h3>
+                                    <h2>{{ __('Year Holidays 2023') }}</h2>
                                 </div>
-                            </a>
+                                <div class="icon">
+                                    <i class="fas fa-arrows-to-circle"></i>
+                                </div>
+                                <a href="{{ route('holiday.index') }}" class="small-box-footer">
+                                    {{ __('More info ') }}
+                                    <i class="fas fa-arrow-circle-right"></i>
+                                </a>
+                            </div>
                         </div>
 
-                        <div class="col-sm-3">
-                            <a href="{{ route('leaves.index') }}">
-                                <div class="card">
-                                    <div class="card-body d-flex align-items-center justify-content-between">
-                                        <h1 class="display-5 mt-1 mb-3">{{ __('Leaves Request') }}</h1>
-                                    </div>
+                        <div class="col-lg-3 col-6">
+                            <!-- small card -->
+                            <div class="small-box bg-info">
+                                <div class="inner">
+                                    <h3>14</h3>
+                                    <h2>{{ __('Leaves Request') }}</h2>
                                 </div>
-                            </a>
+                                <div class="icon">
+                                    <i class="fas fa-bell-slash"></i>
+                                </div>
+                                <a href="{{ route('leaves.index') }}" class="small-box-footer">
+                                    {{ __('More info ') }}
+                                    <i class="fas fa-arrow-circle-right"></i>
+                                </a>
+                            </div>
                         </div>
 
-                        <div class="col-sm-3">
-                            <a href="{{ route('attendance.index') }}">
-                                <div class="card">
-                                    <div class="card-body d-flex align-items-center justify-content-between">
-                                        <h1 class="display-5 mt-1 mb-3">{{ __('Attendance') }}</h1>
-                                    </div>
+                        <div class="col-lg-3 col-6">
+                            <!-- small card -->
+                            <div class="small-box bg-info">
+                                <div class="inner">
+                                    <h3>365</h3>
+                                    <h2>{{ __('Attendance') }}</h2>
                                 </div>
-                            </a>
+                                <div class="icon">
+                                    <i class="fas fa-calendar-days"></i>
+                                </div>
+                                <a href="{{ route('attendance.index') }}" class="small-box-footer">
+                                    {{ __('More info ') }}
+                                    <i class="fas fa-arrow-circle-right"></i>
+                                </a>
+                            </div>
                         </div>
 
-                        <div class="col-sm-3">
-                            <a href="{{ route('employee-salary.index') }}">
-                                <div class="card">
-                                    <div class="card-body d-flex align-items-center justify-content-between">
-                                        <h1 class="display-5 mt-1 mb-3">{{ __('Salary') }}</h1>
-                                    </div>
+                        <div class="col-lg-3 col-6">
+                            <!-- small card -->
+                            <div class="small-box bg-info">
+                                <div class="inner">
+                                    <h3>365</h3>
+                                    <h2>{{ __('Salary') }}</h2>
                                 </div>
-                            </a>
+                                <div class="icon">
+                                    <i class="fas fa-coins"></i>
+                                </div>
+                                <a href="{{ route('employee-salary.index') }}" class="small-box-footer">
+                                    {{ __('More info ') }}
+                                    <i class="fas fa-arrow-circle-right"></i>
+                                </a>
+                            </div>
                         </div>
 
                     </div>

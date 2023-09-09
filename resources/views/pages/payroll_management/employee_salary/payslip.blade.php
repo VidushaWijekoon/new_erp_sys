@@ -23,10 +23,10 @@
             </div>
         </div>
     </div>
-    <div class="row mb-5">
+    <div class="row mb-3">
         <div class="col-sm-5 col-4">
         </div>
-        <div class="col-sm-7 col-8 text-right m-b-30">
+        <div class="col-sm-7 col-8 text-right">
             <div class="btn-group btn-group-sm">
                 <button class="btn btn-white btn-outline-info"><i class="fa-solid fa-file-csv mx-1"></i>CSV</button>
                 <button class="btn btn-white btn-outline-info"><i class="fa-solid fa-file-pdf mx-1"></i>PDF</button>
@@ -35,10 +35,13 @@
     </div>
     <div class="row justify-content-between">
         <div class="col-12 col-lg-12">
-            <div class="card p-5">
-
-                <h4 class="payslip-title">Payslip for the month of July 2018</h4>
-                <div class="row">
+            <div class="card">
+                <div class="card-header" style="background: #222e3c">
+                    <span class="card-title mb-0 d-flex justify-content-between">
+                        <h4 style="color: #e9ecef">{{ __('Payslip for the month of July 2023') }}</h4>
+                    </span>
+                </div>
+                <div class="row px-5 mt-3">
                     <div class="col-sm-6 m-b-20">
                         <img src="{{ asset('images/company/logortbig.png') }}" class="inv-logo my-3" alt=""
                             width="150">
@@ -52,12 +55,12 @@
                         <div class="invoice-details">
                             <h3 class="text-uppercase">Payslip #49029</h3>
                             <ul class="list-unstyled">
-                                <li>Salary Month: <span>July, 2018</span></li>
+                                <li>Salary Month: <span>July, 2023</span></li>
                             </ul>
                         </div>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row px-5">
                     <div class="col-lg-12 m-b-20">
                         <ul class="list-unstyled">
                             <li>
@@ -69,7 +72,7 @@
                         </ul>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row px-5">
                     <div class="col-sm-6">
                         <div>
                             <h4 class="m-b-10"><strong>Earnings</strong></h4>

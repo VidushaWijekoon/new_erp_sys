@@ -192,7 +192,7 @@
                     <hr>
 
                     <div class="d-flex justify-content-end mt-2">
-                        <a href="{{ route('customer.index') }}" type="button"
+                        <a href="{{ route('invoices.index') }}" type="button"
                             class="btn btn-secondary btn-sm mx-2">{{ __('Close') }}</a>
                         <button type="submit" class="btn btn-primary btn-sm">{{ __('Create Quoatation') }}</button>
                     </div>
@@ -203,12 +203,8 @@
 
 @endsection
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
 @push('scripts')
     <script>
-        var items = 0;
-
         var items = 0; // Initialize the items count
 
         function addItem() {

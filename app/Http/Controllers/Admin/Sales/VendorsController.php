@@ -10,4 +10,9 @@ class VendorsController extends Controller
     {
         return view('pages.sales.vendors.index');
     }
+
+    public function create()
+    {
+        return view('pages.sales.vendors.create');
+    }
 }

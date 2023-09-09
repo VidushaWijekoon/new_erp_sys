@@ -6,7 +6,7 @@
             <div class="card">
                 <div class="card-header" style="background: #222e3c">
                     <span class="card-title mb-0 d-flex justify-content-between">
-                        <h4 style="color: #e9ecef">{{ __('Create New Leave') }}</h4>
+                        <h4 style="color: #e9ecef">{{ __('Vidusha Wijekoon - September 2023 - Attendance') }}</h4>
                     </span>
                 </div>
                 <div class="card-body">

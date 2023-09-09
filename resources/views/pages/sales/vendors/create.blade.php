@@ -1,4 +1,4 @@
-@section('title', 'Create New Customer')
+@section('title', 'Create New Vendor')
 @extends('layouts.admin.app')
 @section('content')
     <div class="row justify-content-between">
@@ -6,7 +6,7 @@
             <div class="card">
                 <div class="card-header" style="background: #222e3c">
                     <span class="card-title mb-0 d-flex justify-content-between">
-                        <h4 style="color: #e9ecef">{{ __('Create New Customer') }}</h4>
+                        <h4 style="color: #e9ecef">{{ __('Create New Vendor') }}</h4>
                     </span>
                 </div>
                 <div class="card-body">
@@ -39,7 +39,7 @@
 
                     <div class="form-group">
                         <div class="row">
-                            <label class="col-sm-2 col-form-label">Customer Details</label>
+                            <label class="col-sm-2 col-form-label">Vendor Details</label>
                             <div class="col-sm-10 d-flex">
                                 <select class="custom-select rounded-0" name="salutation"
                                     style="border-radius: 5px; width: 10%;" required>
@@ -59,18 +59,18 @@
 
                     <div class="form-group">
                         <div class="row">
-                            <label class="col-sm-2 col-form-label">Company Name</label>
+                            <label class="col-sm-2 col-form-label">Vendor Name</label>
                             <div class="col-sm-10 d-flex">
-                                <input type="text" class="form-control w-25 rounded-0" placeholder="Company Name"
+                                <input type="text" class="form-control w-25 rounded-0" placeholder="Vendor Name"
                                     name="company_name">
                             </div>
                         </div>
                     </div>
                     <div class="form-group">
                         <div class="row">
-                            <label class="col-sm-2 col-form-label">Company Email</label>
+                            <label class="col-sm-2 col-form-label">Vendor Email</label>
                             <div class="col-sm-10 d-flex">
-                                <input type="email" class="form-control w-25 rounded-0" placeholder="Company Email"
+                                <input type="email" class="form-control w-25 rounded-0" placeholder="Vendor Email"
                                     name="company_email">
                             </div>
                         </div>
@@ -78,7 +78,7 @@
 
                     <div class="form-group">
                         <div class="row">
-                            <label class="col-sm-2 col-form-label">Resident Country</label>
+                            <label class="col-sm-2 col-form-label">Business Located</label>
                             <div class="col-sm-10 d-flex">
                                 <select class="custom-select rounded-0 w-25" name="salutation" style="border-radius: 5px; "
                                     required>
@@ -95,9 +95,9 @@
 
                     <div class="form-group">
                         <div class="row">
-                            <label class="col-sm-2 col-form-label">Customer Phone</label>
+                            <label class="col-sm-2 col-form-label">Vendor Phone</label>
                             <div class="col-sm-10 d-flex">
-                                <input type="text" class="form-control w-25 rounded-0" placeholder="Customer Phone"
+                                <input type="text" class="form-control w-25 rounded-0" placeholder="Vendor Phone"
                                     name="first_name" required>
                             </div>
                         </div>
@@ -507,7 +507,6 @@
 
     </div>
 @endsection
-
 
 @push('scripts')
     <script>

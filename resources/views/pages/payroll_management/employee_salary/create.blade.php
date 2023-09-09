@@ -7,7 +7,8 @@
             <div class="card">
                 <div class="card-header" style="background: #222e3c">
                     <span class="card-title mb-0 d-flex justify-content-between">
-                        <h4 style="color: #e9ecef">{{ __('Salary Sheet') }}</h4>
+                        <h4 style="color: #e9ecef">{{ __('Create Salary Sheet of Vidusha Wijekoon - September - 2023') }}
+                        </h4>
                     </span>
                 </div>
                 <div class="card-body">
@@ -23,12 +24,8 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label class="form-label">{{ __('Employee Name and ID') }}</label>
-                                <select class="custom-select rounded-0">
-                                    <option>Please Select Employee ID</option>
-                                    <option>{{ __('Vidusha Wijekoon - 0001') }}</option>
-                                    <option>{{ __('Vidusha Wijekoon - 0002') }}</option>
-                                    <option>{{ __('Vidusha Wijekoon - 0003') }}</option>
-                                </select>
+                                <input type="text" class="form-control" placeholder="Net Salary" disabled readonly
+                                    value="EMP-0001 Vidusha Wijekoon - Senior Software Engineer">
                             </div>
                         </div>
                         <div class="col-md-6">
