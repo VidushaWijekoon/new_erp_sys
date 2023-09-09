@@ -14,4 +14,10 @@
 <!-- JQuery Js -->
 <script src="{{ asset('vendors/jquery/jquery.min.js') }}"></script>
 
+<!-- Datatable Js -->
+<script src="{{ asset('vendors/datatables/jquery.dataTables.min.js') }}"></script>
+<script src="{{ asset('vendors/datatables-bs4/js/dataTables.bootstrap4.min.js') }}"></script>
+<script src="{{ asset('vendors/datatables-responsive/js/dataTables.responsive.min.js') }}"></script>
+<script src="{{ asset('vendors/datatables-responsive/js/responsive.bootstrap4.min.js') }}"></script>
+
 @stack('scripts')

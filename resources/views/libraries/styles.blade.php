@@ -4,4 +4,8 @@
 <!-- Fontawesome CDN -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+<!-- Data Table -->
+<link rel="stylesheet" href="{{ asset('vendors/datatables-bs4/css/dataTables.bootstrap4.min.css') }}">
+<link rel="stylesheet" href="{{ asset('vendors/datatables-responsive/css/responsive.bootstrap4.min.css') }}">
+
 @stack('css')

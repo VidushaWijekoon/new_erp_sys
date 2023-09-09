@@ -81,8 +81,8 @@ class RegisterController extends Controller
 
     public function index()
     {
-        $available_users = Employees::where('account_status', '0')->get();
+        $users_available = Employees::where('account_status', '0')->get();
         $role = Designations::where('status', '1')->get();
-        return view('auth.register', ['available_users' => $available_users, 'role' => $role]);
+        return view('auth.register', ['users_available' => $users_available, 'role' => $role]);
     }
 }

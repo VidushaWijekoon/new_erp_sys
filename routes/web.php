@@ -28,6 +28,7 @@ use App\Http\Controllers\Admin\Accounts\AccountsDashboardController;
 use App\Http\Controllers\Admin\ECommerce\ECommerceDashboardController;
 use App\Http\Controllers\Admin\Procurement\ProcurementDashboardController;
 use App\Http\Controllers\Admin\InventoryManagement\InventoryManagementDashboardController;
+use App\Http\Controllers\Admin\Sales\SalesApprovalController;
 use App\Http\Controllers\Admin\WarehouseManagement\WarehouseManagementDashboardController;
 use App\Http\Controllers\Admin\SupplyChainManagement\SupplyChainManagementDashboardController;
 
@@ -159,6 +160,7 @@ Route::prefix('/admin')->middleware('auth', 'isAdmin')->group(function () {
 
     Route::get('sales-dahsboard', [SalesDashboardController::class, 'index'])->name('sales.dashboard');
     Route::get('sales-leads', [SalesLeadsDashboardController::class, 'index'])->name('sales-leads');
+    Route::get('sales-approvals', [SalesApprovalController::class, 'index'])->name('sales-approvals');
 
     Route::controller(CustomersController::class)->group(function () {
         Route::get('/customer', 'index')->name('customer.index');
