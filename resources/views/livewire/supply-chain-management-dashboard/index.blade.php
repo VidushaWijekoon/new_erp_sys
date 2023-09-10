@@ -16,7 +16,7 @@
                             <div class="card border-success">
                                 <div class="card-header bg-transparent border-success">
                                     <div class="d-flex justify-content-between">
-                                        <h4>Customers</h4>
+                                        <h4>{{ __('Warehouse') }}</h4>
                                     </div>
                                 </div>
                                 <div class="card-body">
@@ -28,9 +28,8 @@
                                     </div>
                                 </div>
                                 <div class="card-footer border-danger" style="border-top: 1px solid blue">
-                                    <div class="d-flex justify-content-between">
-                                        <i class="fa-solid fa-circle-plus fa-2x text-danger mx-4"></i>
-                                        <span><strong>14 Customers</strong></span>
+                                    <div class="d-flex justify-content-end">
+                                        <i class="fa-solid fa-circle-plus fa-2x text-danger"></i>
                                     </div>
                                 </div>
                             </div>
@@ -40,21 +39,20 @@
                             <div class="card border-success">
                                 <div class="card-header bg-transparent border-success">
                                     <div class="d-flex justify-content-between">
-                                        <h4>Activities</h4>
+                                        <h4>{{ __('Frieght') }}</h4>
                                     </div>
                                 </div>
                                 <div class="card-body">
                                     <div class="d-flex justify-content-between">
                                         <i class="fa-regular fa-lightbulb fa-4x mt-1 text-info p-3 "></i>
                                         <span class="d-flex align-items-center" style="text-align: end">
-                                            Assign follow-ups, history and reminders so nothing is missed
+                                            {{ __('Air, Sea, Local, Experience the speed and efficiency of our global freight services ') }}
                                         </span>
                                     </div>
                                 </div>
                                 <div class="card-footer border-danger" style="border-top: 1px solid blue">
-                                    <div class="d-flex justify-content-between">
-                                        <i class="fa-solid fa-circle-plus fa-2x text-info mx-4"></i>
-                                        <span><strong>14 DUE NOW</strong></span>
+                                    <div class="d-flex justify-content-end">
+                                        <i class="fa-solid fa-circle-plus fa-2x text-info"></i>
                                     </div>
                                 </div>
                             </div>
@@ -76,9 +74,8 @@
                                     </div>
                                 </div>
                                 <div class="card-footer border-danger" style="border-top: 1px solid blue">
-                                    <div class="d-flex justify-content-between">
-                                        <i class="fa-solid fa-circle-plus fa-2x text-warning mx-4"></i>
-                                        <span><strong>0 PIPELINE</strong></span>
+                                    <div class="d-flex justify-content-end">
+                                        <i class="fa-solid fa-circle-plus fa-2x text-warning"></i>
                                     </div>
                                 </div>
                             </div>
@@ -100,9 +97,8 @@
                                     </div>
                                 </div>
                                 <div class="card-footer border-danger" style="border-top: 1px solid blue">
-                                    <div class="d-flex justify-content-between">
-                                        <i class="fa-solid fa-circle-plus fa-2x text-success mx-4"></i>
-                                        <span><strong>14 ACTIVE</strong></span>
+                                    <div class="d-flex justify-content-end">
+                                        <i class="fa-solid fa-circle-plus fa-2x text-success"></i>
                                     </div>
                                 </div>
                             </div>
@@ -124,9 +120,8 @@
                                     </div>
                                 </div>
                                 <div class="card-footer border-danger" style="border-top: 1px solid blue">
-                                    <div class="d-flex justify-content-between">
-                                        <i class="fa-solid fa-circle-plus fa-2x text-primary mx-4"></i>
-                                        <span><strong>14 OVERDUE</strong></span>
+                                    <div class="d-flex justify-content-end">
+                                        <i class="fa-solid fa-circle-plus fa-2x text-primary"></i>
                                     </div>
                                 </div>
                             </div>
@@ -149,9 +144,8 @@
                                     </div>
                                 </div>
                                 <div class="card-footer border-danger" style="border-top: 1px solid blue">
-                                    <div class="d-flex justify-content-between">
-                                        <i class="fa-solid fa-circle-plus fa-2x text-secondary mx-4"></i>
-                                        <span><strong>14 ONGOING</strong></span>
+                                    <div class="d-flex justify-content-end">
+                                        <i class="fa-solid fa-circle-plus fa-2x text-secondary"></i>
                                     </div>
                                 </div>
                             </div>
@@ -174,10 +168,8 @@
                                     </div>
                                 </div>
                                 <div class="card-footer border-danger" style="border-top: 1px solid blue">
-                                    <div class="d-flex justify-content-between">
-                                        <i class="fa-solid fa-circle-plus fa-2x mx-4"
-                                            style="color: rgb(46, 124, 111)"></i>
-                                        <span><strong>14 TODAY</strong></span>
+                                    <div class="d-flex justify-content-end">
+                                        <i class="fa-solid fa-circle-plus fa-2x" style="color: rgb(46, 124, 111)"></i>
                                     </div>
                                 </div>
                             </div>
@@ -201,10 +193,8 @@
                                     </div>
                                 </div>
                                 <div class="card-footer border-danger" style="border-top: 1px solid blue">
-                                    <div class="d-flex justify-content-between">
-                                        <i class="fa-solid fa-circle-plus fa-2x mx-4"
-                                            style="color: rgb(101, 161, 32)"></i>
-                                        <span><strong>14 RESPONSES</strong></span>
+                                    <div class="d-flex justify-content-end">
+                                        <i class="fa-solid fa-circle-plus fa-2x" style="color: rgb(101, 161, 32)"></i>
                                     </div>
                                 </div>
                             </div>
@@ -227,10 +217,8 @@
                                     </div>
                                 </div>
                                 <div class="card-footer border-danger" style="border-top: 1px solid blue">
-                                    <div class="d-flex justify-content-between">
-                                        <i class="fa-solid fa-circle-plus fa-2x mx-4"
-                                            style="color: rgb(161, 32, 111)"></i>
-                                        <span><strong>14 ACTIVE</strong></span>
+                                    <div class="d-flex justify-content-end">
+                                        <i class="fa-solid fa-circle-plus fa-2x" style="color: rgb(161, 32, 111)"></i>
                                     </div>
                                 </div>
                             </div>

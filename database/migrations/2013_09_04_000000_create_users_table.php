@@ -14,15 +14,9 @@ return new class extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('username')->unique();
-            $table->smallInteger('emp_id')->unique();
+            $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->smallInteger('created_by');
-            $table->tinyInteger('role')->default('0')->comment('0=User, 1=Admin, 2=SuperAdmin');
-            $table->tinyInteger('status')->default('0')->comment('0=Inactive, 1=Active');
-            $table->foreign('emp_id')->references('id')->on('employees')->onDelete('cascade');
-            $table->foreign('role')->references('id')->on('designations')->onDelete('cascade');
             $table->rememberToken();
             $table->timestamps();
         });

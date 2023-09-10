@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers\Admin\HRM;
 
-use App\Http\Controllers\Controller;
-use App\Http\Requests\HRM\DepartmentRequestForm;
-use App\Models\Departments;
 use App\Models\Employees;
+use App\Models\Departments;
+use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Requests\HRM\DepartmentRequestForm;
 
 class DepartmentsController extends Controller
 {
@@ -90,7 +91,15 @@ class DepartmentsController extends Controller
 
     public function department($department)
     {
+        $deptCount = DB::table('employees')->where('department', $department)->count(['id']);
+
         $department = Employees::where('department', $department)->get();
-        return view('pages.hrm.departments.employees', ['department' => $department]);
+        return view(
+            'pages.hrm.departments.employees',
+            [
+                'department' => $department,
+                'deptCount' => $deptCount,
+            ]
+        );
     }
 }

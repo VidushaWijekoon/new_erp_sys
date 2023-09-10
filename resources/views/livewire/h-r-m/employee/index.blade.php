@@ -26,7 +26,7 @@
             <div class="col-md-3 col-sm-6 col-12">
                 <div class="info-box">
                     <span class="info-box-icon bg-info">
-                        <i class="fa-solid fa-file-invoice text-white"></i>
+                        <i class="fa-solid fa-users text-white"></i>
                     </span>
 
                     <div class="info-box-content">
@@ -34,7 +34,7 @@
                             <h4>{{ __('Employees') }}</h4>
                         </span>
                         <span class="info-box-number">
-                            <h4>1450</h4>
+                            <h4>{{ $empCount }}</h4>
                         </span>
                     </div>
                     <!-- /.info-box-content -->
@@ -140,9 +140,6 @@
                                 @endforelse
                             </tbody>
                         </table>
-                    </div>
-                    <div class="d-flex justify-content-end mx-3 mt-2">
-                        {{ $employees->links() }}
                     </div>
                 </div>
             </div>

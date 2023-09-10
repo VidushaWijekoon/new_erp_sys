@@ -156,8 +156,14 @@
                                             <label
                                                 class="col-form-label col-sm-3 text-sm-start">{{ __('Resident Country') }}</label>
                                             <div class="col-sm-9">
-                                                <input type="text" class="form-control rounded-0"
-                                                    placeholder="Resident Country" name="resident_country" required>
+                                                <select class="custom-select rounded-0" name="resident_country" required>
+                                                    <option selected>Please Select the Resident Country</option>
+                                                    @foreach ($countries as $country)
+                                                        <option value="{{ $country->id }}" class="text-capitalize">
+                                                            {{ $country->country_name }}
+                                                        </option>
+                                                    @endforeach
+                                                </select>
                                             </div>
                                             @error('resident_country')
                                                 <small>{{ $message }}</small>
@@ -201,8 +207,7 @@
                                             </label>
                                             <div class="col-sm-9">
                                                 <select class="custom-select rounded-0" name="department" required>
-                                                    <option value="" selected>Please Select the
-                                                        Department</option>
+                                                    <option selected>Please Select the Department</option>
                                                     @foreach ($departments as $department)
                                                         <option value="{{ $department->id }}"
                                                             class="text-capitalize rounded-0">
@@ -221,7 +226,7 @@
                                             </label>
                                             <div class="col-sm-9">
                                                 <select class="custom-select rounded-0" name="designation" required>
-                                                    <option value="" selected>Please Select the Designation</option>
+                                                    <option selected>Please Select the Designation</option>
                                                     @foreach ($designations as $designation)
                                                         <option value="{{ $designation->id }}" class="text-capitalize">
                                                             {{ $designation->designation_name }}

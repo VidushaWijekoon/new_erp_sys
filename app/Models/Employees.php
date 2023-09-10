@@ -45,4 +45,9 @@ class Employees extends Model
     {
         return $this->belongsTo(Designations::class, 'designation', 'id');
     }
+
+    public function country_name()
+    {
+        return $this->belongsTo(Country::class, 'resident_country', 'id');
+    }
 }

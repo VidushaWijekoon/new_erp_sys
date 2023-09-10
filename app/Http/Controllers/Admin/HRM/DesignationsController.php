@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin\HRM;
 
 use App\Models\Employees;
 use App\Models\Designations;
+use Illuminate\Support\Facades\DB;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\HRM\DesignationRequestForm;
@@ -90,7 +91,11 @@ class DesignationsController extends Controller
 
     public function designation($designation)
     {
+        $deptCount = DB::table('employees')->where('designation', $designation)->count(['id']);
         $designation  = Employees::where('designation', $designation)->get();
-        return view('pages.hrm.designations.employees', ['designation' => $designation]);
+        return view('pages.hrm.designations.employees', [
+            'designation' => $designation,
+            'deptCount' => $deptCount,
+        ]);
     }
 }

@@ -17,7 +17,7 @@ return new class extends Migration
             $table->date('holiday_date');
             $table->tinyText('holiday_special_note');
             $table->tinyInteger('status')->default('0')->comment('0=InActive, 1=Active');
-            $table->unsignedBigInteger('created_by');
+            $table->unsignedBigInteger('created_by')->nullable();
             $table->foreign('created_by')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });

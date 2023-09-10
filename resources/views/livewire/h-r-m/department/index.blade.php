@@ -34,7 +34,7 @@
                             <h4>{{ __('Departments') }}</h4>
                         </span>
                         <span class="info-box-number">
-                            <h4>1450</h4>
+                            <h4>{{ $deptCount }}</h4>
                         </span>
                     </div>
                     <!-- /.info-box-content -->
@@ -138,9 +138,6 @@
                                 @endforelse
                             </tbody>
                         </table>
-                    </div>
-                    <div class="d-flex justify-content-end mx-3 mt-2">
-                        {{ $departments->links() }}
                     </div>
                 </div>
             </div>

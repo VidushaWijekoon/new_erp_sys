@@ -135,12 +135,12 @@
             <li class="sidebar-item">
                 <a href="#warehouse" data-toggle="collapse" class="sidebar-link collapsed">
                     <i class="align-middle" data-feather="package"></i>
-                    <span class="align-middle">{{ __('Warehouse Management') }}</span>
+                    <span class="align-middle">{{ __('Inventory Management') }}</span>
                 </a>
                 <ul id="warehouse" class="sidebar-dropdown list-unstyled collapse" data-parent="#sidebar">
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="{{ route('warehouse-management-dashoard') }}">
-                            {{ __('Warehouse Dashboard') }}
+                        <a class="sidebar-link" href="{{ route('inventory-management-dashboard') }}">
+                            {{ __('Inventory Dashboard') }}
                         </a>
                     </li>
                 </ul>

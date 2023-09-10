@@ -19,11 +19,6 @@
                 </div>
             </div>
         </div>
-        <div class="row mb-2 mb-xl-3">
-            <div class="col-auto d-none d-sm-block">
-
-            </div>
-        </div>
     </div>
 
     <div class="container-fluid">
@@ -39,7 +34,7 @@
                             <h4>{{ __('Designations') }}</h4>
                         </span>
                         <span class="info-box-number">
-                            <h4>1450</h4>
+                            <h4>{{ $deptCount }}</h4>
                         </span>
                     </div>
                     <!-- /.info-box-content -->

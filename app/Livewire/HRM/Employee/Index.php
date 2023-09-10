@@ -2,9 +2,10 @@
 
 namespace App\Livewire\HRM\Employee;
 
-use App\Models\Employees;
 use Livewire\Component;
+use App\Models\Employees;
 use Livewire\WithPagination;
+use Illuminate\Support\Facades\DB;
 
 class Index extends Component
 {
@@ -13,7 +14,11 @@ class Index extends Component
 
     public function render()
     {
-        $employees = Employees::orderBy('id', 'ASC')->paginate(20);
-        return view('livewire.h-r-m.employee.index', ['employees' => $employees]);
+        $employees = Employees::all();
+        $empCount = DB::table('employees')->count(['id']);
+        return view('livewire.h-r-m.employee.index', [
+            'employees' => $employees,
+            'empCount' => $empCount,
+        ]);
     }
 }

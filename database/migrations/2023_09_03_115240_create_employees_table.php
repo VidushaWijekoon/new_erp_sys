@@ -23,7 +23,7 @@ return new class extends Migration
             $table->date('visa_expiring');
             $table->string('contact_number');
             $table->string('current_address');
-            $table->string('resident_country');
+            $table->unsignedBigInteger('resident_country');
             $table->string('emergency_number');
             $table->string('image');
             $table->unsignedBigInteger('department');
@@ -32,9 +32,10 @@ return new class extends Migration
             $table->string('special_note');
             $table->tinyInteger('status')->default('0')->comment('0=InActive, 1=Active');
             $table->tinyInteger('account_status')->default('0')->comment('0=no create, 1=created');
-            $table->unsignedBigInteger('created_by');
+            $table->unsignedBigInteger('created_by')->nullable();
             $table->foreign('department')->references('id')->on('departments')->onDelete('cascade');
             $table->foreign('designation')->references('id')->on('designations')->onDelete('cascade');
+            $table->foreign('resident_country')->references('id')->on('countries')->onDelete('cascade');
             $table->foreign('created_by')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });

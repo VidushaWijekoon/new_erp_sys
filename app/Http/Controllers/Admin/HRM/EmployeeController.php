@@ -9,6 +9,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 use App\Http\Requests\HRM\EmployeeRequestForm;
+use App\Models\Country;
 
 class EmployeeController extends Controller
 {
@@ -21,7 +22,12 @@ class EmployeeController extends Controller
     {
         $departments = Departments::where('status', '1')->get();
         $designations  = Designations::where('status', '1')->get();
-        return view('pages.hrm.employees.create', ['departments' => $departments, 'designations' => $designations]);
+        $countries = Country::orderBy('country_name', 'ASC')->get();
+        return view('pages.hrm.employees.create', [
+            'departments' => $departments,
+            'designations' => $designations,
+            'countries' => $countries
+        ]);
     }
 
     public function store(EmployeeRequestForm $request)
