@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('holidays', function (Blueprint $table) {
             $table->id();
             $table->string('holiday_name');
-            $table->date('holiday_date');
+            $table->date('holiday_date')->unique();
             $table->tinyText('holiday_special_note');
             $table->tinyInteger('status')->default('0')->comment('0=InActive, 1=Active');
             $table->unsignedBigInteger('created_by')->nullable();

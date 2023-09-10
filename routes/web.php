@@ -110,7 +110,7 @@ Route::prefix('/admin')->middleware('auth', 'isAdmin')->group(function () {
     Route::get('/register', [RegisterController::class, 'index'])->name('user.register');
 
     Route::controller(HolidaysController::class)->group(function () {
-        Route::get('/holidays', 'index')->name('holiday.index');
+        Route::get('/holiday', 'index')->name('holiday.index');
         Route::get('/holiday/create', 'create')->name('holiday.create');
         Route::post('/holiday', 'store')->name('holiday.store');
         Route::get('/holiday/{holiday}/show', 'show')->name('holiday.show');
@@ -122,8 +122,9 @@ Route::prefix('/admin')->middleware('auth', 'isAdmin')->group(function () {
     });
 
     Route::controller(LeavesController::class)->group(function () {
-        Route::get('/leaves', 'index')->name('leaves.index');
+        Route::get('/leaves', 'index')->name('leaves-index');
         Route::get('/leaves/create', 'create')->name('leaves.create');
+        Route::post('/leaves', 'store')->name('leaves.store');
     });
 
     Route::controller(AttendanceController::class)->group(function () {

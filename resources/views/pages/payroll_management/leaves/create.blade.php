@@ -17,33 +17,52 @@
                             @endforeach
                         </div>
                     @endif
-                    <form action="{{ route('department.store') }}" method="POST">
+                    <form action="{{ route('leaves.store') }}" method="POST">
                         @csrf
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <label>Leave Type <span class="text-danger">*</span></label>
-                                    <select class="custom-select rounded-0">
-                                        <option>Select Leave Type</option>
-                                        <option>Casual Leave 12 Days</option>
-                                        <option>Medical Leave</option>
-                                        <option>Loss of Pay-(No Pay)</option>
+                                    <label>{{ __('Leave Type') }} <span class="text-danger">*</span></label>
+                                    <select class="custom-select rounded-0" name="leave_type" required>
+                                        <option>{{ __('Select Leave Type') }}</option>
+                                        <option value="0">{{ __('Sick Leave') }}</option>
+                                        <option value="1">{{ __('Casual Leave') }}</option>
+                                        <option value="2">{{ __('Public holidays') }}</option>
+                                        <option value="3">{{ __('Religious holidays') }}</option>
+                                        <option value="4">{{ __('Bereavement holidays') }}</option>
+                                        <option value="5">{{ __('Compensatory leave and time off in lieu (TOIL)') }}
+                                        </option>
+                                        <option value="6">{{ __('Sabbatical holidays') }}</option>
+                                        <option value="7">{{ __('Unpaid leave (leave without pay)') }}</option>
                                     </select>
+                                    @error('leave_type')
+                                        <small class="text-danger">{{ $message }}</small>
+                                    @enderror
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label>From <span class="text-danger">*</span></label>
+                                            <label>{{ __('From') }} <span
+                                                    class="text-danger">{{ __('*') }}</span></label>
                                             <div class="cal-icon">
-                                                <input class="form-control datetimepicker" type="text">
+                                                <input type="date" class="form-control datetimepicker" name="fromDate"
+                                                    id="fromDate" required>
+                                                @error('fromDate')
+                                                    <small class="text-danger">{{ $message }}</small>
+                                                @enderror
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label>To <span class="text-danger">*</span></label>
+                                            <label>{{ __('To') }} <span
+                                                    class="text-danger">{{ __('*') }}</span></label>
                                             <div class="cal-icon">
-                                                <input class="form-control datetimepicker" type="text">
+                                                <input type="date" class="form-control datetimepicker" name="toDate"
+                                                    id="toDate" onchange="getDays()" required>
+                                                @error('toDate')
+                                                    <small class="text-danger">{{ $message }}</small>
+                                                @enderror
                                             </div>
                                         </div>
                                     </div>
@@ -51,22 +70,30 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label>Number of days <span class="text-danger">*</span></label>
-                                            <input class="form-control" readonly="" type="text">
+                                            <label>{{ __('Number of days') }} <span
+                                                    class="text-danger">{{ __('*') }}</span></label>
+                                            <input type="text" class="form-control" name="number_of_days" readonly
+                                                disabled id="number_of_days">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label>Remaining Leaves <span class="text-danger">*</span></label>
-                                            <input class="form-control" readonly="" value="12" type="text">
+                                            <label>{{ __('Remaining Leaves') }} <span
+                                                    class="text-danger">{{ __('*') }}</span></label>
+                                            <input type="text" class="form-control" value="12"
+                                                name="remaining_leaves" readonly disabled>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label>Leave Reason <span class="text-danger">*</span></label>
-                                    <textarea rows="4" cols="5" class="form-control"></textarea>
+                                    <label>{{ __('Leave Reason') }} <span
+                                            class="text-danger">{{ __('*') }}</span></label>
+                                    <textarea rows="4" cols="5" class="form-control" name="leave_reason" placeholder="Leave Reason" required></textarea>
+                                    @error('leave_reason')
+                                        <small class="text-danger">{{ $message }}</small>
+                                    @enderror
                                 </div>
-                                <a href="{{ route('leaves.index') }}" type="button"
+                                <a href="{{ route('leaves-index') }}"
                                     class="btn btn-secondary btn-sm">{{ __('Close') }}</a>
                                 <button type="submit" class="btn btn-primary btn-sm">{{ __('Save Changes') }}</button>
                             </div>
@@ -76,6 +103,39 @@
             </div>
         </div>
 
-
     </div>
 @endsection
+
+@push('scripts')
+    <script>
+        $(function() {
+            var dtToday = new Date();
+
+            var month = dtToday.getMonth() + 1;
+            var day = dtToday.getDate();
+            var year = dtToday.getFullYear();
+            if (month < 10)
+                month = '0' + month.toString();
+            if (day < 10)
+                day = '0' + day.toString();
+
+            var maxDate = year + '-' + month + '-' + day;
+
+            $('#fromDate').attr('min', maxDate);
+            $('#toDate').attr('min', maxDate);
+
+        });
+
+        function getDays() {
+
+            var start_date = new Date(document.getElementById('fromDate').value);
+            var end_date = new Date(document.getElementById('toDate').value);
+
+            var time_difference = end_date.getTime() - start_date.getTime();
+
+            var days_difference = time_difference / (1000 * 3600 * 24);
+
+            document.getElementById('number_of_days').value = days_difference;
+        }
+    </script>
+@endpush

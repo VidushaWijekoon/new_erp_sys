@@ -34,7 +34,7 @@
                             <h4>{{ __('Leaves') }}</h4>
                         </span>
                         <span class="info-box-number">
-                            <h4>1450</h4>
+                            <h4>3</h4>
                         </span>
                     </div>
                     <!-- /.info-box-content -->

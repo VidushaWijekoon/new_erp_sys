@@ -1,4 +1,4 @@
-@section('title', 'Create New Holiday')
+@section('title', 'Edit Holiday')
 @extends('layouts.admin.app')
 @section('content')
     <div class="row justify-content-between">
@@ -6,10 +6,11 @@
             <div class="card flex-fill">
                 <div class="card-header" style="background: #222e3c">
                     <span class="card-title mb-0 d-flex justify-content-between">
-                        <h4 style="color: #e9ecef">{{ __('Create New Holiday') }}</h4>
+                        <h4 style="color: #e9ecef">{{ __('Create New Holiday') }}-{{ $holidays->holiday_date }} </h4>
                     </span>
                 </div>
-                <form action="{{ url('admin/holiday/') }}" method="POST">
+                <form action="{{ url('admin/holiday/' . $holidays->id) }}" method="POST">
+                    @method('PUT')
                     @csrf
                     <div class="card-body">
                         @if ($errors->any())
@@ -21,8 +22,8 @@
                         @endif
                         <div class="mb-3">
                             <label for="">{{ __('Holiday Name') }}</label>
-                            <input type="text" name="holiday_name" class="form-control form-control-sm"
-                                placeholder="Holiday Name">
+                            <input type="text" name="holiday_name" class="form-control form-control-sm text-capitalize"
+                                value="{{ $holidays->holiday_name }}">
                             @error('holiday_name')
                                 <small class="text-danger">{{ $message }}</small>
                             @enderror
@@ -30,8 +31,8 @@
 
                         <div class="mb-3">
                             <label for="">{{ __('Holiday Date') }}</label>
-                            <input type="date" name="holiday_date" class="form-control form-control-sm"
-                                placeholder="Holiday Date">
+                            <input type="date" name="holiday_date" class="form-control form-control-sm text-capitalize"
+                                value="{{ $holidays->holiday_date }}">
                             @error('holiday_date')
                                 <small class="text-danger">{{ $message }}</small>
                             @enderror
@@ -39,8 +40,7 @@
 
                         <div class="mb-3">
                             <label for="">{{ __('Special Note') }}</label>
-                            <textarea type="text" name="holiday_special_note" class="form-control form-control-sm" rows="3"
-                                placeholder="Special Note"></textarea>
+                            <textarea type="text" name="holiday_special_note" class="form-control form-control-sm" rows="3">{{ $holidays->holiday_special_note }}</textarea>
                             @error('holiday_special_note')
                                 <small class="text-danger">{{ $message }}</small>
                             @enderror

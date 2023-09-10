@@ -25,7 +25,7 @@
                             <!-- small card -->
                             <div class="small-box bg-info">
                                 <div class="inner">
-                                    <h3>14</h3>
+                                    <h3>{{ $holidaysCount }}</h3>
                                     <h2>{{ __('Year Holidays 2023') }}</h2>
                                 </div>
                                 <div class="icon">
@@ -42,13 +42,13 @@
                             <!-- small card -->
                             <div class="small-box bg-info">
                                 <div class="inner">
-                                    <h3>14</h3>
+                                    <h3><i class="fas fa-zero"></i></h3>
                                     <h2>{{ __('Leaves Request') }}</h2>
                                 </div>
                                 <div class="icon">
                                     <i class="fas fa-bell-slash"></i>
                                 </div>
-                                <a href="{{ route('leaves.index') }}" class="small-box-footer">
+                                <a href="{{ route('leaves-index') }}" class="small-box-footer">
                                     {{ __('More info ') }}
                                     <i class="fas fa-arrow-circle-right"></i>
                                 </a>
@@ -59,7 +59,7 @@
                             <!-- small card -->
                             <div class="small-box bg-info">
                                 <div class="inner">
-                                    <h3>365</h3>
+                                    <h3><i class="fas fa-zero"></i></h3>
                                     <h2>{{ __('Attendance') }}</h2>
                                 </div>
                                 <div class="icon">
@@ -76,7 +76,7 @@
                             <!-- small card -->
                             <div class="small-box bg-info">
                                 <div class="inner">
-                                    <h3>365</h3>
+                                    <h3><i class="fas fa-zero"></i></h3>
                                     <h2>{{ __('Salary') }}</h2>
                                 </div>
                                 <div class="icon">

@@ -36,7 +36,7 @@
                             <h4>{{ __('Holidays 2023') }}</h4>
                         </span>
                         <span class="info-box-number">
-                            <h4>1450</h4>
+                            <h4>{{ $holidaysCount }}</h4>
                         </span>
                     </div>
                     <!-- /.info-box-content -->
@@ -47,9 +47,9 @@
         </div>
     </div>
 
-    <div class="container-fluid">
+    <div class="container-fluid mb-3">
         <div class="row">
-            <div class="col-12 col-lg-7 col-xxl-7">
+            <div class="col-lg-8 ">
                 <div class="card flex-fill">
                     <div class="card-header">
                         <a href="{{ route('holiday.create') }}"
@@ -69,7 +69,7 @@
                             </thead>
                             <tbody>
                                 <?php $x = 1; ?>
-                                @forelse ($holidays as $allHolidays)
+                                @foreach ($holidays as $allHolidays)
                                     <tr>
                                         <td>{{ $x++ }}</td>
                                         <td>{{ $allHolidays->holiday_name }}</td>
@@ -95,9 +95,7 @@
                                             </a>
                                         </td>
                                     </tr>
-                                @empty
-                                    <span class="text-danger">No Holidays Has Been Found</span>
-                                @endforelse
+                                @endforeach
                             </tbody>
                         </table>
                     </div>
