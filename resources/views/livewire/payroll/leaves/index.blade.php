@@ -104,194 +104,85 @@
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col-12 col-lg-8 col-xxl-9 d-flex">
+            <div class="col-md-12">
                 <div class="card flex-fill">
                     <div class="card-header">
                         <a href="{{ route('leaves.create') }}"
                             class="btn btn-sm btn-primary">{{ __('Create New Leaves') }}</a>
                     </div>
                     <div class="card-body">
-                        <table id="example1" class="table table-bordered table-hover">
-                            <thead>
-                                <tr>
-                                    <th>#</th>
-                                    <th>Employee</th>
-                                    <th>Leaves Type</th>
-                                    <th>From</th>
-                                    <th>To</th>
-                                    <th>No of Days</th>
-                                    <th>Reason</th>
-                                    <th>Status</th>
-                                    <th>Action</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Project Apollo</td>
-                                    <td>Casual Leave</td>
-                                    <td class="d-none d-xl-table-cell">01/01/2020</td>
-                                    <td class="d-none d-xl-table-cell">31/06/2020</td>
-                                    <td>2</td>
-                                    <td class="d-none d-md-table-cell">Personal Reason</td>
-                                    <td>
-                                        <span class="badge badge-danger">Not Approved</span>
-                                    </td>
-                                    <td class="table-action">
-                                        <a href="#" data-bs-toggle="tooltip" data-bs-placement="bottom"
-                                            title="Show">
-                                            <i class="fa-solid fa-eye mx-1 text-primary"></i>
-                                        </a>
-                                        <a href="#" data-bs-toggle="tooltip" data-bs-placement="bottom"
-                                            title="Edit">
-                                            <i class="fa-solid fa-pen mx-1 text-info"></i>
-                                        </a>
-                                        <a href="#"
-                                            onclick="return confirm('Are you sure you want to delete this employee')"
-                                            data-bs-toggle="tooltip" data-bs-placement="bottom" title="Delete">
-                                            <i class="fa-solid fa-trash mx-1 text-danger"></i>
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>Project Apollo</td>
-                                    <td>Casual Leave</td>
-                                    <td class="d-none d-xl-table-cell">01/01/2020</td>
-                                    <td class="d-none d-xl-table-cell">31/06/2020</td>
-                                    <td>2</td>
-                                    <td class="d-none d-md-table-cell">Personal Reason</td>
-                                    <td>
-                                        <span class="badge badge-danger">Not Approved</span>
-                                    </td>
-                                    <td class="table-action">
-                                        <a href="#" data-bs-toggle="tooltip" data-bs-placement="bottom"
-                                            title="Show">
-                                            <i class="fa-solid fa-eye mx-1 text-primary"></i>
-                                        </a>
-                                        <a href="#" data-bs-toggle="tooltip" data-bs-placement="bottom"
-                                            title="Edit">
-                                            <i class="fa-solid fa-pen mx-1 text-info"></i>
-                                        </a>
-                                        <a href="#"
-                                            onclick="return confirm('Are you sure you want to delete this employee')"
-                                            data-bs-toggle="tooltip" data-bs-placement="bottom" title="Delete">
-                                            <i class="fa-solid fa-trash mx-1 text-danger"></i>
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>Project Apollo</td>
-                                    <td>Casual Leave</td>
-                                    <td class="d-none d-xl-table-cell">01/01/2020</td>
-                                    <td class="d-none d-xl-table-cell">31/06/2020</td>
-                                    <td>2</td>
-                                    <td class="d-none d-md-table-cell">Personal Reason</td>
-                                    <td>
-                                        <span class="badge badge-danger">Not Approved</span>
-                                    </td>
-                                    <td class="table-action">
-                                        <a href="#" data-bs-toggle="tooltip" data-bs-placement="bottom"
-                                            title="Show">
-                                            <i class="fa-solid fa-eye mx-1 text-primary"></i>
-                                        </a>
-                                        <a href="#" data-bs-toggle="tooltip" data-bs-placement="bottom"
-                                            title="Edit">
-                                            <i class="fa-solid fa-pen mx-1 text-info"></i>
-                                        </a>
-                                        <a href="#"
-                                            onclick="return confirm('Are you sure you want to delete this employee')"
-                                            data-bs-toggle="tooltip" data-bs-placement="bottom" title="Delete">
-                                            <i class="fa-solid fa-trash mx-1 text-danger"></i>
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>Project Apollo</td>
-                                    <td>Casual Leave</td>
-                                    <td class="d-none d-xl-table-cell">01/01/2020</td>
-                                    <td class="d-none d-xl-table-cell">31/06/2020</td>
-                                    <td>2</td>
-                                    <td class="d-none d-md-table-cell">Personal Reason</td>
-                                    <td>
-                                        <span class="badge badge-danger">Not Approved</span>
-                                    </td>
-                                    <td class="table-action">
-                                        <a href="#" data-bs-toggle="tooltip" data-bs-placement="bottom"
-                                            title="Show">
-                                            <i class="fa-solid fa-eye mx-1 text-primary"></i>
-                                        </a>
-                                        <a href="#" data-bs-toggle="tooltip" data-bs-placement="bottom"
-                                            title="Edit">
-                                            <i class="fa-solid fa-pen mx-1 text-info"></i>
-                                        </a>
-                                        <a href="#"
-                                            onclick="return confirm('Are you sure you want to delete this employee')"
-                                            data-bs-toggle="tooltip" data-bs-placement="bottom" title="Delete">
-                                            <i class="fa-solid fa-trash mx-1 text-danger"></i>
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>Project Apollo</td>
-                                    <td>Casual Leave</td>
-                                    <td class="d-none d-xl-table-cell">01/01/2020</td>
-                                    <td class="d-none d-xl-table-cell">31/06/2020</td>
-                                    <td>2</td>
-                                    <td class="d-none d-md-table-cell">Personal Reason</td>
-                                    <td>
-                                        <span class="badge badge-danger">Not Approved</span>
-                                    </td>
-                                    <td class="table-action">
-                                        <a href="#" data-bs-toggle="tooltip" data-bs-placement="bottom"
-                                            title="Show">
-                                            <i class="fa-solid fa-eye mx-1 text-primary"></i>
-                                        </a>
-                                        <a href="#" data-bs-toggle="tooltip" data-bs-placement="bottom"
-                                            title="Edit">
-                                            <i class="fa-solid fa-pen mx-1 text-info"></i>
-                                        </a>
-                                        <a href="#"
-                                            onclick="return confirm('Are you sure you want to delete this employee')"
-                                            data-bs-toggle="tooltip" data-bs-placement="bottom" title="Delete">
-                                            <i class="fa-solid fa-trash mx-1 text-danger"></i>
-                                        </a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>2</td>
-                                    <td>Project Apollo</td>
-                                    <td>Casual Leave</td>
-                                    <td class="d-none d-xl-table-cell">01/01/2020</td>
-                                    <td class="d-none d-xl-table-cell">31/06/2020</td>
-                                    <td>2</td>
-                                    <td class="d-none d-md-table-cell">Personal Reason</td>
-                                    <td>
-                                        <span class="badge badge-danger">Not Approved</span>
-                                    </td>
-                                    <td class="table-action">
-                                        <a href="#" data-bs-toggle="tooltip" data-bs-placement="bottom"
-                                            title="Show">
-                                            <i class="fa-solid fa-eye mx-1 text-primary"></i>
-                                        </a>
-                                        <a href="#" data-bs-toggle="tooltip" data-bs-placement="bottom"
-                                            title="Edit">
-                                            <i class="fa-solid fa-pen mx-1 text-info"></i>
-                                        </a>
-                                        <a href="#"
-                                            onclick="return confirm('Are you sure you want to delete this employee')"
-                                            data-bs-toggle="tooltip" data-bs-placement="bottom" title="Delete">
-                                            <i class="fa-solid fa-trash mx-1 text-danger"></i>
-                                        </a>
-                                    </td>
-                                </tr>
+                        <div class="table-responsive">
+                            <table id="example1" class="table table-bordered table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>{{ __('#') }}</th>
+                                        <th>{{ __('Employee') }}</th>
+                                        <th>{{ __('Leaves Type') }}</th>
+                                        <th>{{ __('From') }}</th>
+                                        <th>{{ __('To') }}</th>
+                                        <th>{{ __('No of Days') }}</th>
+                                        <th>{{ __('Reason') }}</th>
+                                        <th>{{ __('Status') }}</th>
+                                        <th>{{ __('Created_by') }}</th>
+                                        <th>{{ __('Action') }}</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php $x = 1; ?>
+                                    @foreach ($leaves as $leavesItem)
+                                        <tr>
+                                            <td>{{ $x++ }}</td>
+                                            <td>{{ $leavesItem->created_by_username->employee_name->fullname }}</td>
+                                            <td>
+                                                @if ($leavesItem->leave_type == '0')
+                                                    {{ __('Sick Leave') }}
+                                                @elseif ($leavesItem->leave_type == '1')
+                                                    {{ __('Casual Leave') }}
+                                                @elseif ($leavesItem->leave_type == '2')
+                                                    {{ __('Public Leave') }}
+                                                @elseif ($leavesItem->leave_type == '3')
+                                                    {{ __('Religious holidays') }}
+                                                @elseif ($leavesItem->leave_type == '4')
+                                                    {{ __('Bereavement holidays') }}
+                                                @elseif ($leavesItem->leave_type == '5')
+                                                    {{ __('Compensatory leave and time off in lieu (TOIL)') }}
+                                                @elseif ($leavesItem->leave_type == '6')
+                                                    {{ __('Sabbatical holidays') }}
+                                                @elseif ($leavesItem->leave_type == '7')
+                                                    {{ __('Unpaid leave (leave without pay)') }}
+                                                @endif
+                                            </td>
+                                            <td class="d-none d-xl-table-cell">{{ $leavesItem->fromDate }}</td>
+                                            <td class="d-none d-xl-table-cell">{{ $leavesItem->toDate }}</td>
+                                            <td>{{ $leavesItem->number_of_days }}{{ __(' - Days') }}</td>
+                                            <td class="d-none d-xl-table-cell text-capitalize">
+                                                {{ $leavesItem->leave_reason }}</td>
+                                            <td class="d-none d-xl-table-cell text-capitalize">
+                                                {{ $leavesItem->created_by_username->username }}
+                                            </td>
+                                            <td>
 
-
-                            </tbody>
-                        </table>
+                                            </td>
+                                            <td class="table-action">
+                                                <a href="#" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                                    title="Show">
+                                                    <i class="fa-solid fa-eye mx-1 text-primary"></i>
+                                                </a>
+                                                <a href="#" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                                    title="Edit">
+                                                    <i class="fa-solid fa-pen mx-1 text-info"></i>
+                                                </a>
+                                                <a href="#"
+                                                    onclick="return confirm('Are you sure you want to delete this employee')"
+                                                    data-bs-toggle="tooltip" data-bs-placement="bottom" title="Delete">
+                                                    <i class="fa-solid fa-trash mx-1 text-danger"></i>
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>

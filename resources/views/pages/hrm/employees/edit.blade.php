@@ -183,8 +183,19 @@
                                             <label
                                                 class="col-form-label col-sm-3 text-sm-start">{{ __('Resident Country') }}</label>
                                             <div class="col-sm-9">
-                                                <input type="text" class="form-control rounded-0 text-capitalize"
-                                                    value="{{ $employee->resident_country }}" name="resident_country">
+                                                {{-- <input type="text" class="form-control rounded-0 text-capitalize"
+                                                    value="{{ $employee->country_name->country_name }}"
+                                                    name="resident_country"> --}}
+                                                <select class="custom-select rounded-0" name="resident_country" required>
+                                                    <option value="{{ $employee->resident_country }}">
+                                                        {{ $employee->country_name->country_name }}
+                                                    </option>
+                                                    @foreach ($countries as $countries)
+                                                        <option value="{{ $countries->id }}" class="text-capitalize">
+                                                            {{ $countries->country_name }}
+                                                        </option>
+                                                    @endforeach
+                                                </select>
                                             </div>
                                             @error('resident_country')
                                                 <small>{{ $message }}</small>
@@ -231,7 +242,7 @@
                                             </label>
                                             <div class="col-sm-9">
                                                 <select class="custom-select rounded-0" name="department" required>
-                                                    <option value="{{ $employee->department_name }}">
+                                                    <option value="{{ $employee->department }}">
                                                         {{ $employee->department_name->department_name }}
                                                     </option>
                                                     @foreach ($departments as $department)
@@ -252,7 +263,7 @@
                                             </label>
                                             <div class="col-sm-9">
                                                 <select class="custom-select rounded-0" name="designation" required>
-                                                    <option value="{{ $employee->designation_name }}">
+                                                    <option value="{{ $employee->designation }}">
                                                         {{ $employee->designation_name->designation_name }}
                                                     </option>
                                                     @foreach ($designations as $designation)
@@ -294,8 +305,25 @@
                                                 <small>{{ $message }}</small>
                                             @enderror
                                         </div>
-
                                     </fieldset>
+
+                                    <fieldset>
+                                        <legend class="px-4">{{ __('Yearly Leaves') }}</legend>
+                                        <div class="form-group row">
+                                            <label
+                                                class="col-form-label col-sm-3 text-sm-start">{{ __('Yearly Leaves') }}</label>
+                                            <div class="col-sm-9">
+                                                <input type="number" min="0"
+                                                    class="form-control rounded-0 text-capitalize"
+                                                    value="{{ $employee->year_leaves }}" name="year_leaves">
+                                            </div>
+                                            @error('special_note')
+                                                <small>{{ $message }}</small>
+                                            @enderror
+                                        </div>
+                                    </fieldset>
+
+
                                     <div class="mt-2 text-center">
                                         <a href="{{ route('employee.index') }}"
                                             class="btn btn-secondary btn-sm">{{ __('Close') }}</a>

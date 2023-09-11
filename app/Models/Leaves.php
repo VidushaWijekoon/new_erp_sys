@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Leaves extends Model
 {
@@ -19,4 +20,9 @@ class Leaves extends Model
         'leave_reason',
         'created_by'
     ];
+
+    public function created_by_username()
+    {
+        return $this->belongsTo(User::class, 'created_by', 'id');
+    }
 }

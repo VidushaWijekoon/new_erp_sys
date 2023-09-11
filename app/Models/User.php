@@ -45,4 +45,9 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function employee_name()
+    {
+        return $this->belongsTo(Employees::class, 'emp_id', 'id');
+    }
 }

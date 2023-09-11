@@ -32,10 +32,7 @@ class EmployeeRequestForm extends FormRequest
             'visa_expiring' => ['required', 'string'],
             'contact_number' => ['required', 'string'],
             'current_address' => ['required', 'string', 'max:255'],
-            'resident_country' => ['required', 'string'],
             'emergency_number' => ['required', 'string', 'max:20'],
-            'department' => ['required', 'integer'],
-            'designation' => ['required', 'integer'],
             'join_date' => ['required', 'string'],
             'special_note' => ['required', 'string', 'max:255'],
 

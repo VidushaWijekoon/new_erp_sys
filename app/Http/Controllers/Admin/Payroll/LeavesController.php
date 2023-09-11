@@ -3,8 +3,8 @@
 namespace App\Http\Controllers\Admin\Payroll;
 
 use App\Models\Leaves;
-use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\Controller;
 use App\Http\Requests\Payroll\LeavesRequestForm;
 
 class LeavesController extends Controller
@@ -16,7 +16,8 @@ class LeavesController extends Controller
 
     public function create()
     {
-        return view('pages.payroll_management.leaves.create');
+        $leaves = Leaves::orderBy('created_at', 'DESC')->where('created_by', Auth::user()->id)->get();
+        return view('pages.payroll_management.leaves.create', ['leaves' => $leaves]);
     }
 
     public function store(LeavesRequestForm $request)

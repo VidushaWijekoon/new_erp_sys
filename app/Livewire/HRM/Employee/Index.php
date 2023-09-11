@@ -16,9 +16,12 @@ class Index extends Component
     {
         $employees = Employees::all();
         $empCount = DB::table('employees')->count(['id']);
+        $activeEmployess = DB::table('employees')->where('status', '=', '1')->count(['id']);
+
         return view('livewire.h-r-m.employee.index', [
             'employees' => $employees,
             'empCount' => $empCount,
+            'activeEmployess' => $activeEmployess,
         ]);
     }
 }

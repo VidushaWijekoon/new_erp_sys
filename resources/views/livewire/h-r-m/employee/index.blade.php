@@ -37,9 +37,24 @@
                             <h4>{{ $empCount }}</h4>
                         </span>
                     </div>
-                    <!-- /.info-box-content -->
                 </div>
-                <!-- /.info-box -->
+            </div>
+
+            <div class="col-md-3 col-sm-6 col-12">
+                <div class="info-box">
+                    <span class="info-box-icon bg-success">
+                        <i class="fa-solid fa-user-check text-white"></i>
+                    </span>
+
+                    <div class="info-box-content">
+                        <span class="info-box-text">
+                            <h4>{{ __('Active Employees') }}</h4>
+                        </span>
+                        <span class="info-box-number">
+                            <h4>{{ $activeEmployess }}</h4>
+                        </span>
+                    </div>
+                </div>
             </div>
 
         </div>
@@ -57,7 +72,6 @@
                         <table id="example1" class="table table-bordered table-hover">
                             <thead>
                                 <tr>
-                                    <th>{{ __('#') }}</th>
                                     <th>{{ __('EMP ID') }}</th>
                                     <th>{{ __('Fullname') }}</th>
                                     <th>{{ __('Contact Number') }}</th>
@@ -65,16 +79,15 @@
                                     <th>{{ __('Department') }}</th>
                                     <th>{{ __('Designation') }}</th>
                                     <th>{{ __('Join Date') }}</th>
+                                    <th>{{ __('Leaves Per Year') }}</th>
                                     <th>{{ __('Status') }}</th>
                                     <th>{{ __('Created By') }}</th>
                                     <th class="text-center">{{ __('Action') }}</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php $x = 1; ?>
                                 @forelse ($employees as $employeesItem)
                                     <tr>
-                                        <td>{{ $x++ }}</td>
                                         <td>
                                             <a
                                                 href="{{ url('admin/employee/' . $employeesItem->id . '/view_employee') }}">
@@ -88,10 +101,11 @@
                                             </a>
                                         </td>
                                         <td>{{ $employeesItem->contact_number }}</td>
-                                        <td>{{ $employeesItem->resident_country }}</td>
+                                        <td>{{ $employeesItem->country_name->country_name }}</td>
                                         <td>{{ $employeesItem->department_name->department_name }}</td>
                                         <td>{{ $employeesItem->designation_name->designation_name }}</td>
                                         <td>{{ $employeesItem->join_date }}</td>
+                                        <td>{{ __('12 Days') }}</td>
                                         <td>
                                             @if ($employeesItem->status == 1)
                                                 <span class="badge badge-success">Active</span>

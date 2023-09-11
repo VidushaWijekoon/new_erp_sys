@@ -1,6 +1,22 @@
 @section('title', 'Show Employee')
 @extends('layouts.admin.app')
 @section('content')
+    <div class="container-fluid p-0">
+        <div class="d-flex justify-content-between">
+            <div class="row mb-2 mb-xl-3">
+                <div class="col-auto d-none d-sm-block">
+
+                </div>
+            </div>
+            <div class="row mb-2 mb-xl-3">
+                <div class="col-auto d-none d-sm-block">
+                    <a href="{{ route('document-management.index') }}">
+                        <i class="fa-solid fa-home fa-2x text-info"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
@@ -73,31 +89,22 @@
                                             @if ($employee->visa_type == '0')
                                                 <input type="text" class="form-control rounded-0 text-capitalize"
                                                     value="Visit Visa" readonly disabled>
-                                                @if ($employee->visa_type == '1')
-                                                    <input type="text" class="form-control rounded-0 text-capitalize"
-                                                        value="Cancel Visa" readonly disabled>
-                                                    @if ($employee->visa_type == '1')
-                                                        <input type="text" class="form-control rounded-0 text-capitalize"
-                                                            value="Family Visa" readonly disabled>
-                                                        @if ($employee->visa_type == '1')
-                                                            <input type="text"
-                                                                class="form-control rounded-0 text-capitalize"
-                                                                value="Freelance Visa" readonly disabled>
-                                                            @if ($employee->visa_type == '1')
-                                                                <input type="text"
-                                                                    class="form-control rounded-0 text-capitalize"
-                                                                    value="Own Visa" readonly disabled>
-                                                                @if ($employee->visa_type == '1')
-                                                                    <input type="text"
-                                                                        class="form-control rounded-0 text-capitalize"
-                                                                        value="Student Visa" readonly disabled>
-                                                                @endif
-                                                            @endif
-                                                        @endif
-                                                    @endif
-                                                @endif
+                                            @elseif ($employee->visa_type == '1')
+                                                <input type="text" class="form-control rounded-0 text-capitalize"
+                                                    value="Cancel Visa" readonly disabled>
+                                            @elseif ($employee->visa_type == '2')
+                                                <input type="text" class="form-control rounded-0 text-capitalize"
+                                                    value="Family Visa" readonly disabled>
+                                            @elseif ($employee->visa_type == '3')
+                                                <input type="text" class="form-control rounded-0 text-capitalize"
+                                                    value="Freelance Visa" readonly disabled>
+                                            @elseif ($employee->visa_type == '4')
+                                                <input type="text" class="form-control rounded-0 text-capitalize"
+                                                    value="Own Visa" readonly disabled>
+                                            @elseif ($employee->visa_type == '5')
+                                                <input type="text" class="form-control rounded-0 text-capitalize"
+                                                    value="Student Visa" readonly disabled>
                                             @endif
-
                                         </div>
                                     </div>
 
@@ -138,7 +145,7 @@
                                             class="col-form-label col-sm-3 text-sm-start">{{ __('Resident Country') }}</label>
                                         <div class="col-sm-9">
                                             <input type="text" class="form-control rounded-0 text-capitalize"
-                                                value="{{ $employee->resident_country }}" readonly disabled>
+                                                value="{{ $employee->country_name->country_name }}" readonly disabled>
                                         </div>
                                     </div>
 
@@ -206,6 +213,20 @@
                                             <textarea type="date" class="form-control rounded-0" name="special_note" placeholder="Special Note"
                                                 rows="3" readonly disabled>{{ $employee->special_note }}
                                             </textarea>
+                                        </div>
+                                    </div>
+                                </fieldset>
+
+                                <fieldset>
+                                    <legend class="px-4">{{ __('Yearly Leaves') }}</legend>
+                                    <div class="form-group row">
+                                        <label
+                                            class="col-form-label col-sm-3 text-sm-start">{{ __('Yearly Leaves') }}</label>
+                                        <div class="col-sm-9">
+                                            <input type="number" min="0"
+                                                class="form-control rounded-0 text-capitalize"
+                                                value="{{ $employee->year_leaves }}" name="year_leaves" readonly
+                                                disabled>
                                         </div>
                                     </div>
                                 </fieldset>

@@ -27,6 +27,7 @@ class Employees extends Model
         'designation',
         'join_date',
         'special_note',
+        'year_leaves',
         'status',
         'created_by',
     ];

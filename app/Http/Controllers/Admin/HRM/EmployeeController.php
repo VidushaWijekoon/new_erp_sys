@@ -63,6 +63,7 @@ class EmployeeController extends Controller
         $employee->join_date = $validatedData['join_date'];
         $employee->special_note = $validatedData['special_note'];
         $employee->status = '1';
+        $employee->year_leaves = '0';
         $employee->created_by = Auth::user()->id;
 
         $employee->save();
@@ -74,6 +75,7 @@ class EmployeeController extends Controller
         $departments = Departments::all();
         $designations  = Designations::all();
         $employee = Employees::findOrFail($employee);
+
         return view(
             'pages.hrm.employees.show',
             [
@@ -89,12 +91,15 @@ class EmployeeController extends Controller
         $departments = Departments::where('status', '1')->get();
         $designations  = Designations::where('status', '1')->get();
         $employee = Employees::findOrFail($employee);
+        $countries = Country::orderBy('country_name', 'ASC')->get();
+
         return view(
             'pages.hrm.employees.edit',
             [
                 'employee' => $employee,
                 'departments' => $departments,
-                'designations' => $designations
+                'designations' => $designations,
+                'countries' => $countries,
             ]
         );
     }
@@ -114,29 +119,25 @@ class EmployeeController extends Controller
         $employee->visa_expiring = $validatedData['visa_expiring'];
         $employee->contact_number = $validatedData['contact_number'];
         $employee->current_address = $validatedData['current_address'];
-        $employee->resident_country = $validatedData['resident_country'];
+        $employee->resident_country = $request['resident_country'];
         $employee->emergency_number = $validatedData['emergency_number'];
 
         if ($request->hasFile('image')) {
             $uploadPath = 'uploads/employee/';
-            $path = 'uploads/employee/' . $employee->image;
-            if (File::exists($path)) {
-                File::delete($path);
-            }
-
             $file = $request->file('image');
             $ext = $file->getClientOriginalExtension();
             $filename = time() . '.' . $ext;
 
-            $file->move('uploads/employee/', $filename);
+            $file->move($uploadPath, $filename);
             $employee->image = $uploadPath . $filename;
         }
 
-        $employee->department = $validatedData['department'];
-        $employee->designation = $validatedData['designation'];
+        $employee->department = $request['department'];
+        $employee->designation = $request['designation'];
         $employee->join_date = $validatedData['join_date'];
         $employee->special_note = $validatedData['special_note'];
         $employee->status = '1';
+        $employee->year_leaves = $request['year_leaves'];
         $employee->created_by = Auth::user()->id;
 
         $employee->update();

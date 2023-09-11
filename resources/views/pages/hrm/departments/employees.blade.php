@@ -12,7 +12,7 @@
 
                         <div class="info-box-content">
                             <span class="info-box-text">
-                                <h4>{{ __('Departments') }}</h4>
+                                <h4>{{ __('Departments') }} </h4>
                             </span>
                             <span class="info-box-number">
                                 <h4>{{ $deptCount }}</h4>
@@ -40,7 +40,6 @@
                             <table id="example1" class="table table-bordered table-hover">
                                 <thead>
                                     <tr>
-                                        <th>{{ __('#') }}</th>
                                         <th>{{ __('EMP ID') }}</th>
                                         <th>{{ __('Fullname') }}</th>
                                         <th>{{ __('Contact Number') }}</th>
@@ -53,15 +52,13 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php $x = 1; ?>
                                     @forelse ($department as $departmentEmployees)
                                         <tr>
-                                            <td>{{ $x++ }}</td>
-
                                             <td class="text-capitalize">{{ $departmentEmployees->id }}</td>
                                             <td class="text-capitalize">{{ $departmentEmployees->fullname }}</td>
                                             <td class="text-capitalize">{{ $departmentEmployees->contact_number }}</td>
-                                            <td class="text-capitalize">{{ $departmentEmployees->resident_country }}</td>
+                                            <td class="text-capitalize">
+                                                {{ $departmentEmployees->country_name->country_name }}</td>
                                             <td>
                                                 @if ($departmentEmployees->status == 1)
                                                     <span class="badge badge-success">Active</span>

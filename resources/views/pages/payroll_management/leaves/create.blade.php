@@ -2,7 +2,7 @@
 @extends('layouts.admin.app')
 @section('content')
     <div class="row justify-content-between">
-        <div class="col-12 col-lg-7">
+        <div class="col-lg-6">
             <div class="card">
                 <div class="card-header" style="background: #222e3c">
                     <span class="card-title mb-0 d-flex justify-content-between">
@@ -102,7 +102,55 @@
                 </div>
             </div>
         </div>
+        <div class="col-lg-6">
+            <div class="card">
+                <div class="card-header" style="background: #222e3c">
+                    <span class="card-title mb-0 d-flex justify-content-between">
+                        <h4 style="color: #e9ecef">{{ __('Previous Leaves') }}</h4>
+                    </span>
+                </div>
+                <div class="card-body">
 
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="table-responsive">
+                                <table id="example1" class="table table-bordered table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>{{ __('Leaves Type') }}</th>
+                                            <th>{{ __('From') }}</th>
+                                            <th>{{ __('To') }}</th>
+                                            <th>{{ __('No of Days') }}</th>
+                                            <th>{{ __('Reason') }}</th>
+                                            <th>{{ __('Status') }}</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach ($leaves as $leavesItem)
+                                            <tr>
+                                                <td>{{ $leavesItem->leave_type }}</td>
+                                                <td>{{ $leavesItem->fromDate }}</td>
+                                                <td>{{ $leavesItem->toDate }}</td>
+                                                <td>{{ $leavesItem->number_of_days }}</td>
+                                                <td class="text-capitalize">{{ $leavesItem->leave_reason }}</td>
+                                                <td>
+                                                    @if ($leavesItem->status == '1')
+                                                        <span class="badge badge-success">Approved</span>
+                                                    @else
+                                                        <span class="badge badge-danger">Not Approved</span>
+                                                    @endif
+                                                </td>
+                                            </tr>
+                                        @endforeach
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
     </div>
 @endsection
 
@@ -137,5 +185,12 @@
 
             document.getElementById('number_of_days').value = days_difference;
         }
+
+        $(function() {
+            $("#example1").DataTable({
+                "responsive": true,
+                "autoWidth": false,
+            });
+        });
     </script>
 @endpush

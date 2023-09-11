@@ -30,6 +30,7 @@ return new class extends Migration
             $table->unsignedBigInteger('designation');
             $table->date('join_date');
             $table->string('special_note');
+            $table->tinyInteger('year_leaves')->default('0');
             $table->tinyInteger('status')->default('0')->comment('0=InActive, 1=Active');
             $table->tinyInteger('account_status')->default('0')->comment('0=no create, 1=created');
             $table->unsignedBigInteger('created_by')->nullable();

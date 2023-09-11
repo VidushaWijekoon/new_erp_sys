@@ -11,6 +11,7 @@ use App\Http\Requests\HRM\DepartmentRequestForm;
 
 class DepartmentsController extends Controller
 {
+
     public function index()
     {
         return view('pages.hrm.departments.index');
