@@ -59,7 +59,7 @@
                                                     class="text-danger">{{ __('*') }}</span></label>
                                             <div class="cal-icon">
                                                 <input type="date" class="form-control datetimepicker" name="toDate"
-                                                    id="toDate" onchange="getDays()" required>
+                                                    id="toDate" onchange="getDays()" min="" required>
                                                 @error('toDate')
                                                     <small class="text-danger">{{ $message }}</small>
                                                 @enderror
@@ -76,11 +76,14 @@
                                                 disabled id="number_of_days">
                                         </div>
                                     </div>
+                                    <?php
+                                    $sum = $year_leaves - $leave_count;
+                                    ?>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>{{ __('Remaining Leaves') }} <span
                                                     class="text-danger">{{ __('*') }}</span></label>
-                                            <input type="text" class="form-control" value="12"
+                                            <input type="text" class="form-control" value="{{ $sum }}"
                                                 name="remaining_leaves" readonly disabled>
                                         </div>
                                     </div>
@@ -128,7 +131,25 @@
                                     <tbody>
                                         @foreach ($leaves as $leavesItem)
                                             <tr>
-                                                <td>{{ $leavesItem->leave_type }}</td>
+                                                <td>
+                                                    @if ($leavesItem->leave_type == '0')
+                                                        {{ __('Sick Leave') }}
+                                                    @elseif ($leavesItem->leave_type == '1')
+                                                        {{ __('Casual Leave') }}
+                                                    @elseif ($leavesItem->leave_type == '2')
+                                                        {{ __('Public Leave') }}
+                                                    @elseif ($leavesItem->leave_type == '3')
+                                                        {{ __('Religious holidays') }}
+                                                    @elseif ($leavesItem->leave_type == '4')
+                                                        {{ __('Bereavement holidays') }}
+                                                    @elseif ($leavesItem->leave_type == '5')
+                                                        {{ __('Compensatory leave and time off in lieu (TOIL)') }}
+                                                    @elseif ($leavesItem->leave_type == '6')
+                                                        {{ __('Sabbatical holidays') }}
+                                                    @elseif ($leavesItem->leave_type == '7')
+                                                        {{ __('Unpaid leave (leave without pay)') }}
+                                                    @endif
+                                                </td>
                                                 <td>{{ $leavesItem->fromDate }}</td>
                                                 <td>{{ $leavesItem->toDate }}</td>
                                                 <td>{{ $leavesItem->number_of_days }}</td>
@@ -192,5 +213,15 @@
                 "autoWidth": false,
             });
         });
+
+        var checkIn = document.getElementById('fromDate');
+        var checkOut = document.getElementById('toDate');
+
+        checkIn.addEventListener('change', updatedate);
+
+        function updatedate() {
+            var firstdate = checkIn.value;
+            checkOut.min = firstdate;
+        }
     </script>
 @endpush

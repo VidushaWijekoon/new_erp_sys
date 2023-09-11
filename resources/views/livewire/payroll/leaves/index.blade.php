@@ -34,7 +34,9 @@
                             <h4>{{ __('Leaves') }}</h4>
                         </span>
                         <span class="info-box-number">
-                            <h4>3</h4>
+                            <h4>
+                                {{ $leave_count }}
+                            </h4>
                         </span>
                     </div>
                     <!-- /.info-box-content -->
@@ -53,7 +55,9 @@
                             <h4>{{ __('Approved') }}</h4>
                         </span>
                         <span class="info-box-number">
-                            <h4>2</h4>
+                            <h4>
+                                {{ $approve_leave_count }}
+                            </h4>
                         </span>
                     </div>
                     <!-- /.info-box-content -->
@@ -72,7 +76,9 @@
                             <h4>{{ __('Not Approved') }}</h4>
                         </span>
                         <span class="info-box-number">
-                            <h4>2</h4>
+                            <h4>
+                                {{ $not_approve_leave_count }}
+                            </h4>
                         </span>
                     </div>
                     <!-- /.info-box-content -->
@@ -87,11 +93,18 @@
                     </span>
 
                     <div class="info-box-content">
-                        <span class="info-box-text">
-                            <h4>{{ __('Remaining Leaves') }}</h4>
-                        </span>
+
                         <span class="info-box-number">
-                            <h4>4/12</h4>
+                            <?php
+                            $sum = $year_leaves - $leave_count;
+                            ?>
+                            <h4>{{ $leave_count }} {{ __('/') }}
+                                {{ $year_leaves }} {{ __('Leaves') }}
+                            </h4>
+                            <h4>
+                                {{ $sum }}
+                                {{ __('Remaining for This Year') }}
+                            </h4>
                         </span>
                     </div>
                     <!-- /.info-box-content -->
@@ -157,22 +170,42 @@
                                             <td>{{ $leavesItem->number_of_days }}{{ __(' - Days') }}</td>
                                             <td class="d-none d-xl-table-cell text-capitalize">
                                                 {{ $leavesItem->leave_reason }}</td>
+                                            <td>
+                                                @if ($leavesItem->status == '1')
+                                                    <span class="badge badge-success">Approved</span>
+                                                @else
+                                                    <span class="badge badge-danger">Not Approved</span>
+                                                @endif
+                                            </td>
                                             <td class="d-none d-xl-table-cell text-capitalize">
                                                 {{ $leavesItem->created_by_username->username }}
                                             </td>
-                                            <td>
-
-                                            </td>
                                             <td class="table-action">
-                                                <a href="#" data-bs-toggle="tooltip" data-bs-placement="bottom"
-                                                    title="Show">
+                                                @if ($leavesItem->status == '1')
+                                                    <a href="{{ url('admin/leaves/' . $leavesItem->id . '/not_approved') }}"
+                                                        onclick="return confirm('Are you sure you want to not approved this leave')"
+                                                        data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                                        title="Not Approved ">
+                                                        <i class="fa-solid fa-circle-xmark mx-1 text-danger"></i>
+                                                    </a>
+                                                @elseif($leavesItem->status == '0')
+                                                    <a href="{{ url('admin/leaves/' . $leavesItem->id . '/approved') }}"
+                                                        onclick="return confirm('Are you sure you want to approved this leave')"
+                                                        data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                                        title="Approved">
+                                                        <i class="fa-solid fa-circle-check mx-1 text-success"></i>
+                                                    </a>
+                                                @endif
+                                                <a href="{{ url('admin/leaves/' . $leavesItem->id . '/show') }}"
+                                                    data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                                    title="Show My Leaves">
                                                     <i class="fa-solid fa-eye mx-1 text-primary"></i>
                                                 </a>
-                                                <a href="#" data-bs-toggle="tooltip" data-bs-placement="bottom"
-                                                    title="Edit">
+                                                <a href="{{ url('admin/leaves/' . $leavesItem->id . '/edit') }}"
+                                                    data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit">
                                                     <i class="fa-solid fa-pen mx-1 text-info"></i>
                                                 </a>
-                                                <a href="#"
+                                                <a href="{{ url('admin/leaves/' . $leavesItem->id . '/destroy') }}"
                                                     onclick="return confirm('Are you sure you want to delete this employee')"
                                                     data-bs-toggle="tooltip" data-bs-placement="bottom" title="Delete">
                                                     <i class="fa-solid fa-trash mx-1 text-danger"></i>
