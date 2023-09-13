@@ -145,7 +145,9 @@
                                     @foreach ($leaves as $leavesItem)
                                         <tr>
                                             <td>{{ $x++ }}</td>
-                                            <td>{{ $leavesItem->created_by_username->employee_name->fullname }}</td>
+                                            <td>
+                                                {{ $leavesItem->created_by }}
+                                            </td>
                                             <td>
                                                 @if ($leavesItem->leave_type == '0')
                                                     {{ __('Sick Leave') }}

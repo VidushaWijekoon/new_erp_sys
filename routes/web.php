@@ -135,7 +135,7 @@ Route::prefix('/admin')->middleware('auth', 'isAdmin')->group(function () {
 
     Route::controller(AttendanceController::class)->group(function () {
         Route::get('/attendance', 'index')->name('attendance.index');
-        Route::get('/attendance/create', 'create')->name('attendance.create');
+        Route::get('/attendance/{attendance}/mark-attendance', 'mark_attendance')->name('attendance.mark-attendance');
     });
 
     Route::controller(EmployeeSalaryController::class)->group(function () {

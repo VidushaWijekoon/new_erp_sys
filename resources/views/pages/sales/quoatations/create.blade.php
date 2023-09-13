@@ -116,39 +116,93 @@
 
                     <hr>
 
-                    <div class="card-header" style="background: #222e3c">
-                        <span class="card-title mb-0 d-flex justify-content-between">
-                            <h4 style="color: #e9ecef">{{ __('Quoataion Details') }}</h4>
-                        </span>
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12">
+
+                            <div class="card-header" style="background: #222e3c">
+                                <span class="card-title mb-0 d-flex justify-content-between">
+                                    <h4 style="color: #e9ecef">{{ __('Quoataion Details') }}</h4>
+                                </span>
+                            </div>
+
+                            <div class="table-responsive">
+                                <table id="emptbl" class="table table-bordered table-hover">
+                                    <tr class="bg-secondary text-white">
+                                        <thead>
+                                            <th>#</th>
+                                            <th>Item</th>
+                                            <th style="width: 400px">Description</th>
+                                            <th>Unit Cost</th>
+                                            <th>Quantity</th>
+                                            <th>Total</th>
+                                            <th>Amount</th>
+                                            <th>Action</th>
+                                        </thead>
+                                    </tr>
+
+                                    <tbody id="tbody">
+
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <table class="mb-3 mx-auto">
+                                <tr class="">
+                                    <td>
+                                        <input type="button" value="Add Container" onclick="addItem()"
+                                            class="btn btn-sm btn-info mx-2 text-white" />
+                                    </td>
+                                </tr>
+                            </table>
+                            <div class="table-responsive">
+                                <table class="table table-hover table-white">
+                                    <tbody>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td class="text-right">Total</td>
+                                            <td style="text-align: right; padding-right: 30px;width: 230px">0
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5" class="text-right">Tax</td>
+                                            <td style="text-align: right; padding-right: 30px;width: 230px">
+                                                <input class="form-control text-right form-amt" value="0"
+                                                    readonly="" type="text">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5" class="text-right">
+                                                Discount %
+                                            </td>
+                                            <td style="text-align: right; padding-right: 30px;width: 230px">
+                                                <input class="form-control text-right" type="text">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="5" style="text-align: right; font-weight: bold">
+                                                Grand Total
+                                            </td>
+                                            <td
+                                                style="text-align: right; padding-right: 30px; font-weight: bold; font-size: 16px;width: 230px">
+                                                $ 0.00
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group rounded-0">
+                                        <label>Additional Information</label>
+                                        <textarea class="form-control" rows=""></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-
-                    <div class="table-responsive">
-                        <table id="emptbl" class="table table-bordered table-hover">
-                            <tr class="bg-secondary text-white">
-                                <thead>
-                                    <th>#</th>
-                                    <th>Quantity</th>
-                                    <th style="width: 400px">Description</th>
-                                    <th>Unit Price</th>
-                                    <th>Total</th>
-                                    <th>Action</th>
-                                </thead>
-                            </tr>
-
-                            <tbody id="tbody">
-
-                            </tbody>
-                        </table>
-                    </div>
-
-                    <table class="mb-3 mx-auto">
-                        <tr class="">
-                            <td>
-                                <input type="button" value="Add Container" onclick="addItem()"
-                                    class="btn btn-sm btn-info mx-2 text-white" />
-                            </td>
-                        </tr>
-                    </table>
 
                     <div class="d-flex justify-content-end mt-2">
                         <a href="{{ route('quotation.index') }}" type="button"
@@ -172,13 +226,17 @@
             var html = "<tr>";
             html += "<td>" + items + "</td>";
             html +=
-                '<td><input type="number" name="tare[]" class="form-control rounded-0" required /></td>';
+                '<td><input type="text" min="0" name="tare[]" class="form-control rounded-0" required /></td>';
             html +=
                 '<td><textarea name="no_and_kind_of_packages[]" class="form-control rounded-0" rows="1" required></textarea></td>';
             html +=
-                '<td><input type="number" name="tare[]" class="form-control rounded-0" required /></td>';
+                '<td><input type="number" min="0" name="tare[]" class="form-control rounded-0" required /></td>';
             html +=
-                '<td><input type="number" name="tare[]" class="form-control rounded-0" required /></td>';
+                '<td><input type="number" min="0" name="tare[]" class="form-control rounded-0" required /></td>';
+            html +=
+                '<td><input type="number" min="0" name="tare[]" class="form-control rounded-0" required /></td>';
+            html +=
+                '<td><input type="number" min="0" name="tare[]" class="form-control rounded-0" required readonly disabled /></td>';
             html +=
                 "<td><button type='button' class='btn btn-sm btn-danger' onclick='deleteRow(this);'>Delete</button></td>";
             html += "</tr>";

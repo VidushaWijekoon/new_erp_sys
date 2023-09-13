@@ -4,6 +4,7 @@
             {{ session('message') }}
         </div>
     @endif
+
     <div class="container-fluid p-0">
         <div class="d-flex justify-content-between">
             <div class="row mb-2 mb-xl-3">
@@ -22,13 +23,14 @@
             </div>
         </div>
     </div>
+
     <div class="container-fluid">
         <div class="row">
             <div class="col-12 col-lg-12 col-xxl-12 d-flex">
                 <div class="card flex-fill">
                     <div class="card-body">
                         <div class="table-responsive">
-                            <table id="example2" class="table table-bordered table-hover">
+                            <table id="example1" class="table table-bordered table-hover">
                                 <thead>
                                     <tr>
                                         <th>Employee</th>
@@ -65,352 +67,18 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr>
-                                        <td>
-                                            <a href="{{ route('attendance.create') }}">Albina Simonis</a>
-                                        </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td>
-                                            <div class="half-day"><span class="first-off"><i
-                                                        class="fa fa-check text-success"></i></span> <span
-                                                    class="first-off"><i class="fa fa-close text-danger"></i></span>
-                                            </div>
-                                        </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-close text-danger"></i> </td>
-                                        <td><i class="fa fa-close text-danger"></i> </td>
-                                        <td><i class="fa fa-close text-danger"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-close text-danger"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td>
-                                            <div class="half-day"><span class="first-off"><i
-                                                        class="fa fa-close text-danger"></i></span> <span
-                                                    class="first-off"><i class="fa fa-check text-success"></i></span>
-                                            </div>
-                                        </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-close text-danger"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-close text-danger"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <a href="{{ route('attendance.create') }}">Cristina Groves</a>
-                                        </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-close text-danger"></i> </td>
-                                        <td><i class="fa fa-close text-danger"></i> </td>
-                                        <td><i class="fa fa-close text-danger"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-close text-danger"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-close text-danger"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-close text-danger"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <a href="{{ route('attendance.create') }}">Haylie Feeney</a>
-                                        </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-close text-danger"></i> </td>
-                                        <td><i class="fa fa-close text-danger"></i> </td>
-                                        <td><i class="fa fa-close text-danger"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-close text-danger"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-close text-danger"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-close text-danger"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Mary Mericle</td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-close text-danger"></i> </td>
-                                        <td><i class="fa fa-close text-danger"></i> </td>
-                                        <td><i class="fa fa-close text-danger"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-close text-danger"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-close text-danger"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-close text-danger"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Zoe Butler</td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-close text-danger"></i> </td>
-                                        <td><i class="fa fa-close text-danger"></i> </td>
-                                        <td><i class="fa fa-close text-danger"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-close text-danger"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-close text-danger"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-close text-danger"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Cristina Groves</td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-close text-danger"></i> </td>
-                                        <td><i class="fa fa-close text-danger"></i> </td>
-                                        <td><i class="fa fa-close text-danger"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-close text-danger"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-close text-danger"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-close text-danger"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Marie Wells</td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-close text-danger"></i> </td>
-                                        <td><i class="fa fa-close text-danger"></i> </td>
-                                        <td><i class="fa fa-close text-danger"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-close text-danger"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-close text-danger"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-close text-danger"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Henry Daniels</td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-close text-danger"></i> </td>
-                                        <td><i class="fa fa-close text-danger"></i> </td>
-                                        <td><i class="fa fa-close text-danger"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-close text-danger"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-close text-danger"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-close text-danger"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Mark Hunter</td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-close text-danger"></i> </td>
-                                        <td><i class="fa fa-close text-danger"></i> </td>
-                                        <td><i class="fa fa-close text-danger"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-close text-danger"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-close text-danger"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-close text-danger"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Michael Sullivan</td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-close text-danger"></i> </td>
-                                        <td><i class="fa fa-close text-danger"></i> </td>
-                                        <td><i class="fa fa-close text-danger"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-close text-danger"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-close text-danger"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-close text-danger"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                        <td><i class="fa fa-check text-success"></i> </td>
-                                    </tr>
+                                    @forelse ($all_active_employee as $empItem)
+                                        <tr>
+                                            <td>
+                                                <a
+                                                    href="{{ url('admin/attendance/' . $empItem->id . '/mark-attendance') }}">
+                                                    {{ $empItem->fullname }}
+                                                </a>
+                                            </td>
+                                        </tr>
+                                    @empty
+                                        <span class="text-danger">No Employees</span>
+                                    @endforelse
                                 </tbody>
                             </table>
                         </div>

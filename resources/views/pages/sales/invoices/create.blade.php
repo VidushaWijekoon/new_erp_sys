@@ -1,4 +1,4 @@
-@section('title', 'Create Quoatation')
+@section('title', 'Create Invoice')
 @extends('layouts.admin.app')
 @section('content')
     <div class="container-fluid">
@@ -26,11 +26,11 @@
                                         <select class="custom-select rounded-0 text-capitalize" name="visa_type" required>
                                             <option selected value="0">{{ __('Please Select Quoatation Number') }}
                                             </option>
-                                            <option value="1">{{ __('Vidusha Wijekoon') }}</option>
-                                            <option value="1">{{ __('Vidusha Wijekoon') }}</option>
-                                            <option value="1">{{ __('Vidusha Wijekoon') }}</option>
-                                            <option value="1">{{ __('Vidusha Wijekoon') }}</option>
-                                            <option value="1">{{ __('Vidusha Wijekoon') }}</option>
+                                            <option value="1">{{ __('QA-0001') }}</option>
+                                            <option value="1">{{ __('QA-0002') }}</option>
+                                            <option value="1">{{ __('QA-0003') }}</option>
+                                            <option value="1">{{ __('QA-0004') }}</option>
+                                            <option value="1">{{ __('QA-0005') }}</option>
                                         </select>
                                     </div>
                                 </div>
@@ -103,7 +103,7 @@
 
                                     <div class="card-header" style="background: #222e3c">
                                         <span class="card-title mb-0 d-flex justify-content-between">
-                                            <h4 style="color: #e9ecef">{{ __('Quoataion Details') }}</h4>
+                                            <h4 style="color: #e9ecef">{{ __('Invoices Details') }}</h4>
                                         </span>
                                     </div>
 
@@ -194,7 +194,7 @@
                     <div class="d-flex justify-content-end mt-2">
                         <a href="{{ route('invoices.index') }}" type="button"
                             class="btn btn-secondary btn-sm mx-2">{{ __('Close') }}</a>
-                        <button type="submit" class="btn btn-primary btn-sm">{{ __('Create Quoatation') }}</button>
+                        <button type="submit" class="btn btn-primary btn-sm">{{ __('Create Invoice') }}</button>
                     </div>
                 </div>
             </div>

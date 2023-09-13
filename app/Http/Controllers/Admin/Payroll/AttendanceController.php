@@ -11,7 +11,7 @@ class AttendanceController extends Controller
         return view('pages.payroll_management.attendance.index');
     }
 
-    public function create()
+    public function mark_attendance($attendance)
     {
         return view('pages.payroll_management.attendance.create');
     }
