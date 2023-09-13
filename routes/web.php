@@ -19,6 +19,8 @@ use App\Http\Controllers\Admin\Payroll\HolidaysController;
 use App\Http\Controllers\Admin\POS\POSDashboardController;
 use App\Http\Controllers\Admin\Sales\QuotationsController;
 use App\Http\Controllers\Admin\Payroll\AttendanceController;
+use App\Http\Controllers\Admin\Sales\SalesApprovalController;
+use App\Http\Controllers\Admin\Inventory\InventoryController;
 use App\Http\Controllers\Admin\Sales\SalesDashboardController;
 use App\Http\Controllers\Admin\HRM\PayrollManagementController;
 use App\Http\Controllers\Admin\HRM\DocumentManagementController;
@@ -26,22 +28,11 @@ use App\Http\Controllers\Admin\Payroll\EmployeeSalaryController;
 use App\Http\Controllers\Admin\Sales\SalesLeadsDashboardController;
 use App\Http\Controllers\Admin\Accounts\AccountsDashboardController;
 use App\Http\Controllers\Admin\ECommerce\ECommerceDashboardController;
+use App\Http\Controllers\Admin\Inventory\InventoryStockReportController;
 use App\Http\Controllers\Admin\Procurement\ProcurementDashboardController;
 use App\Http\Controllers\Admin\InventoryManagement\InventoryManagementDashboardController;
-use App\Http\Controllers\Admin\Sales\SalesApprovalController;
 use App\Http\Controllers\Admin\WarehouseManagement\WarehouseManagementDashboardController;
 use App\Http\Controllers\Admin\SupplyChainManagement\SupplyChainManagementDashboardController;
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
 
 Auth::routes();
 
@@ -108,6 +99,13 @@ Route::prefix('/admin')->middleware('auth', 'isAdmin')->group(function () {
     });
 
     Route::get('/register', [RegisterController::class, 'index'])->name('user.register');
+
+    /*
+    |--------------------------------------------------------------------------
+    | Payroll
+    |--------------------------------------------------------------------------
+    */
+
 
     Route::controller(HolidaysController::class)->group(function () {
         Route::get('/holiday', 'index')->name('holiday.index');
@@ -193,5 +191,19 @@ Route::prefix('/admin')->middleware('auth', 'isAdmin')->group(function () {
     Route::controller(VendorsController::class)->group(function () {
         Route::get('/vendors', 'index')->name('vendors');
         Route::get('/vendors/create', 'create')->name('vendors-create');
+    });
+
+    /*
+    |--------------------------------------------------------------------------
+    | Inventory
+    |--------------------------------------------------------------------------
+    */
+
+    Route::controller(InventoryController::class)->group(function () {
+        Route::get('/inventory', 'index')->name('inventory');
+    });
+
+    Route::controller(InventoryStockReportController::class)->group(function () {
+        Route::get('/inventory-stock-report', 'index')->name('inventory-stock-report');
     });
 });

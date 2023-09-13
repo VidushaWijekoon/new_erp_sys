@@ -5,7 +5,71 @@
                 <h3><strong>{{ __('HR') }}</strong> {{ __('Dashboard') }}</h3>
             </div>
         </div>
+    </div>
 
+    <div class="container-fluid">
+        <!-- Info boxes -->
+        <div class="row">
+            <div class="col-12 col-sm-6 col-md-3">
+                <div class="info-box">
+                    <span class="info-box-icon bg-info elevation-1">
+                        <i class="fas fa-building-user"></i>
+                    </span>
+
+                    <div class="info-box-content">
+                        <span class="info-box-text">{{ __('Departments') }}</span>
+                        <span class="info-box-number">
+                            {{ $deptCount }}
+                        </span>
+                    </div>
+                    <!-- /.info-box-content -->
+                </div>
+                <!-- /.info-box -->
+            </div>
+            <!-- /.col -->
+            <div class="col-12 col-sm-6 col-md-3">
+                <div class="info-box mb-3">
+                    <span class="info-box-icon bg-danger elevation-1">
+                        <i class="fas fa-arrows-to-circle"></i>
+                    </span>
+
+                    <div class="info-box-content">
+                        <span class="info-box-text">{{ __('Designations') }}</span>
+                        <span class="info-box-number">
+                            {{ $designCount }}
+                        </span>
+                    </div>
+                    <!-- /.info-box-content -->
+                </div>
+                <!-- /.info-box -->
+            </div>
+            <!-- /.col -->
+
+            <!-- fix for small devices only -->
+            <div class="clearfix hidden-md-up"></div>
+
+            <div class="col-12 col-sm-6 col-md-3">
+                <div class="info-box mb-3">
+                    <span class="info-box-icon bg-success elevation-1">
+                        <i class="fas fa-users"></i>
+                    </span>
+
+                    <div class="info-box-content">
+                        <span class="info-box-text">{{ __('Employees') }}</span>
+                        <span class="info-box-number">
+                            {{ $empCount }}
+                        </span>
+                    </div>
+                    <!-- /.info-box-content -->
+                </div>
+                <!-- /.info-box -->
+            </div>
+            <!-- /.col -->
+        </div>
+        <!-- /.row -->
+    </div>
+
+    <div class="container-fluid">
         <div class="row">
             <div class="col-xl-12 col-md-12 d-flex">
                 <div class="w-100">
@@ -102,7 +166,7 @@
                                             style="color: rgb(101, 161, 32)"></i>
                                         <span class="d-flex align-items-center" style="text-align: end">
                                             {{ __('Check and use data for reporting and compliance purposes,Follow all
-                                                                                        workplace-related regulations and legislation') }}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                workplace-related regulations and legislation') }}
                                         </span>
                                     </div>
                                 </div>
@@ -130,7 +194,7 @@
                                             style="color: rgb(206, 128, 26)"></i>
                                         <span class="d-flex align-items-center" style="text-align: end">
                                             {{ __('Check and use data for reporting and compliance purposes,Follow all
-                                                                                        workplace-related regulations and legislation') }}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                workplace-related regulations and legislation') }}
                                         </span>
                                     </div>
                                 </div>

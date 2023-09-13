@@ -15,7 +15,7 @@ return new class extends Migration
             $table->string('username')->unique();
             $table->unsignedBigInteger('emp_id')->unique()->nullable();
             $table->smallInteger('created_by')->nullable();
-            $table->unsignedBigInteger('role')->default('0')->comment('0=User, 1=Admin, 2=SuperAdmin');
+            $table->unsignedBigInteger('role')->default('0')->nullable()->comment('0=User, 1=Admin, 2=SuperAdmin');
             $table->tinyInteger('status')->default('0')->comment('0=Inactive, 1=Active');
             $table->foreign('emp_id')->references('id')->on('employees')->onDelete('cascade');
             $table->foreign('role')->references('id')->on('designations')->onDelete('cascade');

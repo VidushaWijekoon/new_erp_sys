@@ -18,7 +18,9 @@
                 </div>
             </div>
         </div>
+    </div>
 
+    <div class="container-fluid">
         <div class="row">
             <div class="col-xl-12 col-md-12 d-flex">
                 <div class="w-100">

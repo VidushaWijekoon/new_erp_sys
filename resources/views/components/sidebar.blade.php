@@ -88,7 +88,7 @@
             <li class="sidebar-item">
                 <a href="#pos" data-toggle="collapse" class="sidebar-link collapsed">
                     <i class="align-middle" data-feather="hard-drive"></i>
-                    <span class="align-middle">POS</span>
+                    <span class="align-middle">{{ __('POS') }}</span>
                 </a>
                 <ul id="pos" class="sidebar-dropdown list-unstyled collapse" data-parent="#sidebar">
                     <li class="sidebar-item">
@@ -133,18 +133,29 @@
             </li>
 
             <li class="sidebar-item">
-                <a href="#warehouse" data-toggle="collapse" class="sidebar-link collapsed">
-                    <i class="align-middle" data-feather="package"></i>
-                    <span class="align-middle">{{ __('Inventory Management') }}</span>
+                <a href="#inventory" data-toggle="collapse" class="sidebar-link collapsed">
+                    <i class="align-middle" data-feather="hard-drive"></i>
+                    <span class="align-middle">{{ __('Inventory') }}</span>
                 </a>
-                <ul id="warehouse" class="sidebar-dropdown list-unstyled collapse" data-parent="#sidebar">
+                <ul id="inventory" class="sidebar-dropdown list-unstyled collapse" data-parent="#sidebar">
                     <li class="sidebar-item">
                         <a class="sidebar-link" href="{{ route('inventory-management-dashboard') }}">
                             {{ __('Inventory Dashboard') }}
                         </a>
                     </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="{{ route('inventory') }}">
+                            {{ __('Inventory') }}
+                        </a>
+                    </li>
+                    <li class="sidebar-item">
+                        <a class="sidebar-link" href="{{ route('inventory-stock-report') }}">
+                            {{ __('Stock Report') }}
+                        </a>
+                    </li>
                 </ul>
             </li>
+
 
             <li class="sidebar-item">
                 <a href="#scm" data-toggle="collapse" class="sidebar-link collapsed">

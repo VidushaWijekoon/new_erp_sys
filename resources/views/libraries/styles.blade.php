@@ -8,4 +8,8 @@
 <link rel="stylesheet" href="{{ asset('vendors/datatables-bs4/css/dataTables.bootstrap4.min.css') }}">
 <link rel="stylesheet" href="{{ asset('vendors/datatables-responsive/css/responsive.bootstrap4.min.css') }}">
 
+<!-- Select2 -->
+<link rel="stylesheet" href="{{ asset('vendors/select2/css/select2.min.css') }}">
+<link rel="stylesheet" href="{{ asset('vendors/select2-bootstrap4-theme/select2-bootstrap4.min.css') }}">
+
 @stack('css')

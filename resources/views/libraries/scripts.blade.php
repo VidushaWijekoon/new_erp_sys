@@ -20,4 +20,7 @@
 <script src="{{ asset('vendors/datatables-responsive/js/dataTables.responsive.min.js') }}"></script>
 <script src="{{ asset('vendors/datatables-responsive/js/responsive.bootstrap4.min.js') }}"></script>
 
+<!-- Select2 -->
+<script src="{{ asset('vendors/select2/js/select2.full.min.js') }}"></script>
+
 @stack('scripts')

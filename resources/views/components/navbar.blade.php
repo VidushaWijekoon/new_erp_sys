@@ -76,7 +76,7 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link d-sm-inline-block" href="#" data-toggle="dropdown">
-                    <span class="text-dark text-capitalize">{{ Auth::user()->username }}</span>
+                    <span class="text-dark text-capitalize">{{ Auth::user()->name }}</span>
                 </a>
                 <a class="" href="{{ route('logout') }}"
                     onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
