@@ -2,15 +2,12 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\Models\User;
-use App\Models\Employees;
-use App\Models\Designations;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Hash;
 use App\Providers\RouteServiceProvider;
-use Illuminate\Support\Facades\Validator;
+use App\Models\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Validator;
 
 class RegisterController extends Controller
 {
@@ -32,7 +29,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = RouteServiceProvider::USERS;
+    protected $redirectTo = RouteServiceProvider::HOME;
 
     /**
      * Create a new controller instance.
@@ -41,7 +38,7 @@ class RegisterController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('isAdmin');
+        $this->middleware('guest');
     }
 
     /**
@@ -54,9 +51,7 @@ class RegisterController extends Controller
     {
         return Validator::make($data, [
             'name' => ['required', 'string', 'max:255'],
-            'username' => ['required', 'string', 'max:255', 'unique:users'],
-            'emp_id' => ['required', 'integer'],
-            'role' => ['required', 'integer'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
     }
@@ -71,18 +66,8 @@ class RegisterController extends Controller
     {
         return User::create([
             'name' => $data['name'],
-            'emp_id' => $data['emp_id'],
-            'role' => $data['role'],
-            'username' => $data['username'],
+            'email' => $data['email'],
             'password' => Hash::make($data['password']),
-            'created_by' => Auth::user()->id,
         ]);
-    }
-
-    public function index()
-    {
-        $users_available = Employees::where('account_status', '0')->get();
-        $role = Designations::where('status', '1')->get();
-        return view('auth.register', ['users_available' => $users_available, 'role' => $role]);
     }
 }

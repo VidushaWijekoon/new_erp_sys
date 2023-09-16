@@ -19,7 +19,7 @@
                     <div class="info-box-content">
                         <span class="info-box-text">{{ __('Departments') }}</span>
                         <span class="info-box-number">
-                            {{ $deptCount }}
+                            10
                         </span>
                     </div>
                     <!-- /.info-box-content -->
@@ -36,7 +36,7 @@
                     <div class="info-box-content">
                         <span class="info-box-text">{{ __('Designations') }}</span>
                         <span class="info-box-number">
-                            {{ $designCount }}
+                            12
                         </span>
                     </div>
                     <!-- /.info-box-content -->
@@ -57,7 +57,7 @@
                     <div class="info-box-content">
                         <span class="info-box-text">{{ __('Employees') }}</span>
                         <span class="info-box-number">
-                            {{ $empCount }}
+                            24
                         </span>
                     </div>
                     <!-- /.info-box-content -->
@@ -118,7 +118,7 @@
                                 </div>
                                 <div class="card-footer border-danger" style="border-top: 1px solid blue">
                                     <div class="d-flex justify-content-end">
-                                        <a href="{{ route('payroll-management.index') }}">
+                                        <a href="#">
                                             <i class="fa-solid fa-circle-plus fa-2x text-success"></i>
                                         </a>
                                     </div>
@@ -166,7 +166,7 @@
                                             style="color: rgb(101, 161, 32)"></i>
                                         <span class="d-flex align-items-center" style="text-align: end">
                                             {{ __('Check and use data for reporting and compliance purposes,Follow all
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                workplace-related regulations and legislation') }}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    workplace-related regulations and legislation') }}
                                         </span>
                                     </div>
                                 </div>
@@ -194,7 +194,7 @@
                                             style="color: rgb(206, 128, 26)"></i>
                                         <span class="d-flex align-items-center" style="text-align: end">
                                             {{ __('Check and use data for reporting and compliance purposes,Follow all
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                workplace-related regulations and legislation') }}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    workplace-related regulations and legislation') }}
                                         </span>
                                     </div>
                                 </div>

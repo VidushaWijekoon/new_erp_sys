@@ -1,6 +1,6 @@
 <nav id="sidebar" class="sidebar">
     <div class="sidebar-content js-simplebar">
-        <a class="sidebar-brand justify-content-center d-flex" href="{{ url('admin/dashboard') }}">
+        <a class="sidebar-brand justify-content-center d-flex" href="{{ route('admin.dashboard') }}">
             <img src="{{ asset('images/company/rtlogolight.png') }}" alt="Company Logo" width="125">
         </a>
 
@@ -8,7 +8,7 @@
             <li class="sidebar-header">{{ __('Pages') }}</li>
 
             <li class="sidebar-item">
-                <a class="sidebar-link" href="{{ url('admin/dashboard') }}">
+                <a class="sidebar-link" href="{{ route('admin.dashboard') }}">
                     <i class="align-middle" data-feather="sliders"></i>
                     <span class="align-middle">{{ __('Dashboard') }}</span>
                 </a>
@@ -28,8 +28,7 @@
                             href="{{ route('document-management.index') }}">{{ __('Document Management') }}</a>
                     </li>
                     <li class="sidebar-item">
-                        <a class="sidebar-link"
-                            href="{{ route('payroll-management.index') }}">{{ __('Payroll Management') }}</a>
+                        <a class="sidebar-link" href="#">{{ __('Payroll Management') }}</a>
                     </li>
                 </ul>
             </li>
@@ -41,18 +40,16 @@
                 </a>
                 <ul id="sales" class="sidebar-dropdown list-unstyled collapse" data-parent="#sidebar">
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="{{ route('sales.dashboard') }}">{{ __('Sales Dashboard') }}</a>
+                        <a class="sidebar-link" href="#">{{ __('Sales Dashboard') }}</a>
                     </li>
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="{{ route('sales-leads') }}">{{ __('Leads Management') }}</a>
+                        <a class="sidebar-link" href="#">{{ __('Leads Management') }}</a>
                     </li>
                     <li class="sidebar-item">
-                        <a class="sidebar-link"
-                            href="{{ route('quotation.index') }}">{{ __('Quotation Management') }}</a>
+                        <a class="sidebar-link" href="#">{{ __('Quotation Management') }}</a>
                     </li>
                     <li class="sidebar-item">
-                        <a class="sidebar-link"
-                            href="{{ route('invoices.index') }}">{{ __('Invoice Management') }}</a>
+                        <a class="sidebar-link" href="#">{{ __('Invoice Management') }}</a>
                     </li>
                     <li class="sidebar-item">
                         <a class="sidebar-link" href="#">{{ __('Approval Stages') }}</a>
@@ -67,8 +64,7 @@
                 </a>
                 <ul id="accounts" class="sidebar-dropdown list-unstyled collapse" data-parent="#sidebar">
                     <li class="sidebar-item">
-                        <a class="sidebar-link"
-                            href="{{ route('accounts-dashboard.index') }}">{{ __('Accounts Dashboard') }}</a>
+                        <a class="sidebar-link" href="#">{{ __('Accounts Dashboard') }}</a>
                     </li>
                     <li class="sidebar-item">
                         <a class="sidebar-link" href="#">{{ __('Sales Orders') }} </a>
@@ -92,8 +88,7 @@
                 </a>
                 <ul id="pos" class="sidebar-dropdown list-unstyled collapse" data-parent="#sidebar">
                     <li class="sidebar-item">
-                        <a class="sidebar-link"
-                            href="{{ route('pos-dashboard.index') }}">{{ __('POS Dashboard') }}</a>
+                        <a class="sidebar-link" href="#">{{ __('POS Dashboard') }}</a>
                     </li>
                     <li class="sidebar-item">
                         <a class="sidebar-link" href="#">{{ __('POS Items') }}</a>
@@ -111,7 +106,7 @@
                 </a>
                 <ul id="ecom" class="sidebar-dropdown list-unstyled collapse" data-parent="#sidebar">
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="{{ route('e-commerce-dashboard.index') }}">
+                        <a class="sidebar-link" href="#">
                             {{ __('E-Commerce Dashboard') }}</a>
                     </li>
                 </ul>
@@ -126,7 +121,7 @@
                 </a>
                 <ul id="procurement" class="sidebar-dropdown list-unstyled collapse" data-parent="#sidebar">
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="{{ route('procurement-dashboard.index') }}">
+                        <a class="sidebar-link" href="#">
                             {{ __('Procurement Dashboard') }}</a>
                     </li>
                 </ul>
@@ -139,17 +134,17 @@
                 </a>
                 <ul id="inventory" class="sidebar-dropdown list-unstyled collapse" data-parent="#sidebar">
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="{{ route('inventory-management-dashboard') }}">
+                        <a class="sidebar-link" href="#">
                             {{ __('Inventory Dashboard') }}
                         </a>
                     </li>
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="{{ route('inventory') }}">
+                        <a class="sidebar-link" href="#">
                             {{ __('Inventory') }}
                         </a>
                     </li>
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="{{ route('inventory-stock-report') }}">
+                        <a class="sidebar-link" href="#">
                             {{ __('Stock Report') }}
                         </a>
                     </li>
@@ -164,7 +159,7 @@
                 </a>
                 <ul id="scm" class="sidebar-dropdown list-unstyled collapse" data-parent="#sidebar">
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="{{ route('supply-chain-management-dashboard') }}">
+                        <a class="sidebar-link" href="#">
                             {{ __('SCM Dashboard') }}
                         </a>
                     </li>
@@ -180,10 +175,10 @@
                 </a>
                 <ul id="users" class="sidebar-dropdown list-unstyled collapse" data-parent="#sidebar">
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="{{ route('user.register') }}">{{ __('Create New User') }}</a>
+                        <a class="sidebar-link" href="#">{{ __('Create New User') }}</a>
                     </li>
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="{{ route('users.index') }}">{{ __('Disciplinary List') }}</a>
+                        <a class="sidebar-link" href="#">{{ __('Disciplinary List') }}</a>
                     </li>
                 </ul>
             </li>

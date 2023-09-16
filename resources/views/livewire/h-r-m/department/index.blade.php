@@ -4,6 +4,7 @@
             {{ session('message') }}
         </div>
     @endif
+    @include('livewire.h-r-m.department.department-form')
     <div class="container-fluid p-0">
         <div class="d-flex justify-content-between">
             <div class="row mb-2 mb-xl-3">
@@ -13,7 +14,7 @@
             </div>
             <div class="row mb-2 mb-xl-3">
                 <div class="col-auto d-none d-sm-block">
-                    <a href="{{ route('document-management.index') }}">
+                    <a href="#">
                         <i class="fa-solid fa-home fa-2x text-info"></i>
                     </a>
                 </div>
@@ -34,7 +35,7 @@
                             <h4>{{ __('Departments') }}</h4>
                         </span>
                         <span class="info-box-number">
-                            <h4>{{ $deptCount }}</h4>
+                            <h4>2</h4>
                         </span>
                     </div>
                     <!-- /.info-box-content -->
@@ -50,8 +51,8 @@
             <div class="col-12 col-lg-12 d-flex">
                 <div class="card flex-fill">
                     <div class="card-header">
-                        <a href="{{ route('department.create') }}"
-                            class="btn btn-sm btn-primary">{{ __('Create New Department') }}</a>
+                        <a href="#" class="btn btn-sm btn-primary" data-toggle="modal"
+                            data-target="#createDepartment">{{ __('Create New Department') }}</a>
                     </div>
                     <div class="card-body">
                         <table id="example1" class="table table-bordered table-hover">
@@ -115,19 +116,21 @@
                                                     <i class="fa-solid fa-circle-check mx-1 text-success"></i>
                                                 </a>
                                             @endif
-                                            <a href="{{ url('admin/department/' . $departmentItem->id . '/show') }}"
-                                                data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                            <a href="#" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                                wire:click="show({{ $departmentItem->id }})" data-toggle="modal"
+                                                data-target="#showDepartment"
                                                 title="Show {{ $departmentItem->department_name }}">
                                                 <i class="fa-solid fa-eye mx-1 text-primary"></i>
                                             </a>
-                                            <a href="{{ url('admin/department/' . $departmentItem->id . '/edit') }}"
-                                                data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                            <a href="#" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                                wire:click="edit({{ $departmentItem->id }})" data-toggle="modal"
+                                                data-target="#editDepartment"
                                                 title="Edit {{ $departmentItem->department_name }}">
                                                 <i class="fa-solid fa-pen mx-1 text-info"></i>
                                             </a>
-                                            <a href="{{ url('admin/department/' . $departmentItem->id . '/destroy') }}"
-                                                onclick="return confirm('Are you sure you want to delete this department')"
-                                                data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                            <a href="#" data-bs-toggle="tooltip" data-bs-placement="bottom"
+                                                data-toggle="modal" data-target="#deleteDepartment"
+                                                wire:click="deleteDepartment({{ $departmentItem->id }})"
                                                 title="Delete {{ $departmentItem->department_name }}">
                                                 <i class="fa-solid fa-trash mx-1 text-danger"></i>
                                             </a>
@@ -138,6 +141,9 @@
                                 @endforelse
                             </tbody>
                         </table>
+                        <div class="d-flex float-end">
+                            {{ $departments->links() }}
+                        </div>
                     </div>
                 </div>
             </div>
@@ -147,11 +153,8 @@
 
 @push('scripts')
     <script>
-        $(function() {
-            $("#example1").DataTable({
-                "responsive": true,
-                "autoWidth": false,
-            });
+        window.addEventListener('close-modal', event => {
+            $('#createDepartment').modal('hide');
         });
     </script>
 @endpush
