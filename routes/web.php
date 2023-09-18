@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\HRM\LeavesController;
 use App\Http\Controllers\Admin\HRM\EmployeeController;
 use App\Http\Controllers\Admin\HRM\DepartmentController;
 use App\Http\Controllers\Admin\HRM\HRDashboardController;
@@ -73,4 +74,16 @@ Route::prefix('/admin')->middleware('auth', 'isAdmin')->group(function () {
 
     // Livewire Holidays
     Route::get('/holidays', App\Http\Livewire\Payroll\Holiday\Index::class)->name('holidays');
+
+    Route::controller(LeavesController::class)->group(function () {
+        Route::get('/leaves', 'index')->name('leaves-index');
+        Route::get('/leaves/create', 'create')->name('leaves.create');
+        Route::post('/leaves', 'store')->name('leaves.store');
+        Route::get('/leaves/{leaves}/show', 'show')->name('leaves.show');
+        Route::get('/leaves/{leaves}/edit', 'edit')->name('leaves.edit');
+        Route::put('/leaves/{leaves}/', 'update')->name('leaves.update');
+        Route::get('/leaves/{leaves}/destroy', 'destroy')->name('leaves.destroy');
+        Route::get('/leaves/{leaves}/approved', 'approved')->name('leaves.approved');
+        Route::get('/leaves/{leaves}/not_approved', 'not_approved')->name('leaves.not_approved');
+    });
 });
