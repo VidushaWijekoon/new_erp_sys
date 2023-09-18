@@ -4,15 +4,23 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\Sales\LeadsController;
 use App\Http\Controllers\Admin\HRM\EmployeeController;
+use App\Http\Controllers\Admin\Sales\VendorsController;
 use App\Http\Controllers\Admin\HRM\DepartmentController;
 use App\Http\Controllers\Admin\Payroll\LeavesController;
+use App\Http\Controllers\Admin\Sales\InvoicesController;
 use App\Http\Controllers\Admin\HRM\HRDashboardController;
+use App\Http\Controllers\Admin\Sales\CustomersController;
 use App\Http\Controllers\Admin\HRM\DesignationsController;
+use App\Http\Controllers\Admin\Sales\QuotationsController;
 use App\Http\Controllers\Admin\Payroll\AttendanceController;
+use App\Http\Controllers\Admin\Sales\SalesApprovalController;
+use App\Http\Controllers\Admin\Sales\SalesDashboardController;
 use App\Http\Controllers\Admin\HRM\PayrollManagementController;
 use App\Http\Controllers\Admin\HRM\DocumentManagementController;
 use App\Http\Controllers\Admin\Payroll\EmployeeSalaryController;
+use App\Http\Controllers\Admin\Sales\SalesLeadsDashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -98,5 +106,42 @@ Route::prefix('/admin')->middleware('auth', 'isAdmin')->group(function () {
         Route::get('/employee-salary', 'index')->name('employee-salary.index');
         Route::get('/employee-salary/create', 'create')->name('employee-salary.create');
         Route::get('/employee-salary/payslip', 'payslip')->name('employee-salary.payslip');
+    });
+
+    /*
+    |--------------------------------------------------------------------------
+    | Sales
+    |--------------------------------------------------------------------------
+    */
+
+    Route::get('sales-dahsboard', [SalesDashboardController::class, 'index'])->name('sales.dashboard');
+    Route::get('sales-leads', [SalesLeadsDashboardController::class, 'index'])->name('sales-leads');
+    Route::get('sales-approvals', [SalesApprovalController::class, 'index'])->name('sales-approvals');
+
+    Route::controller(CustomersController::class)->group(function () {
+        Route::get('/customer', 'index')->name('customer.index');
+        Route::get('/customer/create', 'create')->name('customer.create');
+        Route::post('/customer/', 'store')->name('customer.store');
+        Route::get('/customer/{customer}/view_customer', 'view_customer')->name('customer.view_customer');
+    });
+
+    Route::controller(QuotationsController::class)->group(function () {
+        Route::get('/quotation', 'index')->name('quotation.index');
+        Route::get('/quotation/create', 'create')->name('quotation.create');
+    });
+
+    Route::controller(InvoicesController::class)->group(function () {
+        Route::get('/invoices', 'index')->name('invoices.index');
+        Route::get('/invoices/create', 'create')->name('invoices.create');
+    });
+
+    Route::controller(LeadsController::class)->group(function () {
+        Route::get('/leads', 'index')->name('leads');
+        Route::get('/leads/create', 'create')->name('leads-create');
+    });
+
+    Route::controller(VendorsController::class)->group(function () {
+        Route::get('/vendors', 'index')->name('vendors');
+        Route::get('/vendors/create', 'create')->name('vendors-create');
     });
 });

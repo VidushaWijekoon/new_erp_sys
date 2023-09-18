@@ -40,7 +40,7 @@
                 </a>
                 <ul id="sales" class="sidebar-dropdown list-unstyled collapse" data-parent="#sidebar">
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="#">{{ __('Sales Dashboard') }}</a>
+                        <a class="sidebar-link" href="{{ route('sales.dashboard') }}">{{ __('Sales Dashboard') }}</a>
                     </li>
                     <li class="sidebar-item">
                         <a class="sidebar-link" href="#">{{ __('Leads Management') }}</a>
