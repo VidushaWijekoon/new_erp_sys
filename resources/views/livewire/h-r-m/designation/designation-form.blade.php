@@ -1,11 +1,11 @@
-<!-- Create New Department -->
-<div wire:ignore.self class="modal fade" id="createDepartment" tabindex="-1" aria-hidden="true">
+<!-- Create New Designation -->
+<div wire:ignore.self class="modal fade" id="createDesignation" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
-            <form wire:submit.prevent="storeDepartment">
+            <form wire:submit.prevent="storeDesignation">
                 <div class="modal-header" style="background: #222e3c">
                     <span class="modal-title mb-0 d-flex justify-content-between w-100">
-                        <h4 style="color: #e9ecef">{{ __('Create New Department') }}</h4>
+                        <h4 style="color: #e9ecef">{{ __('Create New Designation') }}</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"
                             wire:click="closeModal">
                             <span aria-hidden="true">&times;</span>
@@ -23,11 +23,11 @@
                     @endif
                     <div class="form-group">
                         <label class="form-label">
-                            <span>{{ __('Department Name') }}</span>
+                            <span>{{ __('Designation Name') }}</span>
                         </label>
-                        <input type="text" class="form-control rounded-0" wire:model.defer="department_name"
-                            placeholder="Department Name" required>
-                        @error('department_name')
+                        <input type="text" class="form-control rounded-0" wire:model.defer="designation_name"
+                            placeholder="Designation Name" required>
+                        @error('designation_name')
                             <small class="text-danger">{{ $message }}</small>
                         @enderror
                     </div>
@@ -50,15 +50,15 @@
         </div>
     </div>
 </div>
-<!-- End Create New Department -->
+<!-- End Create New Designation -->
 
-<!-- Show Department -->
-<div wire:ignore.self class="modal fade" id="showDepartment" tabindex="-1" aria-hidden="true">
+<!-- Show Designation -->
+<div wire:ignore.self class="modal fade" id="showDesignation" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header" style="background: #222e3c">
                 <span class="modal-title mb-0 d-flex justify-content-between w-100">
-                    <h4 style="color: #e9ecef">{{ __('Show Department') }}</h4>
+                    <h4 style="color: #e9ecef">{{ __('Show Designation') }}</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"
                         wire:click="closeModal">
                         <span aria-hidden="true">&times;</span>
@@ -76,10 +76,10 @@
                 <div class="modal-body">
                     <div class="form-group">
                         <label class="form-label">
-                            <span>{{ __('Department Name') }}</span>
+                            <span>{{ __('Designation Name') }}</span>
                         </label>
-                        <input type="text" class="form-control rounded-0" wire:model.defer="department_name" readonly
-                            disabled>
+                        <input type="text" class="form-control rounded-0" wire:model.defer="designation_name"
+                            readonly disabled>
                     </div>
 
                     <div class="form-group">
@@ -97,16 +97,16 @@
         </div>
     </div>
 </div>
-<!-- End Show Department -->
+<!-- End Show Designation -->
 
-<!-- Edit Department -->
-<div wire:ignore.self class="modal fade" id="editDepartment" tabindex="-1" aria-hidden="true">
+<!-- Edit Designation -->
+<div wire:ignore.self class="modal fade" id="editDesignation" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
-            <form wire:submit.prevent="editDepartment">
+            <form wire:submit.prevent="editDesignation">
                 <div class="modal-header" style="background: #222e3c">
                     <span class="modal-title mb-0 d-flex justify-content-between w-100">
-                        <h4 style="color: #e9ecef">{{ __('Edit Department') }}</h4>
+                        <h4 style="color: #e9ecef">{{ __('Edit Designation') }}</h4>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"
                             wire:click="closeModal">
                             <span aria-hidden="true">&times;</span>
@@ -131,11 +131,11 @@
                         @endif
                         <div class="form-group">
                             <label class="form-label">
-                                <span>{{ __('Department Name') }}</span>
+                                <span>{{ __('Designation Name') }}</span>
                             </label>
-                            <input type="text" class="form-control rounded-0" wire:model.defer="department_name"
-                                placeholder="Department Name" required>
-                            @error('department_name')
+                            <input type="text" class="form-control rounded-0" wire:model.defer="designation_name"
+                                placeholder="Designation Name" required>
+                            @error('Designation_name')
                                 <small class="text-danger">{{ $message }}</small>
                             @enderror
                         </div>
@@ -162,7 +162,7 @@
 <!-- End Edit Department -->
 
 <!-- Delete Department -->
-<div wire:ignore.self class="modal fade" id="deleteDepartment" tabindex="-1" aria-hidden="true">
+<div wire:ignore.self class="modal fade" id="deleteDesignation" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <form wire:submit.prevent="detroyDepartment">
@@ -178,7 +178,7 @@
 
                 <div class="modal-body text-center">
                     <img src="{{ asset('images/sent.png') }}" alt="" width="50" height="46">
-                    <h3 class="mt-3">Are you sure want to delete this Department?</h3>
+                    <h3 class="mt-3">Are you sure want to delete this Designation?</h3>
                 </div>
                 <div class="modal-footer d-flex justify-content-center">
                     <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal"

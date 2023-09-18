@@ -34,7 +34,7 @@ class DepartmentController extends Controller
 
         $department = Employees::where('department', $department)->get();
         return view(
-            'pages.hrm.employees.employees',
+            'pages.hrm.department.employees',
             [
                 'department' => $department,
                 'deptCount' => $deptCount,

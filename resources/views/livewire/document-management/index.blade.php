@@ -7,12 +7,12 @@
         <div class="d-flex justify-content-between">
             <div class="row mb-2 mb-xl-3">
                 <div class="col-auto d-none d-sm-block">
-                    <h3><strong class="mx-2">{{ __('HRM') }}</strong> {{ __('Departments') }}</h3>
+                    <h3><strong class="mx-2">{{ __('HRM') }}</strong> {{ __('Document Management') }}</h3>
                 </div>
             </div>
             <div class="row mb-2 mb-xl-3">
                 <div class="col-auto d-none d-sm-block">
-                    <a href="#">
+                    <a href="{{ route('hrm-dashboard.index') }}">
                         <i class="fa-solid fa-home fa-2x text-info"></i>
                     </a>
                 </div>
@@ -30,7 +30,7 @@
                             <!-- small card -->
                             <div class="small-box bg-info">
                                 <div class="inner">
-                                    <h3>12</h3>
+                                    <h3>{{ $deptCount }}</h3>
                                     <h2>{{ __('Departments') }}</h2>
                                 </div>
                                 <div class="icon">
@@ -47,13 +47,13 @@
                             <!-- small card -->
                             <div class="small-box bg-info">
                                 <div class="inner">
-                                    <h3>14</h3>
+                                    <h3>{{ $designCount }}</h3>
                                     <h2>{{ __('Designations') }}</h2>
                                 </div>
                                 <div class="icon">
                                     <i class="fas fa-arrows-to-circle"></i>
                                 </div>
-                                <a href="#" class="small-box-footer">
+                                <a href="{{ route('designation') }}" class="small-box-footer">
                                     {{ __('More info ') }}
                                     <i class="fas fa-arrow-circle-right"></i>
                                 </a>
@@ -64,7 +64,7 @@
                             <!-- small card -->
                             <div class="small-box bg-info">
                                 <div class="inner">
-                                    <h3>25</h3>
+                                    <h3>{{ $empCount }}</h3>
                                     <h2>{{ __('Employees') }}</h2>
                                 </div>
                                 <div class="icon">

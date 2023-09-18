@@ -5,6 +5,7 @@ namespace App\Http\Livewire\HRM\Department;
 use Livewire\Component;
 use App\Models\Departments;
 use Livewire\WithPagination;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 
 class Index extends Component
@@ -28,6 +29,7 @@ class Index extends Component
     {
         $this->department_name = NULL;
         $this->description = NULL;
+        $this->department_id = NULL;
     }
 
     public function storeDepartment()
@@ -99,8 +101,9 @@ class Index extends Component
 
     public function render()
     {
+        $deptCount = DB::table('departments')->count(['id']);
         $departments = Departments::orderBy('id', 'DESC')->paginate('10');
-        return view('livewire.h-r-m.department.index', ['departments' => $departments])
+        return view('livewire.h-r-m.department.index', ['departments' => $departments, 'deptCount' => $deptCount])
             ->extends('layouts.admin.app')
             ->section('content');
     }

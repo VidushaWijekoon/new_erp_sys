@@ -1,9 +1,4 @@
 <div>
-    @if (session('message'))
-        <div class="alert alert-success bg-info p-2 mb-3 text-white text-capitalize" id="alert">
-            {{ session('message') }}
-        </div>
-    @endif
     @include('livewire.h-r-m.department.department-form')
     <div class="container-fluid p-0">
         <div class="d-flex justify-content-between">
@@ -14,7 +9,7 @@
             </div>
             <div class="row mb-2 mb-xl-3">
                 <div class="col-auto d-none d-sm-block">
-                    <a href="#">
+                    <a href="{{ route('document-management.index') }}">
                         <i class="fa-solid fa-home fa-2x text-info"></i>
                     </a>
                 </div>
@@ -35,7 +30,7 @@
                             <h4>{{ __('Departments') }}</h4>
                         </span>
                         <span class="info-box-number">
-                            <h4>2</h4>
+                            <h4>{{ $deptCount }}</h4>
                         </span>
                     </div>
                     <!-- /.info-box-content -->
@@ -141,7 +136,7 @@
                                 @endforelse
                             </tbody>
                         </table>
-                        <div class="d-flex float-end">
+                        <div class="d-flex float-end justify-content-end">
                             {{ $departments->links() }}
                         </div>
                     </div>
@@ -155,6 +150,9 @@
     <script>
         window.addEventListener('close-modal', event => {
             $('#createDepartment').modal('hide');
+            $('#showDepartment').modal('hide');
+            $('#editDepartment').modal('hide');
+            $('#deleteDepartment').modal('hide');
         });
     </script>
 @endpush

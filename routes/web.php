@@ -31,12 +31,14 @@ Route::prefix('/admin')->middleware('auth', 'isAdmin')->group(function () {
 
     // Livewire Department
     Route::get('/department', App\Http\Livewire\HRM\Department\Index::class)->name('department');
-
+    
     Route::controller(DepartmentController::class)->group(function () {
         Route::get('/department/{department}/activate', 'activate')->name('department.activate');
         Route::get('/department/{department}/dectivate', 'dectivate')->name('department.dectivate');
         Route::get('/department/{department}/department', 'department')->name('department.department');
     });
-
+    
     // Livewire Designation
+   
+    Route::get('/designation',App\Http\Livewire\HRM\Designation\Index::class)->name('designation');
 });
