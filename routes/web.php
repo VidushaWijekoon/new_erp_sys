@@ -6,8 +6,9 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\HRM\EmployeeController;
 use App\Http\Controllers\Admin\HRM\DepartmentController;
-use App\Http\Controllers\Admin\HRM\DesignationsController;
 use App\Http\Controllers\Admin\HRM\HRDashboardController;
+use App\Http\Controllers\Admin\HRM\DesignationsController;
+use App\Http\Controllers\Admin\HRM\PayrollManagementController;
 use App\Http\Controllers\Admin\HRM\DocumentManagementController;
 
 /*
@@ -36,6 +37,7 @@ Route::prefix('/admin')->middleware('auth', 'isAdmin')->group(function () {
 
     Route::get('/document-management', [DocumentManagementController::class, 'index'])->name('document-management.index');
     Route::get('/hrm-dashboard', [HRDashboardController::class, 'index'])->name('hrm-dashboard.index');
+    Route::get('/payroll-management', [PayrollManagementController::class, 'index'])->name('payroll-management.index');
 
     // Livewire Department
     Route::get('/department', App\Http\Livewire\HRM\Department\Index::class)->name('department');
@@ -68,4 +70,7 @@ Route::prefix('/admin')->middleware('auth', 'isAdmin')->group(function () {
         Route::get('/employee/{employee}/view_employee', 'view_employee')->name('employee.view_employee');
         Route::get('/employee/{employee}/performance', 'performance')->name('employee.performance');
     });
+
+    // Livewire Holidays
+    Route::get('/holidays', App\Http\Livewire\Payroll\Holiday\Index::class)->name('holidays');
 });

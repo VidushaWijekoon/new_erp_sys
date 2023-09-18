@@ -1,4 +1,10 @@
 <div>
+    @section('title', 'VSoft | Departments')
+    @if (session('message'))
+        <div class="alert alert-success bg-info p-2 mb-3 text-white text-capitalize" id="alert">
+            {{ session('message') }}
+        </div>
+    @endif
     @include('livewire.h-r-m.department.department-form')
     <div class="container-fluid p-0">
         <div class="d-flex justify-content-between">

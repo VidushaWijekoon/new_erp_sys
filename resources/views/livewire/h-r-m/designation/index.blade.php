@@ -1,4 +1,5 @@
 <div>
+    @section('title', 'VSoft | Designations')
     @if (session('message'))
         <div class="alert alert-success bg-info p-2 mb-3 text-white text-capitalize" id="alert">
             {{ session('message') }}
