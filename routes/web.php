@@ -4,13 +4,15 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Admin\DashboardController;
-use App\Http\Controllers\Admin\HRM\LeavesController;
 use App\Http\Controllers\Admin\HRM\EmployeeController;
 use App\Http\Controllers\Admin\HRM\DepartmentController;
+use App\Http\Controllers\Admin\Payroll\LeavesController;
 use App\Http\Controllers\Admin\HRM\HRDashboardController;
 use App\Http\Controllers\Admin\HRM\DesignationsController;
+use App\Http\Controllers\Admin\Payroll\AttendanceController;
 use App\Http\Controllers\Admin\HRM\PayrollManagementController;
 use App\Http\Controllers\Admin\HRM\DocumentManagementController;
+use App\Http\Controllers\Admin\Payroll\EmployeeSalaryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -85,5 +87,16 @@ Route::prefix('/admin')->middleware('auth', 'isAdmin')->group(function () {
         Route::get('/leaves/{leaves}/destroy', 'destroy')->name('leaves.destroy');
         Route::get('/leaves/{leaves}/approved', 'approved')->name('leaves.approved');
         Route::get('/leaves/{leaves}/not_approved', 'not_approved')->name('leaves.not_approved');
+    });
+
+    Route::controller(AttendanceController::class)->group(function () {
+        Route::get('/attendance', 'index')->name('attendance.index');
+        Route::get('/attendance/{attendance}/mark-attendance', 'mark_attendance')->name('attendance.mark-attendance');
+    });
+
+    Route::controller(EmployeeSalaryController::class)->group(function () {
+        Route::get('/employee-salary', 'index')->name('employee-salary.index');
+        Route::get('/employee-salary/create', 'create')->name('employee-salary.create');
+        Route::get('/employee-salary/payslip', 'payslip')->name('employee-salary.payslip');
     });
 });

@@ -65,7 +65,7 @@
                                 <div class="icon">
                                     <i class="fas fa-calendar-days"></i>
                                 </div>
-                                <a href="#" class="small-box-footer">
+                                <a href="{{ route('attendance.index') }}" class="small-box-footer">
                                     {{ __('More info ') }}
                                     <i class="fas fa-arrow-circle-right"></i>
                                 </a>
@@ -82,7 +82,7 @@
                                 <div class="icon">
                                     <i class="fas fa-coins"></i>
                                 </div>
-                                <a href="#" class="small-box-footer">
+                                <a href="{{ route('employee-salary.index') }}" class="small-box-footer">
                                     {{ __('More info ') }}
                                     <i class="fas fa-arrow-circle-right"></i>
                                 </a>
