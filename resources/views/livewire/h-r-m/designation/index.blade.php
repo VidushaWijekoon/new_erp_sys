@@ -60,7 +60,7 @@
                                 <tr>
                                     <th>{{ __('#') }}</th>
                                     <th>{{ __('ID') }}</th>
-                                    <th>{{ __('Department Name') }}</th>
+                                    <th>{{ __('Designation Name') }}</th>
                                     <th>{{ __('Discription') }}</th>
                                     <th>{{ __('Status') }}</th>
                                     <th>{{ __('Created At') }}</th>
@@ -75,18 +75,18 @@
                                         <td>{{ $x++ }}</td>
                                         <td>
                                             <a
-                                                href="{{ url('admin/department/' . $designationItems->id . '/department') }}">
+                                                href="{{ url('admin/designation/' . $designationItems->id . '/designation') }}">
                                                 {{ $designationItems->id }}
                                             </a>
                                         </td>
                                         <td class="text-capitalize">
                                             <a
-                                                href="{{ url('admin/department/' . $designationItems->id . '/department') }}">
+                                                href="{{ url('admin/designation/' . $designationItems->id . '/designation') }}">
                                                 {{ $designationItems->designation_name }}</a>
                                         </td>
                                         <td class="text-capitalize">
                                             <a
-                                                href="{{ url('admin/department/' . $designationItems->id . '/department') }}">
+                                                href="{{ url('admin/designation/' . $designationItems->id . '/designation') }}">
                                                 {{ $designationItems->description }}</a>
                                         </td>
                                         <td>
@@ -102,15 +102,15 @@
                                         </td>
                                         <td class="table-action">
                                             @if ($designationItems->status == '1')
-                                                <a href="{{ url('admin/department/' . $designationItems->id . '/dectivate') }}"
-                                                    onclick="return confirm('Are you sure you want to deactivate this department')"
+                                                <a href="{{ url('admin/designation/' . $designationItems->id . '/dectivate') }}"
+                                                    onclick="return confirm('Are you sure you want to deactivate this designation')"
                                                     data-bs-toggle="tooltip" data-bs-placement="bottom"
                                                     title="Deactivate {{ $designationItems->designation_name }}">
                                                     <i class="fa-solid fa-circle-xmark mx-1 text-danger"></i>
                                                 </a>
                                             @elseif($designationItems->status == '0')
-                                                <a href="{{ url('admin/department/' . $designationItems->id . '/activate') }}"
-                                                    onclick="return confirm('Are you sure you want to activate this department')"
+                                                <a href="{{ url('admin/designation/' . $designationItems->id . '/activate') }}"
+                                                    onclick="return confirm('Are you sure you want to activate this designation')"
                                                     data-bs-toggle="tooltip" data-bs-placement="bottom"
                                                     title="Activate {{ $designationItems->designation_name }} ">
                                                     <i class="fa-solid fa-circle-check mx-1 text-success"></i>
@@ -130,7 +130,7 @@
                                             </a>
                                             <a href="#" data-bs-toggle="tooltip" data-bs-placement="bottom"
                                                 data-toggle="modal" data-target="#deleteDesignation"
-                                               wire:click="deleteDesignation({{ $designationItems->id }})"
+                                                wire:click="deleteDesignation({{ $designationItems->id }})"
                                                 title="Delete {{ $designationItems->designation_name }}">
                                                 <i class="fa-solid fa-trash mx-1 text-danger"></i>
                                             </a>

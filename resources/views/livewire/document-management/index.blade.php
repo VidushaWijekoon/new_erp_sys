@@ -70,7 +70,7 @@
                                 <div class="icon">
                                     <i class="fas fa-users"></i>
                                 </div>
-                                <a href="#" class="small-box-footer">
+                                <a href="{{ route('employee.index') }}" class="small-box-footer">
                                     {{ __('More info ') }}
                                     <i class="fas fa-arrow-circle-right"></i>
                                 </a>
