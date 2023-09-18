@@ -8,6 +8,6 @@ class SalesLeadsDashboardController extends Controller
 {
     public function index()
     {
-        return view('pages.sales.sales-leads.index');
+        return view('pages.sales.sales-leads-dashboard.index');
     }
 }

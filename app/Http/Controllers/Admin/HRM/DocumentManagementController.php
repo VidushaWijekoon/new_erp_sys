@@ -8,6 +8,6 @@ class DocumentManagementController extends Controller
 {
     public function index()
     {
-        return view('pages.document_management.index');
+        return view('pages.hrm.document_management.index');
     }
 }

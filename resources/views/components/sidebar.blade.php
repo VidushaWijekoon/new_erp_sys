@@ -43,13 +43,15 @@
                         <a class="sidebar-link" href="{{ route('sales.dashboard') }}">{{ __('Sales Dashboard') }}</a>
                     </li>
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="#">{{ __('Leads Management') }}</a>
+                        <a class="sidebar-link" href="{{ route('sales-leads') }}">{{ __('Leads Management') }}</a>
                     </li>
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="#">{{ __('Quotation Management') }}</a>
+                        <a class="sidebar-link"
+                            href="{{ route('quotation.index') }}">{{ __('Quotation Management') }}</a>
                     </li>
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="#">{{ __('Invoice Management') }}</a>
+                        <a class="sidebar-link"
+                            href="{{ route('invoices.index') }}">{{ __('Invoice Management') }}</a>
                     </li>
                     <li class="sidebar-item">
                         <a class="sidebar-link" href="#">{{ __('Approval Stages') }}</a>
@@ -64,7 +66,8 @@
                 </a>
                 <ul id="accounts" class="sidebar-dropdown list-unstyled collapse" data-parent="#sidebar">
                     <li class="sidebar-item">
-                        <a class="sidebar-link" href="#">{{ __('Accounts Dashboard') }}</a>
+                        <a class="sidebar-link"
+                            href="{{ route('accounts-dashboard.index') }}">{{ __('Accounts Dashboard') }}</a>
                     </li>
                     <li class="sidebar-item">
                         <a class="sidebar-link" href="#">{{ __('Sales Orders') }} </a>

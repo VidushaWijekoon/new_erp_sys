@@ -17,10 +17,11 @@ use App\Http\Controllers\Admin\Sales\QuotationsController;
 use App\Http\Controllers\Admin\Payroll\AttendanceController;
 use App\Http\Controllers\Admin\Sales\SalesApprovalController;
 use App\Http\Controllers\Admin\Sales\SalesDashboardController;
-use App\Http\Controllers\Admin\HRM\PayrollManagementController;
 use App\Http\Controllers\Admin\HRM\DocumentManagementController;
 use App\Http\Controllers\Admin\Payroll\EmployeeSalaryController;
+use App\Http\Controllers\Admin\Payroll\PayrollManagementController;
 use App\Http\Controllers\Admin\Sales\SalesLeadsDashboardController;
+use App\Http\Controllers\Admin\Accounts\AccountsDashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -49,6 +50,7 @@ Route::prefix('/admin')->middleware('auth', 'isAdmin')->group(function () {
     Route::get('/document-management', [DocumentManagementController::class, 'index'])->name('document-management.index');
     Route::get('/hrm-dashboard', [HRDashboardController::class, 'index'])->name('hrm-dashboard.index');
     Route::get('/payroll-management', [PayrollManagementController::class, 'index'])->name('payroll-management.index');
+
 
     // Livewire Department
     Route::get('/department', App\Http\Livewire\HRM\Department\Index::class)->name('department');
@@ -144,4 +146,12 @@ Route::prefix('/admin')->middleware('auth', 'isAdmin')->group(function () {
         Route::get('/vendors', 'index')->name('vendors');
         Route::get('/vendors/create', 'create')->name('vendors-create');
     });
+
+    /*
+    |--------------------------------------------------------------------------
+    | Accounts
+    |--------------------------------------------------------------------------
+    */
+
+    Route::get('/accounts-dashboard', [AccountsDashboardController::class, 'index'])->name('accounts-dashboard.index');
 });

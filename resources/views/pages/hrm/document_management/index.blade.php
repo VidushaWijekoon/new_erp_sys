@@ -1,5 +1,5 @@
 @section('title', 'RSoft | Document Management')
 @extends('layouts.admin.app')
 @section('content')
-    <livewire:document-management.index />
+    <livewire:h-r-m.document-management.index />
 @endsection
